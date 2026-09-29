@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 124" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="butt" stroke-linejoin="miter" role="img" aria-label="LAOS">
+  <title>LAOS</title>
+  <!-- L -->
+  <path d="M8 12V108.5H58"/>
+  <!-- A com travessão em onda (do selo original) -->
+  <path d="M84 110L124.5 11L165 110"/>
+  <path d="M93 82C104 70 114 70 124 79S146 90 158 79C163 75 167 74 175 77" stroke-linecap="round"/>
+  <!-- Ø -->
+  <circle cx="242" cy="61" r="49"/>
+  <path d="M242 0V124"/>
+  <!-- S geométrico: dois arcos com terminais retos -->
+  <path d="M388 18L366 12.5C352 9 336 12 328 24C318 39 330 55 350 61C371 67 383 80 375 96C368 110 348 114 330 109L310 103"/>
+</svg>

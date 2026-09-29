@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <title>IA da equipe · LAOS</title>
+  <link rel="stylesheet" href="equipe.css">
+  <script src="config.js"></script>
+  <script src="equipe.js" defer></script>
+</head>
+<body>
+  <a class="pular" href="#principal">Pular para o conteúdo</a>
+  <header class="topo">
+    <div>
+      <p class="sobre">LAOS · uso interno</p>
+      <h1>IA da equipe</h1>
+    </div>
+    <button type="button" id="sair" class="botao-texto" hidden>Sair</button>
+  </header>
+
+  <main id="principal">
+    <noscript><p class="alerta">Esta página precisa de JavaScript.</p></noscript>
+
+    <!-- Acesso -->
+    <section id="acesso" class="cartao acesso" aria-labelledby="acesso-titulo">
+      <h2 id="acesso-titulo">Entrar</h2>
+      <p>Digite o código da equipe. Ele fica guardado só nesta aba e some ao fechá-la.</p>
+      <form id="form-acesso" autocomplete="off">
+        <label for="codigo">Código da equipe</label>
+        <input id="codigo" name="codigo" type="password" required minlength="12" autocomplete="current-password" spellcheck="false">
+        <button type="submit" class="botao">Entrar</button>
+        <p id="acesso-erro" class="erro" role="alert"></p>
+      </form>
+    </section>
+
+    <!-- Trabalho -->
+    <section id="trabalho" class="trabalho" hidden>
+      <form id="form-tarefa" class="cartao" aria-labelledby="tarefa-titulo">
+        <h2 id="tarefa-titulo">O que você precisa?</h2>
+        <fieldset class="tarefas">
+          <legend class="sr">Tarefa</legend>
+          <label class="tarefa"><input type="radio" name="tarefa" value="fatos" checked><span><b>Fatos e preços</b> Preço, tamanho, notas e pendências de um produto</span></label>
+          <label class="tarefa"><input type="radio" name="tarefa" value="resposta_cliente"><span><b>Responder cliente</b> Rascunho para WhatsApp, Instagram ou e-mail</span></label>
+          <label class="tarefa"><input type="radio" name="tarefa" value="legenda_instagram"><span><b>Legenda Instagram</b> Legenda, variações e hashtags</span></label>
+          <label class="tarefa"><input type="radio" name="tarefa" value="descricao_produto"><span><b>Descrição de produto</b> Texto sensorial e ficha técnica</span></label>
+          <label class="tarefa"><input type="radio" name="tarefa" value="proposta_b2b"><span><b>Proposta B2B</b> Pousada, hotel, empresa, revenda ou evento</span></label>
+          <label class="tarefa"><input type="radio" name="tarefa" value="livre"><span><b>Livre</b> Outro pedido, dentro das regras da marca</span></label>
+        </fieldset>
+
+        <div class="campos">
+          <div class="campo" data-para="fatos resposta_cliente legenda_instagram descricao_produto proposta_b2b livre">
+            <label for="produtos">Produtos <span class="dica">nome ou slug; um por linha ou separados por vírgula</span></label>
+            <input id="produtos" list="lista-produtos" autocomplete="off">
+            <datalist id="lista-produtos"></datalist>
+          </div>
+          <div class="campo" data-para="resposta_cliente">
+            <label for="canal">Canal</label>
+            <select id="canal"><option>WhatsApp</option><option>Instagram (direct)</option><option>E-mail</option></select>
+          </div>
+          <div class="campo" data-para="resposta_cliente">
+            <label for="mensagem-cliente">Mensagem do cliente</label>
+            <textarea id="mensagem-cliente" rows="4" placeholder="Cole aqui o que o cliente escreveu."></textarea>
+          </div>
+          <div class="campo" data-para="proposta_b2b">
+            <label for="cliente-b2b">Para quem</label>
+            <input id="cliente-b2b" placeholder="Ex.: pousada em Trancoso com 12 quartos">
+          </div>
+          <div class="campo" data-para="proposta_b2b">
+            <label for="quantidades">Quantidades e uso</label>
+            <input id="quantidades" placeholder="Ex.: 12 difusores 350 ml para os quartos, 40 sabonetes/mês">
+          </div>
+          <div class="campo" data-para="legenda_instagram">
+            <label for="ocasiao">Tema ou ocasião</label>
+            <input id="ocasiao" placeholder="Ex.: fim de tarde em Arraial, Dia das Mães, chegada de novo aroma">
+          </div>
+          <div class="campo" data-para="fatos resposta_cliente legenda_instagram descricao_produto proposta_b2b livre">
+            <label for="observacoes" data-rotulo-livre="Pedido">Observações da equipe <span class="dica">fatos que só vocês sabem (prazo, frete, desconto…) entram como "informado pela equipe"</span></label>
+            <textarea id="observacoes" rows="3"></textarea>
+          </div>
+        </div>
+
+        <div class="acoes">
+          <button type="submit" id="gerar" class="botao">Gerar</button>
+          <button type="button" id="parar" class="botao-contorno" hidden>Parar</button>
+          <span id="status" class="status" role="status" aria-live="polite"></span>
+        </div>
+        <p class="lembrete">A IA usa só o catálogo coletado da loja online (preços e estoque da data da coleta). O que faltar aparece como <mark>[CONFIRMAR]</mark>. Revise antes de enviar ou publicar. Não cole CPF, cartão ou endereço completo de clientes.</p>
+      </form>
+
+      <section class="cartao saida" aria-labelledby="saida-titulo">
+        <div class="saida-topo">
+          <h2 id="saida-titulo">Resultado</h2>
+          <div class="saida-acoes">
+            <button type="button" id="refinar" class="botao-texto" hidden>Pedir ajuste</button>
+            <button type="button" id="copiar" class="botao-contorno" disabled>Copiar</button>
+          </div>
+        </div>
+        <div id="saida" class="saida-texto" aria-live="polite" aria-busy="false" tabindex="0"><p class="vazio">O texto gerado aparece aqui.</p></div>
+        <p id="pendencias" class="pendencias" hidden></p>
+        <form id="form-ajuste" class="ajuste" hidden>
+          <label for="ajuste">Ajuste</label>
+          <input id="ajuste" placeholder="Ex.: mais curto, tom mais formal, trocar por difusores">
+          <button type="submit" class="botao">Ajustar</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <footer class="rodape"><p>Rascunhos gerados por IA (DeepSeek) a partir do catálogo da LAOS. Conferir fatos antes de usar.</p></footer>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /equipe/
+# Prévia: páginas com meta noindex.
