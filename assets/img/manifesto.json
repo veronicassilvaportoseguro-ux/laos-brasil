@@ -2,97 +2,10 @@
  "produtos": {
   "vela-energy": {
    "url_slug": "vela-energy",
-   "principal": {
-    "w": 534,
-    "h": 580,
-    "srcs": [
-     [
-      "assets/img/p/vela-energy/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-energy/principal-960.webp",
-      534
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-energy/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 680,
-     "h": 680,
-     "srcs": [
-      [
-       "assets/img/p/vela-energy/loja-1-1000.webp",
-       680
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-energy/01.webp"
-    }
-   ],
-   "editoriais": []
-  },
-  "bronzeador-pequeno-60ml": {
-   "url_slug": "bronzeador-pequeno-60ml",
-   "principal": {
-    "w": 474,
-    "h": 1039,
-    "srcs": [
-     [
-      "assets/img/p/bronzeador-pequeno-60ml/principal-480.webp",
-      474
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-pequeno-60ml/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/bronzeador-pequeno-60ml/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-pequeno-60ml/01.webp"
-    },
-    {
-     "w": 918,
-     "h": 918,
-     "srcs": [
-      [
-       "assets/img/p/bronzeador-pequeno-60ml/loja-2-1000.webp",
-       918
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-pequeno-60ml/02.webp"
-    },
-    {
-     "w": 680,
-     "h": 680,
-     "srcs": [
-      [
-       "assets/img/p/bronzeador-pequeno-60ml/loja-3-1000.webp",
-       680
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-pequeno-60ml/03.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-namaste": {
    "url_slug": "vela-namaste",
@@ -101,13 +14,18 @@
     "h": 542,
     "srcs": [
      [
+      "assets/img/p/vela-namaste/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-namaste/principal-480.webp",
       410
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-namaste/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-namaste/01.webp",
+    "hash": "c08e3e7e5d5f1efc"
    },
    "galeria": [
     {
@@ -135,19 +53,6 @@
      "tipo": "cena",
      "origem": "loja",
      "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-namaste/02.webp"
-    },
-    {
-     "w": 680,
-     "h": 680,
-     "srcs": [
-      [
-       "assets/img/p/vela-namaste/loja-3-1000.webp",
-       680
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-namaste/03.webp"
     }
    ],
    "editoriais": []
@@ -159,6 +64,10 @@
     "h": 547,
     "srcs": [
      [
+      "assets/img/p/vela-relax/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-relax/principal-480.webp",
       480
      ],
@@ -169,7 +78,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-relax/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-relax/01.webp",
+    "hash": "ccccccc9e6e49830"
    },
    "galeria": [
     {
@@ -190,420 +100,72 @@
   },
   "vela-yoga-200ml": {
    "url_slug": "vela-yoga-200ml",
-   "principal": {
-    "w": 363,
-    "h": 476,
-    "srcs": [
-     [
-      "assets/img/p/vela-yoga-200ml/principal-480.webp",
-      363
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-yoga-200ml/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-yoga-200ml/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-yoga-200ml/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-yoga-200ml/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-yoga-200ml/02.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-yoga-200ml/loja-3-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-yoga-200ml/03.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "creme-rosa-mosqueta": {
    "url_slug": "creme-rosa-mosqueta",
-   "principal": {
-    "w": 779,
-    "h": 507,
-    "srcs": [
-     [
-      "assets/img/p/creme-rosa-mosqueta/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/creme-rosa-mosqueta/principal-960.webp",
-      779
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-rosa-mosqueta/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/creme-rosa-mosqueta/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-rosa-mosqueta/01.webp"
-    },
-    {
-     "w": 823,
-     "h": 823,
-     "srcs": [
-      [
-       "assets/img/p/creme-rosa-mosqueta/loja-2-1000.webp",
-       823
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-rosa-mosqueta/02.webp"
-    },
-    {
-     "w": 768,
-     "h": 768,
-     "srcs": [
-      [
-       "assets/img/p/creme-rosa-mosqueta/loja-3-1000.webp",
-       768
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-rosa-mosqueta/03.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "creme-calendula": {
    "url_slug": "creme-calendula",
-   "principal": {
-    "w": 547,
-    "h": 694,
-    "srcs": [
-     [
-      "assets/img/p/creme-calendula/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/creme-calendula/principal-960.webp",
-      547
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-calendula/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/creme-calendula/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-calendula/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "creme-malva": {
    "url_slug": "creme-malva",
-   "principal": {
-    "w": 547,
-    "h": 694,
-    "srcs": [
-     [
-      "assets/img/p/creme-malva/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/creme-malva/principal-960.webp",
-      547
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-malva/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/creme-malva/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-malva/01.webp"
-    },
-    {
-     "w": 768,
-     "h": 768,
-     "srcs": [
-      [
-       "assets/img/p/creme-malva/loja-2-1000.webp",
-       768
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-malva/02.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/creme-malva/loja-3-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-malva/03.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-verde": {
    "url_slug": "mascara-argila-verde",
-   "principal": {
-    "w": 545,
-    "h": 858,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-verde/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-verde/principal-960.webp",
-      545
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-verde/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-verde/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-verde/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-branca": {
    "url_slug": "mascara-argila-branca",
-   "principal": {
-    "w": 565,
-    "h": 901,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-branca/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-branca/principal-960.webp",
-      565
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-branca/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-branca/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-branca/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-marrom": {
    "url_slug": "mascara-argila-marrom",
-   "principal": {
-    "w": 544,
-    "h": 862,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-marrom/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-marrom/principal-960.webp",
-      544
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-marrom/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-marrom/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-marrom/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-rosa": {
    "url_slug": "mascara-argila-rosa",
-   "principal": {
-    "w": 601,
-    "h": 937,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-rosa/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-rosa/principal-960.webp",
-      601
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-rosa/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-rosa/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-rosa/01.webp"
-    },
-    {
-     "w": 766,
-     "h": 766,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-rosa/loja-2-1000.webp",
-       766
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-rosa/02.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-vermelha": {
    "url_slug": "mascara-argila-vermelha",
-   "principal": {
-    "w": 533,
-    "h": 828,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-vermelha/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-vermelha/principal-960.webp",
-      533
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-vermelha/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-vermelha/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-vermelha/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-cinza": {
    "url_slug": "mascara-argila-cinza",
    "principal": {
-    "w": 511,
-    "h": 821,
+    "w": 819,
+    "h": 1024,
     "srcs": [
      [
       "assets/img/p/mascara-argila-cinza/principal-480.webp",
@@ -611,48 +173,22 @@
      ],
      [
       "assets/img/p/mascara-argila-cinza/principal-960.webp",
-      511
+      819
      ]
     ],
-    "tipo": "recorte",
+    "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-cinza/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-cinza/02.webp",
+    "hash": "6f302625334d5d39"
    },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-cinza/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-cinza/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-cinza/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-cinza/02.webp"
-    }
-   ],
+   "galeria": [],
    "editoriais": []
   },
   "mascara-argila-preta": {
    "url_slug": "mascara-argila-preta",
    "principal": {
-    "w": 558,
-    "h": 810,
+    "w": 819,
+    "h": 1024,
     "srcs": [
      [
       "assets/img/p/mascara-argila-preta/principal-480.webp",
@@ -660,172 +196,30 @@
      ],
      [
       "assets/img/p/mascara-argila-preta/principal-960.webp",
-      558
+      819
      ]
     ],
-    "tipo": "recorte",
+    "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-preta/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-preta/02.webp",
+    "hash": "dc1970f060302d1b"
    },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-preta/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-preta/01.webp"
-    },
-    {
-     "w": 899,
-     "h": 899,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-preta/loja-2-1000.webp",
-       899
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-preta/02.webp"
-    }
-   ],
+   "galeria": [],
    "editoriais": []
   },
   "mascara-argila-amarela": {
    "url_slug": "mascara-argila-amarela",
-   "principal": {
-    "w": 526,
-    "h": 813,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-amarela/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-amarela/principal-960.webp",
-      526
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-amarela/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-amarela/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-amarela/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "mascara-argila-dolomita": {
    "url_slug": "mascara-argila-dolomita",
-   "principal": {
-    "w": 550,
-    "h": 834,
-    "srcs": [
-     [
-      "assets/img/p/mascara-argila-dolomita/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/mascara-argila-dolomita/principal-960.webp",
-      550
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-dolomita/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/mascara-argila-dolomita/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-argila-dolomita/01.webp"
-    }
-   ],
-   "editoriais": []
-  },
-  "desodorante": {
-   "url_slug": "desodorante",
-   "principal": {
-    "w": 416,
-    "h": 422,
-    "srcs": [
-     [
-      "assets/img/p/desodorante/principal-480.webp",
-      416
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/desodorante/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/desodorante/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/desodorante/01.webp"
-    },
-    {
-     "w": 683,
-     "h": 683,
-     "srcs": [
-      [
-       "assets/img/p/desodorante/loja-2-1000.webp",
-       683
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/desodorante/02.webp"
-    },
-    {
-     "w": 713,
-     "h": 713,
-     "srcs": [
-      [
-       "assets/img/p/desodorante/loja-3-1000.webp",
-       713
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/desodorante/03.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "sabonete-barbatimao": {
    "url_slug": "sabonete-barbatimao",
@@ -833,6 +227,10 @@
     "w": 707,
     "h": 514,
     "srcs": [
+     [
+      "assets/img/p/sabonete-barbatimao/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/sabonete-barbatimao/principal-480.webp",
       480
@@ -844,7 +242,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-barbatimao/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-barbatimao/01.webp",
+    "hash": "8a82828282a29280"
    },
    "galeria": [
     {
@@ -870,6 +269,10 @@
     "h": 380,
     "srcs": [
      [
+      "assets/img/p/sabonete-extrato-glicolico-de-maracuja/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-extrato-glicolico-de-maracuja/principal-480.webp",
       480
      ],
@@ -880,7 +283,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-extrato-glicolico-de-maracuja/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-extrato-glicolico-de-maracuja/01.webp",
+    "hash": "0141687878703030"
    },
    "galeria": [
     {
@@ -919,6 +323,10 @@
     "h": 499,
     "srcs": [
      [
+      "assets/img/p/sabonete-oleo-de-coco/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-oleo-de-coco/principal-480.webp",
       480
      ],
@@ -929,7 +337,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-oleo-de-coco/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-oleo-de-coco/01.webp",
+    "hash": "ee164b6f3d3bbeae"
    },
    "galeria": [
     {
@@ -955,6 +364,10 @@
     "h": 594,
     "srcs": [
      [
+      "assets/img/p/sabonete-creme-hidratante-oleo-de-coco-e-manteiga-de-karite/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-creme-hidratante-oleo-de-coco-e-manteiga-de-karite/principal-480.webp",
       480
      ],
@@ -965,7 +378,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-creme-hidratante-oleo-de-coco-e-manteiga-de-karite/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-creme-hidratante-oleo-de-coco-e-manteiga-de-karite/01.webp",
+    "hash": "3909696978f2b34f"
    },
    "galeria": [
     {
@@ -1004,6 +418,10 @@
     "h": 1095,
     "srcs": [
      [
+      "assets/img/p/sabonete-palo-santo-e-sal-grosso/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-palo-santo-e-sal-grosso/principal-480.webp",
       480
      ],
@@ -1014,7 +432,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-palo-santo-e-sal-grosso/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-palo-santo-e-sal-grosso/01.webp",
+    "hash": "e2c4831b9f6841c9"
    },
    "galeria": [
     {
@@ -1066,6 +485,10 @@
     "h": 508,
     "srcs": [
      [
+      "assets/img/p/sabonete-aloe-vera/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-aloe-vera/principal-480.webp",
       480
      ],
@@ -1076,7 +499,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-aloe-vera/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-aloe-vera/01.webp",
+    "hash": "efeefefefefefefe"
    },
    "galeria": [
     {
@@ -1102,6 +526,10 @@
     "h": 525,
     "srcs": [
      [
+      "assets/img/p/sabonete-lavanda-oleo-de-coco/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-lavanda-oleo-de-coco/principal-480.webp",
       480
      ],
@@ -1112,7 +540,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-lavanda-oleo-de-coco/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-lavanda-oleo-de-coco/01.webp",
+    "hash": "ce9eb2f2f2f2f2fa"
    },
    "galeria": [
     {
@@ -1151,6 +580,10 @@
     "h": 538,
     "srcs": [
      [
+      "assets/img/p/sabonete-rosa-mosqueta/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-rosa-mosqueta/principal-480.webp",
       480
      ],
@@ -1161,7 +594,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-rosa-mosqueta/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-rosa-mosqueta/01.webp",
+    "hash": "b819c9c9c9f0b246"
    },
    "galeria": [
     {
@@ -1187,6 +621,10 @@
     "h": 798,
     "srcs": [
      [
+      "assets/img/p/alecrim-oleo-de-coco/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/alecrim-oleo-de-coco/principal-480.webp",
       480
      ],
@@ -1197,7 +635,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/alecrim-oleo-de-coco/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/alecrim-oleo-de-coco/01.webp",
+    "hash": "091b7222362676fc"
    },
    "galeria": [
     {
@@ -1212,19 +651,6 @@
      "tipo": "cena",
      "origem": "loja",
      "ref": "originais/2026-09-29-loja-nuvemshop/imagens/alecrim-oleo-de-coco/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/alecrim-oleo-de-coco/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/alecrim-oleo-de-coco/02.webp"
     }
    ],
    "editoriais": []
@@ -1236,6 +662,10 @@
     "h": 541,
     "srcs": [
      [
+      "assets/img/p/sabonete-calendula-oleo-de-amendoa/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-calendula-oleo-de-amendoa/principal-480.webp",
       480
      ],
@@ -1246,7 +676,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-calendula-oleo-de-amendoa/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-calendula-oleo-de-amendoa/01.webp",
+    "hash": "9a9a8a8cdefcdcda"
    },
    "galeria": [
     {
@@ -1272,6 +703,10 @@
     "h": 545,
     "srcs": [
      [
+      "assets/img/p/sabonete-aveia-e-mel-oleo-de-amendoa/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-aveia-e-mel-oleo-de-amendoa/principal-480.webp",
       480
      ],
@@ -1282,7 +717,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-aveia-e-mel-oleo-de-amendoa/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-aveia-e-mel-oleo-de-amendoa/01.webp",
+    "hash": "9ef68fce8abb9f8f"
    },
    "galeria": [
     {
@@ -1308,6 +744,10 @@
     "h": 637,
     "srcs": [
      [
+      "assets/img/p/sabonete-algas-marinhas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-algas-marinhas/principal-480.webp",
       480
      ],
@@ -1318,7 +758,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-algas-marinhas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-algas-marinhas/01.webp",
+    "hash": "8f5313e3f25af2f2"
    },
    "galeria": [
     {
@@ -1333,19 +774,6 @@
      "tipo": "cena",
      "origem": "loja",
      "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-algas-marinhas/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/sabonete-algas-marinhas/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-algas-marinhas/02.webp"
     }
    ],
    "editoriais": []
@@ -1357,6 +785,10 @@
     "h": 363,
     "srcs": [
      [
+      "assets/img/p/sabonete-carvao-ativado/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-carvao-ativado/principal-480.webp",
       480
      ],
@@ -1367,7 +799,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-carvao-ativado/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-carvao-ativado/01.webp",
+    "hash": "f4b0a08a9a9a8682"
    },
    "galeria": [
     {
@@ -1406,6 +839,10 @@
     "h": 561,
     "srcs": [
      [
+      "assets/img/p/sabonete-hammamelis-patchuly/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-hammamelis-patchuly/principal-480.webp",
       480
      ],
@@ -1416,7 +853,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-hammamelis-patchuly/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-hammamelis-patchuly/01.webp",
+    "hash": "befefebebebefefe"
    },
    "galeria": [
     {
@@ -1455,6 +893,10 @@
     "h": 448,
     "srcs": [
      [
+      "assets/img/p/laranja/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/laranja/principal-480.webp",
       480
      ],
@@ -1465,7 +907,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/laranja/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/laranja/01.webp",
+    "hash": "c6c6c6f6daf8fcec"
    },
    "galeria": [
     {
@@ -1504,13 +947,18 @@
     "h": 880,
     "srcs": [
      [
+      "assets/img/p/aromatizador-de-varetas-castanha-de-para-pp/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-de-varetas-castanha-de-para-pp/principal-480.webp",
       424
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-de-varetas-castanha-de-para-pp/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-de-varetas-castanha-de-para-pp/01.webp",
+    "hash": "99f170f0d4d09ec4"
    },
    "galeria": [
     {
@@ -1536,13 +984,18 @@
     "h": 880,
     "srcs": [
      [
+      "assets/img/p/aromatizador-de-varetas-bamboo-pp/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-de-varetas-bamboo-pp/principal-480.webp",
       424
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-de-varetas-bamboo-pp/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-de-varetas-bamboo-pp/01.webp",
+    "hash": "99f170f0d4d09ec4"
    },
    "galeria": [
     {
@@ -1568,6 +1021,10 @@
     "h": 1239,
     "srcs": [
      [
+      "assets/img/p/aromatizador-de-varetas-cascas-e-folhas-pp/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-de-varetas-cascas-e-folhas-pp/principal-480.webp",
       480
      ],
@@ -1578,7 +1035,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F103"
+    "ref": "F103",
+    "hash": "c961d093909092f2"
    },
    "galeria": [],
    "editoriais": []
@@ -1590,6 +1048,10 @@
     "h": 1384,
     "srcs": [
      [
+      "assets/img/p/difusor-de-varetas-bamboo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-varetas-bamboo/principal-480.webp",
       480
      ],
@@ -1600,7 +1062,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F097"
+    "ref": "F097",
+    "hash": "4961f0b2808080f0"
    },
    "galeria": [],
    "editoriais": []
@@ -1612,6 +1075,10 @@
     "h": 728,
     "srcs": [
      [
+      "assets/img/p/manteiga-de-karite/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/manteiga-de-karite/principal-480.webp",
       480
      ],
@@ -1622,7 +1089,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/manteiga-de-karite/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/manteiga-de-karite/01.webp",
+    "hash": "c5a4c4cebed4599c"
    },
    "galeria": [
     {
@@ -1648,6 +1116,10 @@
     "h": 708,
     "srcs": [
      [
+      "assets/img/p/oleo-rosa-mosqueta/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/oleo-rosa-mosqueta/principal-480.webp",
       480
      ],
@@ -1658,7 +1130,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-rosa-mosqueta/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-rosa-mosqueta/01.webp",
+    "hash": "d4cccceee4ece4e4"
    },
    "galeria": [
     {
@@ -1673,19 +1146,6 @@
      "tipo": "cena",
      "origem": "loja",
      "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-rosa-mosqueta/01.webp"
-    },
-    {
-     "w": 823,
-     "h": 823,
-     "srcs": [
-      [
-       "assets/img/p/oleo-rosa-mosqueta/loja-2-1000.webp",
-       823
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-rosa-mosqueta/02.webp"
     },
     {
      "w": 934,
@@ -1710,13 +1170,18 @@
     "h": 1006,
     "srcs": [
      [
+      "assets/img/p/oleo-para-barba-premium/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/oleo-para-barba-premium/principal-480.webp",
       342
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-para-barba-premium/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-para-barba-premium/01.webp",
+    "hash": "99797cbc7c7adace"
    },
    "galeria": [
     {
@@ -1748,70 +1213,16 @@
    ],
    "editoriais": []
   },
-  "vela-para-massagem-morango": {
-   "url_slug": "vela-para-massagem-morango",
-   "principal": {
-    "w": 356,
-    "h": 342,
-    "srcs": [
-     [
-      "assets/img/p/vela-para-massagem-morango/principal-480.webp",
-      356
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-para-massagem-morango/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-para-massagem-morango/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-para-massagem-morango/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-para-massagem-morango/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-para-massagem-morango/02.webp"
-    },
-    {
-     "w": 900,
-     "h": 900,
-     "srcs": [
-      [
-       "assets/img/p/vela-para-massagem-morango/loja-3-1000.webp",
-       900
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-para-massagem-morango/03.webp"
-    }
-   ],
-   "editoriais": []
-  },
   "shampoo-em-barra": {
    "url_slug": "shampoo-em-barra",
    "principal": {
     "w": 952,
     "h": 714,
     "srcs": [
+     [
+      "assets/img/p/shampoo-em-barra/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/shampoo-em-barra/principal-480.webp",
       480
@@ -1823,7 +1234,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-em-barra/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-em-barra/01.webp",
+    "hash": "e2a2c2c6a6840e6c"
    },
    "galeria": [
     {
@@ -1875,6 +1287,10 @@
     "h": 839,
     "srcs": [
      [
+      "assets/img/p/condicionador-em-barra/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/condicionador-em-barra/principal-480.webp",
       480
      ],
@@ -1885,7 +1301,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-em-barra/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-em-barra/01.webp",
+    "hash": "e2f1d8d8e2e67eb8"
    },
    "galeria": [
     {
@@ -1937,6 +1354,10 @@
     "h": 998,
     "srcs": [
      [
+      "assets/img/p/vela-cancer/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-cancer/principal-480.webp",
       480
      ],
@@ -1947,7 +1368,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F125"
+    "ref": "F125",
+    "hash": "3031b021331396d0"
    },
    "galeria": [
     {
@@ -1973,6 +1395,10 @@
     "h": 1011,
     "srcs": [
      [
+      "assets/img/p/vela-leao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-leao/principal-480.webp",
       480
      ],
@@ -1983,7 +1409,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F118"
+    "ref": "F118",
+    "hash": "3011983133311bd0"
    },
    "galeria": [
     {
@@ -2009,6 +1436,10 @@
     "h": 999,
     "srcs": [
      [
+      "assets/img/p/vela-touro/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-touro/principal-480.webp",
       480
      ],
@@ -2019,7 +1450,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F123"
+    "ref": "F123",
+    "hash": "b0309233333392f0"
    },
    "galeria": [
     {
@@ -2045,6 +1477,10 @@
     "h": 1004,
     "srcs": [
      [
+      "assets/img/p/vela-libra/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-libra/principal-480.webp",
       480
      ],
@@ -2055,7 +1491,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F116"
+    "ref": "F116",
+    "hash": "b0309873673717d0"
    },
    "galeria": [
     {
@@ -2081,6 +1518,10 @@
     "h": 1029,
     "srcs": [
      [
+      "assets/img/p/vela-aries/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-aries/principal-480.webp",
       480
      ],
@@ -2091,7 +1532,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F127"
+    "ref": "F127",
+    "hash": "3131b025253393f0"
    },
    "galeria": [
     {
@@ -2117,6 +1559,10 @@
     "h": 973,
     "srcs": [
      [
+      "assets/img/p/vela-escorpiao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-escorpiao/principal-480.webp",
       480
      ],
@@ -2127,7 +1573,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F115"
+    "ref": "F115",
+    "hash": "b0309813331317d2"
    },
    "galeria": [
     {
@@ -2155,6 +1602,10 @@
     "h": 1006,
     "srcs": [
      [
+      "assets/img/p/vela-virgem/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-virgem/principal-480.webp",
       480
      ],
@@ -2165,7 +1616,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F117"
+    "ref": "F117",
+    "hash": "b8109865653112f0"
    },
    "galeria": [
     {
@@ -2191,6 +1643,10 @@
     "h": 1008,
     "srcs": [
      [
+      "assets/img/p/vela-gemeos/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-gemeos/principal-480.webp",
       480
      ],
@@ -2201,7 +1657,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F122"
+    "ref": "F122",
+    "hash": "b031b217373392f0"
    },
    "galeria": [
     {
@@ -2227,6 +1684,10 @@
     "h": 1018,
     "srcs": [
      [
+      "assets/img/p/vela-sagittarius/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-sagittarius/principal-480.webp",
       480
      ],
@@ -2237,7 +1698,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F119"
+    "ref": "F119",
+    "hash": "3035b833373336f0"
    },
    "galeria": [
     {
@@ -2263,6 +1725,10 @@
     "h": 1012,
     "srcs": [
      [
+      "assets/img/p/vela-capricornio/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-capricornio/principal-480.webp",
       480
      ],
@@ -2273,7 +1739,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F121"
+    "ref": "F121",
+    "hash": "b031b035331596f0"
    },
    "galeria": [
     {
@@ -2299,6 +1766,10 @@
     "h": 1013,
     "srcs": [
      [
+      "assets/img/p/vela-aquario/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-aquario/principal-480.webp",
       480
      ],
@@ -2309,7 +1780,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F126"
+    "ref": "F126",
+    "hash": "b031b075777516d0"
    },
    "galeria": [
     {
@@ -2335,6 +1807,10 @@
     "h": 1007,
     "srcs": [
      [
+      "assets/img/p/vela-peixes/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-peixes/principal-480.webp",
       480
      ],
@@ -2345,7 +1821,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F120"
+    "ref": "F120",
+    "hash": "b830b037373193d0"
    },
    "galeria": [
     {
@@ -2371,6 +1848,10 @@
     "h": 1057,
     "srcs": [
      [
+      "assets/img/p/creme-cachos-500ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/creme-cachos-500ml/principal-480.webp",
       480
      ],
@@ -2381,7 +1862,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-cachos-500ml/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-cachos-500ml/01.webp",
+    "hash": "b2645392b1b13131"
    },
    "galeria": [
     {
@@ -2420,6 +1902,10 @@
     "h": 667,
     "srcs": [
      [
+      "assets/img/p/creme-cachos-200ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/creme-cachos-200ml/principal-480.webp",
       480
      ],
@@ -2430,7 +1916,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-cahos-200ml/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-cahos-200ml/01.webp",
+    "hash": "c9d8ac8cccccccdc"
    },
    "galeria": [
     {
@@ -2465,8 +1952,8 @@
   "shampoo-alecrim": {
    "url_slug": "shampoo-alecrim",
    "principal": {
-    "w": 900,
-    "h": 1185,
+    "w": 960,
+    "h": 1200,
     "srcs": [
      [
       "assets/img/p/shampoo-alecrim/principal-480.webp",
@@ -2474,40 +1961,15 @@
      ],
      [
       "assets/img/p/shampoo-alecrim/principal-960.webp",
-      900
+      960
      ]
     ],
     "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-alecrim/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-alecrim/02.webp",
+    "hash": "1b4b48e4b6b1e34d"
    },
    "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/shampoo-alecrim/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-alecrim/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/shampoo-alecrim/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-alecrim/02.webp"
-    },
     {
      "w": 900,
      "h": 900,
@@ -2520,6 +1982,19 @@
      "tipo": "cena",
      "origem": "loja",
      "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-alecrim/03.webp"
+    },
+    {
+     "w": 1000,
+     "h": 1000,
+     "srcs": [
+      [
+       "assets/img/p/shampoo-alecrim/loja-4-1000.webp",
+       1000
+      ]
+     ],
+     "tipo": "cena",
+     "origem": "loja",
+     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-alecrim/04.webp"
     }
    ],
    "editoriais": []
@@ -2527,32 +2002,24 @@
   "condicionador-alecrim": {
    "url_slug": "condicionador-alecrim",
    "principal": {
-    "w": 384,
-    "h": 867,
+    "w": 960,
+    "h": 1200,
     "srcs": [
      [
       "assets/img/p/condicionador-alecrim/principal-480.webp",
-      384
+      480
+     ],
+     [
+      "assets/img/p/condicionador-alecrim/principal-960.webp",
+      960
      ]
     ],
-    "tipo": "recorte",
+    "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-alecrim/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-alecrim/04.webp",
+    "hash": "dcbcbe6e6e676fdd"
    },
    "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/condicionador-alecrim/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-alecrim/01.webp"
-    },
     {
      "w": 1000,
      "h": 1000,
@@ -2589,13 +2056,18 @@
     "h": 867,
     "srcs": [
      [
+      "assets/img/p/shampoo-aloe-vera/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/shampoo-aloe-vera/principal-480.webp",
       384
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-aloe-vera/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-aloe-vera/01.webp",
+    "hash": "c0e6f1e8ec36de26"
    },
    "galeria": [
     {
@@ -2643,8 +2115,8 @@
   "condicionador-aloe-vera": {
    "url_slug": "condicionador-aloe-vera",
    "principal": {
-    "w": 900,
-    "h": 1185,
+    "w": 960,
+    "h": 1200,
     "srcs": [
      [
       "assets/img/p/condicionador-aloe-vera/principal-480.webp",
@@ -2652,27 +2124,15 @@
      ],
      [
       "assets/img/p/condicionador-aloe-vera/principal-960.webp",
-      900
+      960
      ]
     ],
     "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-aloe-vera/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-aloe-vera/01.webp",
+    "hash": "dcbcbe6e6e676fdd"
    },
    "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/condicionador-aloe-vera/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-aloe-vera/01.webp"
-    },
     {
      "w": 859,
      "h": 859,
@@ -2709,13 +2169,18 @@
     "h": 867,
     "srcs": [
      [
+      "assets/img/p/shampoo-camomila/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/shampoo-camomila/principal-480.webp",
       384
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-camomila/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-camomila/01.webp",
+    "hash": "c0e6f1e8ec36de26"
    },
    "galeria": [
     {
@@ -2763,8 +2228,8 @@
   "condicionador-camomila": {
    "url_slug": "condicionador-camomila",
    "principal": {
-    "w": 955,
-    "h": 1197,
+    "w": 960,
+    "h": 1200,
     "srcs": [
      [
       "assets/img/p/condicionador-camomila/principal-480.webp",
@@ -2772,12 +2237,13 @@
      ],
      [
       "assets/img/p/condicionador-camomila/principal-960.webp",
-      955
+      960
      ]
     ],
-    "tipo": "recorte",
+    "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-camomila/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-camomila/03.webp",
+    "hash": "dcbcbe6e6e676fdd"
    },
    "galeria": [
     {
@@ -2805,19 +2271,6 @@
      "tipo": "cena",
      "origem": "loja",
      "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-camomila/02.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/condicionador-camomila/loja-3-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-camomila/03.webp"
     }
    ],
    "editoriais": []
@@ -2829,13 +2282,18 @@
     "h": 867,
     "srcs": [
      [
+      "assets/img/p/shampoo-capim/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/shampoo-capim/principal-480.webp",
       384
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-capim/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-capim/01.webp",
+    "hash": "c0e6f1e8ec36de26"
    },
    "galeria": [
     {
@@ -2870,8 +2328,8 @@
   "condicionador-capim": {
    "url_slug": "condicionador-capim",
    "principal": {
-    "w": 900,
-    "h": 1185,
+    "w": 960,
+    "h": 1200,
     "srcs": [
      [
       "assets/img/p/condicionador-capim/principal-480.webp",
@@ -2879,27 +2337,15 @@
      ],
      [
       "assets/img/p/condicionador-capim/principal-960.webp",
-      900
+      960
      ]
     ],
     "tipo": "cena",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-capim/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-capim/01.webp",
+    "hash": "dcbcbe6e6e676fdd"
    },
    "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/condicionador-capim/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-capim/01.webp"
-    },
     {
      "w": 951,
      "h": 951,
@@ -2936,6 +2382,10 @@
     "h": 1155,
     "srcs": [
      [
+      "assets/img/p/shampoo-maracuja/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/shampoo-maracuja/principal-480.webp",
       480
      ],
@@ -2946,7 +2396,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-maracuja/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-maracuja/01.webp",
+    "hash": "d4ccccbab2b2aa9e"
    },
    "galeria": [
     {
@@ -2985,6 +2436,10 @@
     "h": 1212,
     "srcs": [
      [
+      "assets/img/p/condicionador-maracuja/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/condicionador-maracuja/principal-480.webp",
       480
      ],
@@ -2995,7 +2450,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-maracuja/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/condicionador-maracuja/01.webp",
+    "hash": "a9d9dcd4d4b4a8c8"
    },
    "galeria": [
     {
@@ -3021,6 +2477,10 @@
     "h": 428,
     "srcs": [
      [
+      "assets/img/p/escalda-pe/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/escalda-pe/principal-480.webp",
       480
      ],
@@ -3031,7 +2491,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/escalda-pe/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/escalda-pe/01.webp",
+    "hash": "423ef2f2d89e6c0e"
    },
    "galeria": [
     {
@@ -3083,6 +2544,10 @@
     "h": 912,
     "srcs": [
      [
+      "assets/img/p/creme-aloe/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/creme-aloe/principal-480.webp",
       480
      ],
@@ -3093,7 +2558,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-aloe/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-aloe/01.webp",
+    "hash": "dccec6e6f2d2ea6e"
    },
    "galeria": [
     {
@@ -3132,13 +2598,14 @@
     "h": 353,
     "srcs": [
      [
-      "assets/img/p/creme-hidratante-pitanga-preta/principal-480.webp",
+      "assets/img/p/creme-hidratante-pitanga-preta/principal-320.webp",
       231
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-pitanga-preta/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-pitanga-preta/01.webp",
+    "hash": "a6e9e974bc303618"
    },
    "galeria": [
     {
@@ -3177,13 +2644,14 @@
     "h": 353,
     "srcs": [
      [
-      "assets/img/p/creme-hidratante-bamboo/principal-480.webp",
+      "assets/img/p/creme-hidratante-bamboo/principal-320.webp",
       231
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-bamboo/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-bamboo/01.webp",
+    "hash": "a6e9e974bc303618"
    },
    "galeria": [
     {
@@ -3235,13 +2703,14 @@
     "h": 353,
     "srcs": [
      [
-      "assets/img/p/creme-hidratante-castanha-de-para/principal-480.webp",
+      "assets/img/p/creme-hidratante-castanha-de-para/principal-320.webp",
       231
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-castanha-de-para/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-castanha-de-para/01.webp",
+    "hash": "a6e9e974bc303618"
    },
    "galeria": [
     {
@@ -3293,13 +2762,14 @@
     "h": 335,
     "srcs": [
      [
-      "assets/img/p/vela-laranja/principal-480.webp",
+      "assets/img/p/vela-laranja/principal-320.webp",
       234
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-laranja/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-laranja/01.webp",
+    "hash": "8659d8c6829392f8"
    },
    "galeria": [
     {
@@ -3338,13 +2808,14 @@
     "h": 319,
     "srcs": [
      [
-      "assets/img/p/vela-melancia/principal-480.webp",
+      "assets/img/p/vela-melancia/principal-320.webp",
       274
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-melancia/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-melancia/01.webp",
+    "hash": "d09ca696a28382f2"
    },
    "galeria": [
     {
@@ -3396,13 +2867,18 @@
     "h": 571,
     "srcs": [
      [
+      "assets/img/p/vela-maracuja/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-maracuja/principal-480.webp",
       401
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-maracuja/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-maracuja/01.webp",
+    "hash": "caae7efcf8faf8fc"
    },
    "galeria": [
     {
@@ -3454,13 +2930,18 @@
     "h": 388,
     "srcs": [
      [
+      "assets/img/p/vela-citronela/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-citronela/principal-480.webp",
       323
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-citronela/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-citronela/01.webp",
+    "hash": "e48686a60782c2e0"
    },
    "galeria": [
     {
@@ -3512,13 +2993,18 @@
     "h": 469,
     "srcs": [
      [
+      "assets/img/p/vela-morango/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-morango/principal-480.webp",
       432
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-morango/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-morango/01.webp",
+    "hash": "d8987f7ef0fad8f0"
    },
    "galeria": [
     {
@@ -3570,6 +3056,10 @@
     "h": 475,
     "srcs": [
      [
+      "assets/img/p/vela-capim/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-capim/principal-480.webp",
       480
      ],
@@ -3580,7 +3070,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-capim/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-capim/01.webp",
+    "hash": "c3a4ee7ee6dede1c"
    },
    "galeria": [
     {
@@ -3632,6 +3123,10 @@
     "h": 521,
     "srcs": [
      [
+      "assets/img/p/vela-algas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-algas/principal-480.webp",
       480
      ],
@@ -3642,7 +3137,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-algas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-algas/01.webp",
+    "hash": "b3b2b2339b97b333"
    },
    "galeria": [
     {
@@ -3694,6 +3190,10 @@
     "h": 876,
     "srcs": [
      [
+      "assets/img/p/vela-pitanga/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-pitanga/principal-480.webp",
       480
      ],
@@ -3704,7 +3204,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-pitanga/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-pitanga/01.webp",
+    "hash": "696971e29c988cc4"
    },
    "galeria": [
     {
@@ -3751,25 +3252,10 @@
   },
   "aromatizador-250ml-relaxa-e-acalma-sandalo-baunilha": {
    "url_slug": "aromatizador-250-ml-sandalo-baunilha",
-   "principal": {
-    "w": 801,
-    "h": 2134,
-    "srcs": [
-     [
-      "assets/img/p/aromatizador-250-ml-sandalo-baunilha/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/aromatizador-250-ml-sandalo-baunilha/principal-960.webp",
-      801
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F041"
-   },
+   "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "aromatizador-250ml-harmonia-serenidade-bamboo-capim": {
    "url_slug": "aromatizador-250ml-harmonia-serenidade-bamboo-capim",
@@ -3777,6 +3263,10 @@
     "w": 750,
     "h": 1878,
     "srcs": [
+     [
+      "assets/img/p/aromatizador-250ml-harmonia-serenidade-bamboo-capim/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/aromatizador-250ml-harmonia-serenidade-bamboo-capim/principal-480.webp",
       480
@@ -3788,54 +3278,25 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F040"
+    "ref": "F040",
+    "hash": "c49431e0f1b1d1f0"
    },
    "galeria": [],
    "editoriais": []
   },
   "aromatizador-250-ml-anti-stress-lavanda-limao": {
    "url_slug": "aromatizador-250-ml-lavanda-limao",
-   "principal": {
-    "w": 746,
-    "h": 1937,
-    "srcs": [
-     [
-      "assets/img/p/aromatizador-250-ml-lavanda-limao/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/aromatizador-250-ml-lavanda-limao/principal-960.webp",
-      746
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F039"
-   },
+   "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "aromatizador-250-ml-amor-fertilidade-erva-doce-laranja": {
    "url_slug": "aromatizador-250-ml-erva-doce-laranja",
-   "principal": {
-    "w": 794,
-    "h": 2085,
-    "srcs": [
-     [
-      "assets/img/p/aromatizador-250-ml-erva-doce-laranja/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/aromatizador-250-ml-erva-doce-laranja/principal-960.webp",
-      794
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F073"
-   },
+   "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-good-vibes": {
    "url_slug": "vela-good-vibes",
@@ -3843,6 +3304,10 @@
     "w": 764,
     "h": 985,
     "srcs": [
+     [
+      "assets/img/p/vela-good-vibes/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/vela-good-vibes/principal-480.webp",
       480
@@ -3854,7 +3319,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-good-vibes/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-good-vibes/01.webp",
+    "hash": "36542ccc98cecc8e"
    },
    "galeria": [
     {
@@ -3893,6 +3359,10 @@
     "h": 1318,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-aromatizador-xl-varetas-good-vibes/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-aromatizador-xl-varetas-good-vibes/principal-480.webp",
       480
      ],
@@ -3903,71 +3373,10 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F064"
+    "ref": "F064",
+    "hash": "6161cca2fa62aedc"
    },
    "galeria": [],
-   "editoriais": []
-  },
-  "bronzeador-xxl-200-ml": {
-   "url_slug": "bronzeador-xxl-200-ml",
-   "principal": {
-    "w": 503,
-    "h": 857,
-    "srcs": [
-     [
-      "assets/img/p/bronzeador-xxl-200-ml/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/bronzeador-xxl-200-ml/principal-960.webp",
-      503
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-xxl-200-ml/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/bronzeador-xxl-200-ml/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-xxl-200-ml/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/bronzeador-xxl-200-ml/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-xxl-200-ml/02.webp"
-    },
-    {
-     "w": 866,
-     "h": 866,
-     "srcs": [
-      [
-       "assets/img/p/bronzeador-xxl-200-ml/loja-3-1000.webp",
-       866
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bronzeador-xxl-200-ml/03.webp"
-    }
-   ],
    "editoriais": []
   },
   "difusor-de-ambientes-350-mlaromatizador-xl-varetas-cascas-e-folhas": {
@@ -3976,6 +3385,10 @@
     "w": 920,
     "h": 1699,
     "srcs": [
+     [
+      "assets/img/p/difusor-de-ambientes-350-mlaromatizador-xl-varetas-cascas-e-folhas/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/difusor-de-ambientes-350-mlaromatizador-xl-varetas-cascas-e-folhas/principal-480.webp",
       480
@@ -3987,7 +3400,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F043"
+    "ref": "F043",
+    "hash": "616192c2c4c4c4ec"
    },
    "galeria": [],
    "editoriais": []
@@ -3999,6 +3413,10 @@
     "h": 1569,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-350-ml-aromatizador-xl-varetas-castanha-do-para/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-350-ml-aromatizador-xl-varetas-castanha-do-para/principal-480.webp",
       480
      ],
@@ -4009,32 +3427,18 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F045"
+    "ref": "F045",
+    "hash": "61619e82c4c4c0d4"
    },
    "galeria": [],
    "editoriais": []
   },
   "difusor-de-ambientes-350ml-aromatizador-xl-varetas-energias-positivas-alecrim-citronela-hortela": {
    "url_slug": "difusor-de-ambientes-350ml-aromatizador-xl-varetas-energias-positivas-alecrim-citronela-hortela",
-   "principal": {
-    "w": 730,
-    "h": 1320,
-    "srcs": [
-     [
-      "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-energias-positivas-alecrim-citronela-hortela/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-energias-positivas-alecrim-citronela-hortela/principal-960.webp",
-      730
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F060"
-   },
+   "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "difusor-de-ambientes-350ml-aromatizador-xl-varetas-harmonia-serenidade-bamboo-capim": {
    "url_slug": "difusor-de-ambientes-350ml-aromatizador-xl-varetas-harmonia-serenidade-bamboo-capim",
@@ -4042,6 +3446,10 @@
     "w": 721,
     "h": 1299,
     "srcs": [
+     [
+      "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-harmonia-serenidade-bamboo-capim/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-harmonia-serenidade-bamboo-capim/principal-480.webp",
       480
@@ -4053,7 +3461,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F061"
+    "ref": "F061",
+    "hash": "616196e6f4f4a4b4"
    },
    "galeria": [],
    "editoriais": []
@@ -4065,6 +3474,10 @@
     "h": 857,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-350-aromatizador-xl-varetas-maracuja-e-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-350-aromatizador-xl-varetas-maracuja-e-limao/principal-480.webp",
       480
      ],
@@ -4075,7 +3488,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350-aromatizador-xl-varetas-maracuja-e-limao/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350-aromatizador-xl-varetas-maracuja-e-limao/01.webp",
+    "hash": "68c8cdd0d69a9a86"
    },
    "galeria": [
     {
@@ -4114,6 +3528,10 @@
     "h": 2085,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-350-ml-aromatizador-xl-varetas-pitanga-preta/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-350-ml-aromatizador-xl-varetas-pitanga-preta/principal-480.webp",
       480
      ],
@@ -4124,7 +3542,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F042"
+    "ref": "F042",
+    "hash": "de4161b282cec8c4"
    },
    "galeria": [],
    "editoriais": []
@@ -4136,13 +3555,18 @@
     "h": 675,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-sandalo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-sandalo/principal-480.webp",
       396
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350ml-aromatizador-xl-varetas-sandalo/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350ml-aromatizador-xl-varetas-sandalo/01.webp",
+    "hash": "52529838989a9a9a"
    },
    "galeria": [
     {
@@ -4181,6 +3605,10 @@
     "h": 1317,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-arraial-d-ajuda-caramelo-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-350ml-aromatizador-xl-varetas-arraial-d-ajuda-caramelo-limao/principal-480.webp",
       480
      ],
@@ -4191,7 +3619,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F063"
+    "ref": "F063",
+    "hash": "6160968a9e8682ee"
    },
    "galeria": [],
    "editoriais": [
@@ -4208,6 +3637,10 @@
     "h": 1918,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-porto-seguro-abacaxi/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-porto-seguro-abacaxi/principal-480.webp",
       480
      ],
@@ -4218,7 +3651,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F035"
+    "ref": "F035",
+    "hash": "d89031e0c0c3c3c0"
    },
    "galeria": [],
    "editoriais": [
@@ -4232,13 +3666,14 @@
     "h": 749,
     "srcs": [
      [
-      "assets/img/p/aromatizador-250ml-cascas-e-folhas/principal-480.webp",
+      "assets/img/p/aromatizador-250ml-cascas-e-folhas/principal-320.webp",
       260
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-250ml-cascas-e-folhas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-250ml-cascas-e-folhas/01.webp",
+    "hash": "c0d839f0d68484e0"
    },
    "galeria": [
     {
@@ -4290,6 +3725,10 @@
     "h": 2018,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-arraial-dajuda-caramelo-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-arraial-dajuda-caramelo-limao/principal-480.webp",
       480
      ],
@@ -4300,7 +3739,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F034"
+    "ref": "F034",
+    "hash": "c89431e0c1c3c2d0"
    },
    "galeria": [],
    "editoriais": [
@@ -4315,6 +3755,10 @@
     "h": 2074,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-trancoso-caju/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-trancoso-caju/principal-480.webp",
       480
      ],
@@ -4325,7 +3769,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F037"
+    "ref": "F037",
+    "hash": "c4b031e0818282d0"
    },
    "galeria": [],
    "editoriais": [
@@ -4339,6 +3784,10 @@
     "h": 2087,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-caraiva-pomelo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-caraiva-pomelo/principal-480.webp",
       480
      ],
@@ -4349,7 +3798,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F036"
+    "ref": "F036",
+    "hash": "c4b431e0818282d0"
    },
    "galeria": [],
    "editoriais": [
@@ -4363,6 +3813,10 @@
     "h": 1955,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250-ml-good-vibes-bamboo-sandalo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250-ml-good-vibes-bamboo-sandalo/principal-480.webp",
       480
      ],
@@ -4373,54 +3827,25 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F031"
+    "ref": "F031",
+    "hash": "c4b031ece4f1e0c0"
    },
    "galeria": [],
    "editoriais": []
   },
   "difusor-de-ambientes-350-ml-aromatizador-xl-varetas-amor-fertilidade-erva-doce-laranja": {
    "url_slug": "difusor-de-varetas-350-ml-erva-doce-laranja",
-   "principal": {
-    "w": 689,
-    "h": 1272,
-    "srcs": [
-     [
-      "assets/img/p/difusor-de-varetas-350-ml-erva-doce-laranja/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/difusor-de-varetas-350-ml-erva-doce-laranja/principal-960.webp",
-      689
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F062"
-   },
+   "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "difusor-de-ambientes-350-ml-aromatizador-xl-varetas-anti-stress-lavanda-limao": {
    "url_slug": "difusor-de-varetas-350-ml-lavanda-limao",
-   "principal": {
-    "w": 727,
-    "h": 1311,
-    "srcs": [
-     [
-      "assets/img/p/difusor-de-varetas-350-ml-lavanda-limao/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/difusor-de-varetas-350-ml-lavanda-limao/principal-960.webp",
-      727
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F058"
-   },
+   "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "difusor-de-ambientes-aromatizador-xl-varetas-bamboo-350ml": {
    "url_slug": "difusor-de-ambientes-aromatizador-xl-varetas-bamboo-350ml",
@@ -4428,6 +3853,10 @@
     "w": 742,
     "h": 1356,
     "srcs": [
+     [
+      "assets/img/p/difusor-de-ambientes-aromatizador-xl-varetas-bamboo-350ml/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/difusor-de-ambientes-aromatizador-xl-varetas-bamboo-350ml/principal-480.webp",
       480
@@ -4439,7 +3868,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F048"
+    "ref": "F048",
+    "hash": "616196c4ccc4d4cc"
    },
    "galeria": [],
    "editoriais": []
@@ -4451,6 +3881,10 @@
     "h": 2096,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-bamboo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-bamboo/principal-480.webp",
       480
      ],
@@ -4461,7 +3895,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F014"
+    "ref": "F014",
+    "hash": "c0b031f0d1c0d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -4473,6 +3908,10 @@
     "h": 2178,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-pitanga-preta/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-pitanga-preta/principal-480.webp",
       480
      ],
@@ -4483,7 +3922,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F019"
+    "ref": "F019",
+    "hash": "6cd430e0c1c2d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -4495,6 +3935,10 @@
     "h": 2055,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-sandalo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-sandalo/principal-480.webp",
       480
      ],
@@ -4505,7 +3949,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F025"
+    "ref": "F025",
+    "hash": "c09431f0c0c0d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -4517,6 +3962,10 @@
     "h": 777,
     "srcs": [
      [
+      "assets/img/p/manteiga-karite-10gr/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/manteiga-karite-10gr/principal-480.webp",
       480
      ],
@@ -4527,7 +3976,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/manteiga-karite-10gr/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/manteiga-karite-10gr/01.webp",
+    "hash": "39b1f1306ccac464"
    },
    "galeria": [
     {
@@ -4547,40 +3997,11 @@
    "editoriais": []
   },
   "esfoliante-comestivel1": {
-   "url_slug": "esfoliante-comestivel1",
-   "principal": {
-    "w": 960,
-    "h": 922,
-    "srcs": [
-     [
-      "assets/img/p/esfoliante-comestivel1/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/esfoliante-comestivel1/principal-960.webp",
-      960
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/esfoliante-comestivel1/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 979,
-     "h": 979,
-     "srcs": [
-      [
-       "assets/img/p/esfoliante-comestivel1/loja-1-1000.webp",
-       979
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/esfoliante-comestivel1/01.webp"
-    }
-   ],
-   "editoriais": []
+   "url_slug": "esfoliante-de-acucar-aroma-de-morango",
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "creme-hidratante-laos": {
    "url_slug": "creme-hidratante-laos",
@@ -4588,6 +4009,10 @@
     "w": 753,
     "h": 862,
     "srcs": [
+     [
+      "assets/img/p/creme-hidratante-laos/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/creme-hidratante-laos/principal-480.webp",
       480
@@ -4599,7 +4024,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-laos/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-hidratante-laos/01.webp",
+    "hash": "dccec6e6f2d2ea6e"
    },
    "galeria": [
     {
@@ -4651,6 +4077,10 @@
     "h": 737,
     "srcs": [
      [
+      "assets/img/p/hidratante-labial-10gr/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/hidratante-labial-10gr/principal-480.webp",
       480
      ],
@@ -4661,7 +4091,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/hidratante-labial-10gr/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/hidratante-labial-10gr/01.webp",
+    "hash": "c1e4ceccdc99b232"
    },
    "galeria": [
     {
@@ -4713,6 +4144,10 @@
     "h": 2156,
     "srcs": [
      [
+      "assets/img/p/aromatizador-250ml-castanha-do-para/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-250ml-castanha-do-para/principal-480.webp",
       480
      ],
@@ -4723,7 +4158,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F018"
+    "ref": "F018",
+    "hash": "609430e0c1c2d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -4735,6 +4171,10 @@
     "h": 999,
     "srcs": [
      [
+      "assets/img/p/creme-capilar-200ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/creme-capilar-200ml/principal-480.webp",
       480
      ],
@@ -4745,7 +4185,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-capilar-200ml/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/creme-capilar-200ml/01.webp",
+    "hash": "256716e6e6f2e2ca"
    },
    "galeria": [
     {
@@ -4784,6 +4225,10 @@
     "h": 1941,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250ml-pimenta-rosa/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250ml-pimenta-rosa/principal-480.webp",
       480
      ],
@@ -4794,7 +4239,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F009"
+    "ref": "F009",
+    "hash": "c49c31e0d8c2d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -4806,6 +4252,10 @@
     "h": 2063,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-patchuly-e-sandalo-250ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-patchuly-e-sandalo-250ml/principal-480.webp",
       480
      ],
@@ -4816,7 +4266,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F026"
+    "ref": "F026",
+    "hash": "f0b031e0c1c2c2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -4828,13 +4279,14 @@
     "h": 818,
     "srcs": [
      [
-      "assets/img/p/oleo-de-coco-60ml/principal-480.webp",
+      "assets/img/p/oleo-de-coco-60ml/principal-320.webp",
       277
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-de-coco-60ml/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-de-coco-60ml/01.webp",
+    "hash": "7179eccca69692c4"
    },
    "galeria": [
     {
@@ -4883,7 +4335,8 @@
    "url_slug": "sabonete-de-camomila-com-oleo-de-amendoas",
    "principal": null,
    "galeria": [],
-   "editoriais": []
+   "editoriais": [],
+   "sem_foto": true
   },
   "aromatizador-pitanga-preta-1-l": {
    "url_slug": "aromatizador-pitanga-preta-1-l",
@@ -4892,13 +4345,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-pitanga-preta-1-l/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-pitanga-preta-1-l/principal-480.webp",
       407
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-arraial-dajuda-caramelo-limao-litro/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-arraial-dajuda-caramelo-limao-litro/01.webp",
+    "hash": "1278e8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -4924,6 +4382,10 @@
     "h": 816,
     "srcs": [
      [
+      "assets/img/p/leave-in-10gr/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/leave-in-10gr/principal-480.webp",
       480
      ],
@@ -4934,7 +4396,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/leave-in-10gr/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/leave-in-10gr/01.webp",
+    "hash": "24d4dcdc8cccce88"
    },
    "galeria": [
     {
@@ -4986,6 +4449,10 @@
     "h": 529,
     "srcs": [
      [
+      "assets/img/p/drops-desodorante/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/drops-desodorante/principal-480.webp",
       480
      ],
@@ -4996,7 +4463,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/drops-desodorante/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/drops-desodorante/01.webp",
+    "hash": "83d0dcc6c787c6f4"
    },
    "galeria": [
     {
@@ -5035,6 +4503,10 @@
     "h": 620,
     "srcs": [
      [
+      "assets/img/p/drops-dental-vanilla-30g/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/drops-dental-vanilla-30g/principal-480.webp",
       480
      ],
@@ -5045,7 +4517,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/drops-dental-vanilla-30g/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/drops-dental-vanilla-30g/01.webp",
+    "hash": "34c6e5e440cc0c23"
    },
    "galeria": [
     {
@@ -5084,6 +4557,10 @@
     "h": 603,
     "srcs": [
      [
+      "assets/img/p/shampoo-barra-90-gr/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/shampoo-barra-90-gr/principal-480.webp",
       480
      ],
@@ -5094,7 +4571,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-barra-90-gr/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/shampoo-barra-90-gr/01.webp",
+    "hash": "07a4e4c6e6a6a41c"
    },
    "galeria": [
     {
@@ -5133,6 +4611,10 @@
     "h": 410,
     "srcs": [
      [
+      "assets/img/p/fosforos/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/fosforos/principal-480.webp",
       480
      ],
@@ -5143,7 +4625,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/fosforos/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/fosforos/01.webp",
+    "hash": "81c9d9e1b0b2dccf"
    },
    "galeria": [
     {
@@ -5169,6 +4652,10 @@
     "h": 687,
     "srcs": [
      [
+      "assets/img/p/aromatizador-carro-castanha/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-carro-castanha/principal-480.webp",
       480
      ],
@@ -5179,7 +4666,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-castanha/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-castanha/01.webp",
+    "hash": "5836b6b6b66e4e9e"
    },
    "galeria": [
     {
@@ -5205,6 +4693,10 @@
     "h": 938,
     "srcs": [
      [
+      "assets/img/p/envelope-cheiro-castanha-do-para/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/envelope-cheiro-castanha-do-para/principal-480.webp",
       480
      ],
@@ -5215,7 +4707,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/enevelope-cheiro-castanha-do-para/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/enevelope-cheiro-castanha-do-para/01.webp",
+    "hash": "453373576323e062"
    },
    "galeria": [
     {
@@ -5241,13 +4734,18 @@
     "h": 1084,
     "srcs": [
      [
+      "assets/img/p/aromatizador-arraial-dajuda-caramelo-limao-litro/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-arraial-dajuda-caramelo-limao-litro/principal-480.webp",
       410
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-arraial-dajuda-caramelo-limao-litro1/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-arraial-dajuda-caramelo-limao-litro1/01.webp",
+    "hash": "1272e8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -5273,13 +4771,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-verbena-1-l/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-verbena-1-l/principal-480.webp",
       407
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-arraial-dajuda-caramelo-limao-litro-copia-copia/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-arraial-dajuda-caramelo-limao-litro-copia-copia/01.webp",
+    "hash": "1278e8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -5305,6 +4808,10 @@
     "h": 687,
     "srcs": [
      [
+      "assets/img/p/aromatizador-carro-bamboo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-carro-bamboo/principal-480.webp",
       480
      ],
@@ -5315,7 +4822,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-lavanda1/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-lavanda1/01.webp",
+    "hash": "5836b6b6b66e4e9e"
    },
    "galeria": [
     {
@@ -5341,6 +4849,10 @@
     "h": 687,
     "srcs": [
      [
+      "assets/img/p/aromatizador-carro-capim-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-carro-capim-limao/principal-480.webp",
       480
      ],
@@ -5351,7 +4863,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-capim-limao/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-capim-limao/01.webp",
+    "hash": "5836b6b6b66e4e9e"
    },
    "galeria": [
     {
@@ -5377,6 +4890,10 @@
     "h": 687,
     "srcs": [
      [
+      "assets/img/p/aromatizador-carro-cascas-e-folhas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-carro-cascas-e-folhas/principal-480.webp",
       480
      ],
@@ -5387,7 +4904,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-cascas-e-folhas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-cascas-e-folhas/01.webp",
+    "hash": "5836b6b6b66e4e9e"
    },
    "galeria": [
     {
@@ -5406,28 +4924,6 @@
    ],
    "editoriais": []
   },
-  "palo-santo-aromatizador-spray-260ml": {
-   "url_slug": "palo-santo-aromatizador-spray-260ml",
-   "principal": {
-    "w": 793,
-    "h": 2014,
-    "srcs": [
-     [
-      "assets/img/p/palo-santo-aromatizador-spray-260ml/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/palo-santo-aromatizador-spray-260ml/principal-960.webp",
-      793
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F033"
-   },
-   "galeria": [],
-   "editoriais": []
-  },
   "palo-santo-difusor-vareta-260ml": {
    "url_slug": "palo-santo-difusor-vareta-260ml",
    "principal": {
@@ -5435,13 +4931,14 @@
     "h": 572,
     "srcs": [
      [
-      "assets/img/p/palo-santo-difusor-vareta-260ml/principal-480.webp",
+      "assets/img/p/palo-santo-difusor-vareta-260ml/principal-320.webp",
       156
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/palo-santo-difusor-vareta-260ml/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/palo-santo-difusor-vareta-260ml/01.webp",
+    "hash": "92d46933f8bebebc"
    },
    "galeria": [
     {
@@ -5467,6 +4964,10 @@
     "h": 2100,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-misterio-de-praga/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-misterio-de-praga/principal-480.webp",
       480
      ],
@@ -5477,7 +4978,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F008"
+    "ref": "F008",
+    "hash": "c49431e0d0b1d3d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5489,6 +4991,10 @@
     "h": 2223,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-notas-de-paris/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-notas-de-paris/principal-480.webp",
       480
      ],
@@ -5499,7 +5005,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F006"
+    "ref": "F006",
+    "hash": "c09431f0c1b1d3d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5511,6 +5018,10 @@
     "h": 1886,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-serenidade-de-kyoto/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-serenidade-de-kyoto/principal-480.webp",
       480
      ],
@@ -5521,7 +5032,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F001"
+    "ref": "F001",
+    "hash": "f0b031e0b1e182c0"
    },
    "galeria": [],
    "editoriais": [
@@ -5535,6 +5047,10 @@
     "h": 2107,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-elegancia-de-dubai/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-elegancia-de-dubai/principal-480.webp",
       480
      ],
@@ -5545,7 +5061,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F007"
+    "ref": "F007",
+    "hash": "c89431f0d1b1d3d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5557,6 +5074,10 @@
     "h": 2212,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-verao-do-capri/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-verao-do-capri/principal-480.webp",
       480
      ],
@@ -5567,7 +5088,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F004"
+    "ref": "F004",
+    "hash": "d49430f0d191d3d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5579,6 +5101,10 @@
     "h": 2238,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-segredos-do-cairo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-segredos-do-cairo/principal-480.webp",
       480
      ],
@@ -5589,7 +5115,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F005"
+    "ref": "F005",
+    "hash": "d0b031f0d1a0c3d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5601,6 +5128,10 @@
     "h": 2160,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-noites-de-moscou/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-noites-de-moscou/principal-480.webp",
       480
      ],
@@ -5611,7 +5142,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F003"
+    "ref": "F003",
+    "hash": "e4d430e0d1b0d3d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5623,6 +5155,10 @@
     "h": 2183,
     "srcs": [
      [
+      "assets/img/p/aromatizador-spray-250-ml-charme-miami/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-spray-250-ml-charme-miami/principal-480.webp",
       480
      ],
@@ -5633,7 +5169,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F002"
+    "ref": "F002",
+    "hash": "e4dc31f0d1b1d2f0"
    },
    "galeria": [],
    "editoriais": []
@@ -5645,6 +5182,10 @@
     "h": 954,
     "srcs": [
      [
+      "assets/img/p/vela-arraial-d-ajuda-caramelo-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-arraial-d-ajuda-caramelo-limao/principal-480.webp",
       480
      ],
@@ -5655,7 +5196,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F154"
+    "ref": "F154",
+    "hash": "740532828686cef0"
    },
    "galeria": [],
    "editoriais": []
@@ -5664,8 +5206,12 @@
    "url_slug": "vela-porto-seguro-abacaxi",
    "principal": {
     "w": 960,
-    "h": 1581,
+    "h": 935,
     "srcs": [
+     [
+      "assets/img/p/vela-porto-seguro-abacaxi/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/vela-porto-seguro-abacaxi/principal-480.webp",
       480
@@ -5677,7 +5223,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F156"
+    "ref": "F156",
+    "hash": "d0d1d0409a8b86f0"
    },
    "galeria": [],
    "editoriais": []
@@ -5689,6 +5236,10 @@
     "h": 975,
     "srcs": [
      [
+      "assets/img/p/vela-caraiva-pomelo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-caraiva-pomelo/principal-480.webp",
       480
      ],
@@ -5699,7 +5250,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F153"
+    "ref": "F153",
+    "hash": "3201339282828ef0"
    },
    "galeria": [],
    "editoriais": []
@@ -5708,8 +5260,12 @@
    "url_slug": "vela-trancoso-caju",
    "principal": {
     "w": 960,
-    "h": 1681,
+    "h": 982,
     "srcs": [
+     [
+      "assets/img/p/vela-trancoso-caju/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/vela-trancoso-caju/principal-480.webp",
       480
@@ -5721,7 +5277,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F155"
+    "ref": "F155",
+    "hash": "d0d0d449038286f0"
    },
    "galeria": [],
    "editoriais": []
@@ -5733,6 +5290,10 @@
     "h": 354,
     "srcs": [
      [
+      "assets/img/p/vela-charme-carioca/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-charme-carioca/principal-480.webp",
       480
      ],
@@ -5743,7 +5304,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-charme-carioca/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-charme-carioca/01.webp",
+    "hash": "c99130305436b6e2"
    },
    "galeria": [
     {
@@ -5782,6 +5344,10 @@
     "h": 527,
     "srcs": [
      [
+      "assets/img/p/vela-serenidade-amazonica/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-serenidade-amazonica/principal-480.webp",
       480
      ],
@@ -5792,7 +5358,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-serenidade-amazonica/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-serenidade-amazonica/01.webp",
+    "hash": "29c0b03828a8dad0"
    },
    "galeria": [
     {
@@ -5831,6 +5398,10 @@
     "h": 1948,
     "srcs": [
      [
+      "assets/img/p/marinho-aromatizador-spray-250ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/marinho-aromatizador-spray-250ml/principal-480.webp",
       480
      ],
@@ -5841,7 +5412,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F020"
+    "ref": "F020",
+    "hash": "ecdc31e0c1c2d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5853,6 +5425,10 @@
     "h": 2085,
     "srcs": [
      [
+      "assets/img/p/baunilha-limao-aromatizador-spray-250ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/baunilha-limao-aromatizador-spray-250ml/principal-480.webp",
       480
      ],
@@ -5863,7 +5439,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F022"
+    "ref": "F022",
+    "hash": "e0b031e0818292d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5875,6 +5452,10 @@
     "h": 2188,
     "srcs": [
      [
+      "assets/img/p/caramelo-laranja-aromatizador-spray-250-ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/caramelo-laranja-aromatizador-spray-250-ml/principal-480.webp",
       480
      ],
@@ -5885,7 +5466,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F016"
+    "ref": "F016",
+    "hash": "ccdc31f0d0c2d2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -5897,6 +5479,10 @@
     "h": 1381,
     "srcs": [
      [
+      "assets/img/p/marinho-difusor-de-ambientes-350ml-aromatizador-xl-varetas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/marinho-difusor-de-ambientes-350ml-aromatizador-xl-varetas/principal-480.webp",
       480
      ],
@@ -5907,7 +5493,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F056"
+    "ref": "F056",
+    "hash": "616096c2c4c4c08c"
    },
    "galeria": [],
    "editoriais": []
@@ -5919,6 +5506,10 @@
     "h": 1373,
     "srcs": [
      [
+      "assets/img/p/baunilha-limao-difusor-de-ambientes-350ml-aromatizador-xl-varetas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/baunilha-limao-difusor-de-ambientes-350ml-aromatizador-xl-varetas/principal-480.webp",
       480
      ],
@@ -5929,7 +5520,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F049"
+    "ref": "F049",
+    "hash": "6161b6f2ccccc4e4"
    },
    "galeria": [],
    "editoriais": []
@@ -5941,6 +5533,10 @@
     "h": 1367,
     "srcs": [
      [
+      "assets/img/p/cravo-e-canela-difusor-de-ambientes-350ml-aromatizador-xl-varetas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/cravo-e-canela-difusor-de-ambientes-350ml-aromatizador-xl-varetas/principal-480.webp",
       480
      ],
@@ -5951,7 +5547,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F053"
+    "ref": "F053",
+    "hash": "6160a6c6c4c4c4cc"
    },
    "galeria": [],
    "editoriais": []
@@ -5963,6 +5560,10 @@
     "h": 1356,
     "srcs": [
      [
+      "assets/img/p/caramelo-laranja-difusor-de-ambientes-350-ml-aromatizador-xl-varetas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/caramelo-laranja-difusor-de-ambientes-350-ml-aromatizador-xl-varetas/principal-480.webp",
       480
      ],
@@ -5973,284 +5574,60 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F047"
+    "ref": "F047",
+    "hash": "6160a6a284c6c0c0"
    },
    "galeria": [],
    "editoriais": []
   },
   "vela-palo-santo-200gr": {
    "url_slug": "vela-palo-santo-200gr",
-   "principal": {
-    "w": 960,
-    "h": 1896,
-    "srcs": [
-     [
-      "assets/img/p/vela-palo-santo-200gr/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-palo-santo-200gr/principal-960.webp",
-      960
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F134"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-palo-santo-200gr/cliente-F134-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "cliente",
-     "ref": "F134"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-7-chakras": {
    "url_slug": "vela-7-chakras",
-   "principal": {
-    "w": 960,
-    "h": 1691,
-    "srcs": [
-     [
-      "assets/img/p/vela-7-chakras/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-7-chakras/principal-960.webp",
-      960
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F132"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-7-chakras/cliente-F132-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "cliente",
-     "ref": "F132"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-jade-nefrita-200gr": {
    "url_slug": "vela-jade-nefrita-200gr",
-   "principal": {
-    "w": 772,
-    "h": 605,
-    "srcs": [
-     [
-      "assets/img/p/vela-jade-nefrita-200gr/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-jade-nefrita-200gr/principal-960.webp",
-      772
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-jade-nefrita-200gr/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 872,
-     "h": 872,
-     "srcs": [
-      [
-       "assets/img/p/vela-jade-nefrita-200gr/loja-1-1000.webp",
-       872
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-jade-nefrita-200gr/01.webp"
-    },
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-jade-nefrita-200gr/loja-2-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-jade-nefrita-200gr/02.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-jaspe-dalmata-200gr": {
    "url_slug": "vela-jaspe-dalmata-200gr",
-   "principal": {
-    "w": 737,
-    "h": 651,
-    "srcs": [
-     [
-      "assets/img/p/vela-jaspe-dalmata-200gr/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-jaspe-dalmata-200gr/principal-960.webp",
-      737
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-jaspe-dalmata-200gr/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 964,
-     "h": 964,
-     "srcs": [
-      [
-       "assets/img/p/vela-jaspe-dalmata-200gr/loja-1-1000.webp",
-       964
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-jaspe-dalmata-200gr/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-turmalina-200gr": {
    "url_slug": "vela-turmalina-200gr",
-   "principal": {
-    "w": 398,
-    "h": 556,
-    "srcs": [
-     [
-      "assets/img/p/vela-turmalina-200gr/principal-480.webp",
-      398
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-turmalina-200gr/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 965,
-     "h": 965,
-     "srcs": [
-      [
-       "assets/img/p/vela-turmalina-200gr/loja-1-1000.webp",
-       965
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-turmalina-200gr/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-quartzo-rosa": {
    "url_slug": "vela-quartzo-rosa",
-   "principal": {
-    "w": 809,
-    "h": 645,
-    "srcs": [
-     [
-      "assets/img/p/vela-quartzo-rosa/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-quartzo-rosa/principal-960.webp",
-      809
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-quartzo-rosa/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 901,
-     "h": 901,
-     "srcs": [
-      [
-       "assets/img/p/vela-quartzo-rosa/loja-1-1000.webp",
-       901
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-quartzo-rosa/01.webp"
-    },
-    {
-     "w": 882,
-     "h": 882,
-     "srcs": [
-      [
-       "assets/img/p/vela-quartzo-rosa/loja-2-1000.webp",
-       882
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-quartzo-rosa/02.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-olho-de-tigre-200gr": {
    "url_slug": "vela-olho-de-tigre-200gr",
-   "principal": {
-    "w": 960,
-    "h": 1757,
-    "srcs": [
-     [
-      "assets/img/p/vela-olho-de-tigre-200gr/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-olho-de-tigre-200gr/principal-960.webp",
-      960
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F133"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-olho-de-tigre-200gr/cliente-F133-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "cliente",
-     "ref": "F133"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-fosca-preta": {
    "url_slug": "vela-fosca-preta",
@@ -6259,13 +5636,18 @@
     "h": 457,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-preta/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-preta/principal-480.webp",
       358
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-fosca-preta/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-fosca-preta/01.webp",
+    "hash": "f0beb2b2b6a6e4f0"
    },
    "galeria": [
     {
@@ -6291,6 +5673,10 @@
     "h": 1093,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-cristal/principal-480.webp",
       480
      ],
@@ -6301,7 +5687,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F108"
+    "ref": "F108",
+    "hash": "050182b3b29282e0"
    },
    "galeria": [],
    "editoriais": []
@@ -6313,6 +5700,10 @@
     "h": 1114,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-cristal-caramelo-laranja-200-ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-cristal-caramelo-laranja-200-ml/principal-480.webp",
       480
      ],
@@ -6323,7 +5714,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F106"
+    "ref": "F106",
+    "hash": "3383a0b1b29282e0"
    },
    "galeria": [],
    "editoriais": []
@@ -6335,6 +5727,10 @@
     "h": 1178,
     "srcs": [
      [
+      "assets/img/p/sache-perfumado-castanha-do-para/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sache-perfumado-castanha-do-para/principal-480.webp",
       480
      ],
@@ -6345,7 +5741,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sache-perfumado-castanha-do-para/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sache-perfumado-castanha-do-para/01.webp",
+    "hash": "4848faf8f4b034f8"
    },
    "galeria": [
     {
@@ -6371,6 +5768,10 @@
     "h": 755,
     "srcs": [
      [
+      "assets/img/p/sache-perfumado-bamboo-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sache-perfumado-bamboo-limao/principal-480.webp",
       480
      ],
@@ -6381,7 +5782,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sache-perfumado-bamboo-limao/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sache-perfumado-bamboo-limao/01.webp",
+    "hash": "3061f8f0f4a011f1"
    },
    "galeria": [
     {
@@ -6407,6 +5809,10 @@
     "h": 755,
     "srcs": [
      [
+      "assets/img/p/sache-perfumado-caramelo-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sache-perfumado-caramelo-limao/principal-480.webp",
       480
      ],
@@ -6417,7 +5823,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sache-perfumado-caramelo-limao/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sache-perfumado-caramelo-limao/01.webp",
+    "hash": "3061f8f0f4a011f1"
    },
    "galeria": [
     {
@@ -6438,107 +5845,24 @@
   },
   "vela-ametista-200gr": {
    "url_slug": "vela-ametista-200gr",
-   "principal": {
-    "w": 960,
-    "h": 1869,
-    "srcs": [
-     [
-      "assets/img/p/vela-ametista-200gr/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-ametista-200gr/principal-960.webp",
-      960
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "cliente",
-    "ref": "F136"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/vela-ametista-200gr/cliente-F136-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "cliente",
-     "ref": "F136"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-quartzo-verde-200-gr": {
    "url_slug": "vela-quartzo-verde-200-gr",
-   "principal": {
-    "w": 430,
-    "h": 571,
-    "srcs": [
-     [
-      "assets/img/p/vela-quartzo-verde-200-gr/principal-480.webp",
-      430
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-quartzo-verde-200-gr/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 915,
-     "h": 915,
-     "srcs": [
-      [
-       "assets/img/p/vela-quartzo-verde-200-gr/loja-1-1000.webp",
-       915
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-quartzo-verde-200-gr/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-opala-rosa-200gr": {
    "url_slug": "vela-opala-rosa-200gr",
-   "principal": {
-    "w": 691,
-    "h": 684,
-    "srcs": [
-     [
-      "assets/img/p/vela-opala-rosa-200gr/principal-480.webp",
-      480
-     ],
-     [
-      "assets/img/p/vela-opala-rosa-200gr/principal-960.webp",
-      691
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-opala-rosa-200gr/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 922,
-     "h": 922,
-     "srcs": [
-      [
-       "assets/img/p/vela-opala-rosa-200gr/loja-1-1000.webp",
-       922
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/vela-opala-rosa-200gr/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "vela-fosca-preta-caramelo-limao-200ml": {
    "url_slug": "vela-fosca-preta-caramelo-limao-200ml",
@@ -6546,6 +5870,10 @@
     "w": 897,
     "h": 1091,
     "srcs": [
+     [
+      "assets/img/p/vela-fosca-preta-caramelo-limao-200ml/principal-320.webp",
+      320
+     ],
      [
       "assets/img/p/vela-fosca-preta-caramelo-limao-200ml/principal-480.webp",
       480
@@ -6557,7 +5885,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F112"
+    "ref": "F112",
+    "hash": "1780b090b4b490f0"
    },
    "galeria": [],
    "editoriais": []
@@ -6569,6 +5898,10 @@
     "h": 1125,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-cristal-caramelo-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-cristal-caramelo-limao/principal-480.webp",
       480
      ],
@@ -6579,7 +5912,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F105"
+    "ref": "F105",
+    "hash": "3301b1b3b3b282f0"
    },
    "galeria": [],
    "editoriais": [
@@ -6596,6 +5930,10 @@
     "h": 687,
     "srcs": [
      [
+      "assets/img/p/aromatizador-carro-pitanga-preta/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-carro-pitanga-preta/principal-480.webp",
       480
      ],
@@ -6606,7 +5944,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-pitanga-preta/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-carro-pitanga-preta/01.webp",
+    "hash": "5836b6b6b66e4e9e"
    },
    "galeria": [
     {
@@ -6632,6 +5971,10 @@
     "h": 2249,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-pimenta-rosa/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-pimenta-rosa/principal-480.webp",
       480
      ],
@@ -6642,7 +5985,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F065"
+    "ref": "F065",
+    "hash": "b271e8a480a0b292"
    },
    "galeria": [],
    "editoriais": []
@@ -6654,6 +5998,10 @@
     "h": 2158,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-baunilha-limao/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-baunilha-limao/principal-480.webp",
       480
      ],
@@ -6664,7 +6012,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F068"
+    "ref": "F068",
+    "hash": "b271c8b4b088b2b0"
    },
    "galeria": [],
    "editoriais": []
@@ -6676,6 +6025,10 @@
     "h": 1080,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-preta-caramelo-laranja-200ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-preta-caramelo-laranja-200ml/principal-480.webp",
       480
      ],
@@ -6686,7 +6039,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F111"
+    "ref": "F111",
+    "hash": "1380b0b0b4b4b4f0"
    },
    "galeria": [],
    "editoriais": []
@@ -6698,6 +6052,10 @@
     "h": 1086,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-preta-bamboo-capim-200ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-preta-bamboo-capim-200ml/principal-480.webp",
       480
      ],
@@ -6708,7 +6066,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F114"
+    "ref": "F114",
+    "hash": "1780b0b0b0b4b0f0"
    },
    "galeria": [],
    "editoriais": []
@@ -6720,6 +6079,10 @@
     "h": 1114,
     "srcs": [
      [
+      "assets/img/p/vela-fosca-cristal-bamboo-capim-200-ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/vela-fosca-cristal-bamboo-capim-200-ml/principal-480.webp",
       480
      ],
@@ -6730,7 +6093,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F109"
+    "ref": "F109",
+    "hash": "13809131b19282e0"
    },
    "galeria": [],
    "editoriais": []
@@ -6742,6 +6106,10 @@
     "h": 2056,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-caramelo-laranja/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-caramelo-laranja/principal-480.webp",
       480
      ],
@@ -6752,7 +6120,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F069"
+    "ref": "F069",
+    "hash": "b271c89080b0b0b0"
    },
    "galeria": [],
    "editoriais": []
@@ -6764,13 +6133,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-castanha-do-para/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-castanha-do-para/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-castanha-do-para/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-castanha-do-para/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -6796,13 +6170,18 @@
     "h": 1041,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-bamboo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-bamboo/principal-480.webp",
       385
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-bamboo/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-bamboo/01.webp",
+    "hash": "b271e0838e8ed0c5"
    },
    "galeria": [
     {
@@ -6828,13 +6207,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-good-vibes-sandalo-e-bamboo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-good-vibes-sandalo-e-bamboo/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-good-vibes-sandao-e-bamboo/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-good-vibes-sandao-e-bamboo/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -6860,13 +6244,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-capim-e-bamboo-harmonia-serenidade/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-capim-e-bamboo-harmonia-serenidade/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-capim-e-bamboo-harmonia-serenidade/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-capim-e-bamboo-harmonia-serenidade/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -6887,35 +6276,10 @@
   },
   "aromatizador-litro-anti-stress-lavanda-limao": {
    "url_slug": "aromatizador-1-litro-lavanda-limao",
-   "principal": {
-    "w": 408,
-    "h": 1083,
-    "srcs": [
-     [
-      "assets/img/p/aromatizador-1-litro-lavanda-limao/principal-480.webp",
-      408
-     ]
-    ],
-    "tipo": "recorte",
-    "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-anti-stress-lavanda-limao/01.webp"
-   },
-   "galeria": [
-    {
-     "w": 1000,
-     "h": 1000,
-     "srcs": [
-      [
-       "assets/img/p/aromatizador-1-litro-lavanda-limao/loja-1-1000.webp",
-       1000
-      ]
-     ],
-     "tipo": "cena",
-     "origem": "loja",
-     "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-anti-stress-lavanda-limao/01.webp"
-    }
-   ],
-   "editoriais": []
+   "principal": null,
+   "galeria": [],
+   "editoriais": [],
+   "sem_foto": true
   },
   "aromatizador-litro-cascas-e-folhas": {
    "url_slug": "aromatizador-litro-cascas-e-folhas",
@@ -6924,13 +6288,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-cascas-e-folhas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-cascas-e-folhas/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-cascas-e-folhas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-cascas-e-folhas/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -6956,6 +6325,10 @@
     "h": 2124,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-marinho/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-marinho/principal-480.webp",
       480
      ],
@@ -6966,7 +6339,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F072"
+    "ref": "F072",
+    "hash": "b261e091a1a0b2b8"
    },
    "galeria": [],
    "editoriais": []
@@ -6978,13 +6352,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-serenidade-amazonica/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-serenidade-amazonica/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-serenidade-amazonica/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-serenidade-amazonica/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -7010,13 +6389,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-madero-noites-paulistas/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-madero-noites-paulistas/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-madero-noites-paulistas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-madero-noites-paulistas/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -7042,13 +6426,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-encanto-nordestino-bulgaro-preto/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-encanto-nordestino-bulgaro-preto/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-encanto-nordestino-bulgaro-preto/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-encanto-nordestino-bulgaro-preto/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -7074,13 +6463,18 @@
     "h": 1083,
     "srcs": [
      [
+      "assets/img/p/aromatizador-litro-elegancia-gaucha/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-litro-elegancia-gaucha/principal-480.webp",
       408
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-elegancia-gaucha/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-litro-elegancia-gaucha/01.webp",
+    "hash": "127ae8d0d8d8f2f0"
    },
    "galeria": [
     {
@@ -7106,6 +6500,10 @@
     "h": 1859,
     "srcs": [
      [
+      "assets/img/p/aromatizador-60ml-alecrim/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-60ml-alecrim/principal-480.webp",
       480
      ],
@@ -7116,7 +6514,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F074"
+    "ref": "F074",
+    "hash": "3070e4cc9282a0f4"
    },
    "galeria": [],
    "editoriais": [
@@ -7130,13 +6529,18 @@
     "h": 1578,
     "srcs": [
      [
+      "assets/img/p/aromatizador-castanha-do-para-60ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-castanha-do-para-60ml/principal-480.webp",
       420
      ]
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F083"
+    "ref": "F083",
+    "hash": "61f0c88c9282b098"
    },
    "galeria": [],
    "editoriais": []
@@ -7148,13 +6552,18 @@
     "h": 1758,
     "srcs": [
      [
+      "assets/img/p/aromatizador-pitanga-preta-60ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-pitanga-preta-60ml/principal-480.webp",
       457
      ]
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F079"
+    "ref": "F079",
+    "hash": "61f0c8c8929292d2"
    },
    "galeria": [],
    "editoriais": []
@@ -7166,6 +6575,10 @@
     "h": 1886,
     "srcs": [
      [
+      "assets/img/p/aromatizador-bamboo-60ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-bamboo-60ml/principal-480.webp",
       480
      ],
@@ -7176,7 +6589,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F081"
+    "ref": "F081",
+    "hash": "61e0ccc89282b2f0"
    },
    "galeria": [],
    "editoriais": []
@@ -7188,13 +6602,18 @@
     "h": 1738,
     "srcs": [
      [
+      "assets/img/p/aromatizador-cascas-e-folhas-60ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-cascas-e-folhas-60ml/principal-480.webp",
       454
      ]
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F080"
+    "ref": "F080",
+    "hash": "61e0c88e9292b2d4"
    },
    "galeria": [],
    "editoriais": []
@@ -7206,13 +6625,18 @@
     "h": 1809,
     "srcs": [
      [
+      "assets/img/p/aromatizador-lavanda-60ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-lavanda-60ml/principal-480.webp",
       469
      ]
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F078"
+    "ref": "F078",
+    "hash": "61f0c0ca929292f0"
    },
    "galeria": [],
    "editoriais": []
@@ -7224,13 +6648,18 @@
     "h": 1123,
     "srcs": [
      [
+      "assets/img/p/difusor-de-varetas-350-ml-serenidade-de-kyoto/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-varetas-350-ml-serenidade-de-kyoto/principal-480.webp",
       372
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350-ml-serenidade-amazonica-aromatizador-xl-varetas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350-ml-serenidade-amazonica-aromatizador-xl-varetas/01.webp",
+    "hash": "50b8d871f096a296"
    },
    "galeria": [
     {
@@ -7256,13 +6685,18 @@
     "h": 885,
     "srcs": [
      [
+      "assets/img/p/caramelo-laranja-aromatizador-spray-250-ml-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/caramelo-laranja-aromatizador-spray-250-ml-cristal/principal-480.webp",
       336
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/caramelo-laranja-aromatizador-spray-250-ml-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/caramelo-laranja-aromatizador-spray-250-ml-cristal/01.webp",
+    "hash": "f87273d0849494c4"
    },
    "galeria": [
     {
@@ -7288,13 +6722,18 @@
     "h": 1149,
     "srcs": [
      [
+      "assets/img/p/caramelo-laranja-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/caramelo-laranja-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/principal-480.webp",
       392
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/caramelo-laranja-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/caramelo-laranja-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/01.webp",
+    "hash": "92c46d79f0e8dc96"
    },
    "galeria": [
     {
@@ -7320,13 +6759,18 @@
     "h": 1103,
     "srcs": [
      [
+      "assets/img/p/pitanga-preta-aromatizador-spray-250-ml-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/pitanga-preta-aromatizador-spray-250-ml-cristal/principal-480.webp",
       418
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/pitanga-preta-aromatizador-spray-250-ml-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/pitanga-preta-aromatizador-spray-250-ml-cristal/01.webp",
+    "hash": "fcf273bca6b0b0e4"
    },
    "galeria": [
     {
@@ -7352,13 +6796,18 @@
     "h": 1089,
     "srcs": [
      [
+      "assets/img/p/pitanga-preta-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/pitanga-preta-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/principal-480.webp",
       398
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/pitanga-preta-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/pitanga-preta-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/01.webp",
+    "hash": "964c6971e2c8948e"
    },
    "galeria": [
     {
@@ -7384,13 +6833,18 @@
     "h": 972,
     "srcs": [
      [
+      "assets/img/p/bulgaro-preto-aromatizador-spray-250-ml-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/bulgaro-preto-aromatizador-spray-250-ml-cristal/principal-480.webp",
       369
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bulgaro-preto-aromatizador-spray-250-ml-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/bulgaro-preto-aromatizador-spray-250-ml-cristal/01.webp",
+    "hash": "fc727994929094c4"
    },
    "galeria": [
     {
@@ -7416,13 +6870,18 @@
     "h": 1093,
     "srcs": [
      [
+      "assets/img/p/madero-aromatizador-spray-250-ml-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/madero-aromatizador-spray-250-ml-cristal/principal-480.webp",
       414
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/madero-aromatizador-spray-250-ml-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/madero-aromatizador-spray-250-ml-cristal/01.webp",
+    "hash": "f8727194a69094e4"
    },
    "galeria": [
     {
@@ -7448,6 +6907,10 @@
     "h": 1982,
     "srcs": [
      [
+      "assets/img/p/patchuly-aromatizador-spray-250-ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/patchuly-aromatizador-spray-250-ml/principal-480.webp",
       480
      ],
@@ -7458,7 +6921,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F028"
+    "ref": "F028",
+    "hash": "d89431e0c1c0c2d0"
    },
    "galeria": [],
    "editoriais": []
@@ -7470,13 +6934,18 @@
     "h": 1144,
     "srcs": [
      [
+      "assets/img/p/toronja-bergamota-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/toronja-bergamota-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/principal-480.webp",
       421
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/toronja-bergamota-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/toronja-bergamota-difusor-de-ambientes-350-ml-aromatizador-xl-varetas-cristal/01.webp",
+    "hash": "4a66a579b8e8d494"
    },
    "galeria": [
     {
@@ -7502,13 +6971,18 @@
     "h": 1053,
     "srcs": [
      [
+      "assets/img/p/toronja-bergamota-aromatizador-spray-250-ml-cristal/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/toronja-bergamota-aromatizador-spray-250-ml-cristal/principal-480.webp",
       404
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/toronja-bergamota-aromatizador-spray-250-ml-cristal/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/toronja-bergamota-aromatizador-spray-250-ml-cristal/01.webp",
+    "hash": "f4f673b486f494e4"
    },
    "galeria": [
     {
@@ -7534,13 +7008,18 @@
     "h": 627,
     "srcs": [
      [
+      "assets/img/p/difusor-de-varetas-350-ml-notas-de-paris/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-varetas-350-ml-notas-de-paris/principal-480.webp",
       340
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350-ml-aromatizador-xl-varetas-noites-paulistas/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/difusor-de-ambientes-350-ml-aromatizador-xl-varetas-noites-paulistas/01.webp",
+    "hash": "6160e02a2323a2a2"
    },
    "galeria": [
     {
@@ -7566,6 +7045,10 @@
     "h": 1391,
     "srcs": [
      [
+      "assets/img/p/difusor-de-ambientes-350-mlaromatizador-xl-varetas-patchuly/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/difusor-de-ambientes-350-mlaromatizador-xl-varetas-patchuly/principal-480.webp",
       480
      ],
@@ -7576,7 +7059,8 @@
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F052"
+    "ref": "F052",
+    "hash": "616196c0c4c4c4c4"
    },
    "galeria": [],
    "editoriais": []
@@ -7588,13 +7072,14 @@
     "h": 748,
     "srcs": [
      [
-      "assets/img/p/aromatizador-250ml-cha-branco-e-bamboo/principal-480.webp",
+      "assets/img/p/aromatizador-250ml-cha-branco-e-bamboo/principal-320.webp",
       297
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-250ml-cha-branco-e-bamboo-w0go5/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-250ml-cha-branco-e-bamboo-w0go5/01.webp",
+    "hash": "c49879d89e9e9edc"
    },
    "galeria": [
     {
@@ -7620,13 +7105,18 @@
     "h": 1584,
     "srcs": [
      [
+      "assets/img/p/aromatizador-60ml-pimenta-rosa/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-60ml-pimenta-rosa/principal-480.webp",
       418
      ]
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F089"
+    "ref": "F089",
+    "hash": "61e0c0ac929292f6"
    },
    "galeria": [],
    "editoriais": []
@@ -7638,13 +7128,14 @@
     "h": 748,
     "srcs": [
      [
-      "assets/img/p/aromatizador-60-ml/principal-480.webp",
+      "assets/img/p/aromatizador-60-ml/principal-320.webp",
       208
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-60-ml-y74kf/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-60-ml-y74kf/01.webp",
+    "hash": "5bd9d88e9e969ed8"
    },
    "galeria": [
     {
@@ -7670,13 +7161,18 @@
     "h": 1844,
     "srcs": [
      [
+      "assets/img/p/aromatizador-60ml-cha-branco-e-bamboo/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/aromatizador-60ml-cha-branco-e-bamboo/principal-480.webp",
       472
      ]
     ],
     "tipo": "recorte",
     "origem": "cliente",
-    "ref": "F077"
+    "ref": "F077",
+    "hash": "61f0c88c9292b2d6"
    },
    "galeria": [],
    "editoriais": []
@@ -7688,6 +7184,10 @@
     "h": 491,
     "srcs": [
      [
+      "assets/img/p/sabonete-aroeira/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/sabonete-aroeira/principal-480.webp",
       480
      ],
@@ -7698,7 +7198,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-laranja-copia-icnkf/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/sabonete-laranja-copia-icnkf/01.webp",
+    "hash": "9ede9c8cccccc0c0"
    },
    "galeria": [
     {
@@ -7724,13 +7225,14 @@
     "h": 750,
     "srcs": [
      [
-      "assets/img/p/essencia-10ml-lavanda/principal-480.webp",
+      "assets/img/p/essencia-10ml-lavanda/principal-320.webp",
       313
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-10ml-lavanda-1wive/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-10ml-lavanda-1wive/01.webp",
+    "hash": "c0c0d2d2929082c0"
    },
    "galeria": [
     {
@@ -7782,13 +7284,14 @@
     "h": 749,
     "srcs": [
      [
-      "assets/img/p/essencia-bamboo-10-ml/principal-480.webp",
+      "assets/img/p/essencia-bamboo-10-ml/principal-320.webp",
       319
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-bamboo-10-ml-1wb3t/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-bamboo-10-ml-1wb3t/01.webp",
+    "hash": "e0c0dad2909082f0"
    },
    "galeria": [
     {
@@ -7827,13 +7330,14 @@
     "h": 748,
     "srcs": [
      [
-      "assets/img/p/essencia-castanha-do-para/principal-480.webp",
+      "assets/img/p/essencia-castanha-do-para/principal-320.webp",
       310
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-castanha-do-para-1urq2/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-castanha-do-para-1urq2/01.webp",
+    "hash": "c0c8d2d2928282c0"
    },
    "galeria": [
     {
@@ -7885,13 +7389,14 @@
     "h": 748,
     "srcs": [
      [
-      "assets/img/p/essencia-caramelo-e-limao-10ml/principal-480.webp",
+      "assets/img/p/essencia-caramelo-e-limao-10ml/principal-320.webp",
       318
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-caramelo-e-limao-10ml-1y5gr/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-caramelo-e-limao-10ml-1y5gr/01.webp",
+    "hash": "e0c8d0f0808080e0"
    },
    "galeria": [
     {
@@ -7917,13 +7422,14 @@
     "h": 750,
     "srcs": [
      [
-      "assets/img/p/essencia-patchouli-10ml/principal-480.webp",
+      "assets/img/p/essencia-patchouli-10ml/principal-320.webp",
       310
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-patchouli-10ml-7vt0r/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-patchouli-10ml-7vt0r/01.webp",
+    "hash": "c0c0d0d091c080d0"
    },
    "galeria": [
     {
@@ -7962,13 +7468,14 @@
     "h": 751,
     "srcs": [
      [
-      "assets/img/p/essencia-pitanga-preta-10ml-rkshm/principal-480.webp",
+      "assets/img/p/essencia-pitanga-preta-10ml-rkshm/principal-320.webp",
       314
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-pitanga-preta-10ml-rkshm/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-pitanga-preta-10ml-rkshm/01.webp",
+    "hash": "c0c4d2d2919090c0"
    },
    "galeria": [
     {
@@ -8007,13 +7514,14 @@
     "h": 749,
     "srcs": [
      [
-      "assets/img/p/essencia-sandalo-10ml/principal-480.webp",
+      "assets/img/p/essencia-sandalo-10ml/principal-320.webp",
       302
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-sandalo-10ml-8qzwy/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-sandalo-10ml-8qzwy/01.webp",
+    "hash": "d0c0d2f2f0f080f0"
    },
    "galeria": [
     {
@@ -8039,6 +7547,10 @@
     "h": 427,
     "srcs": [
      [
+      "assets/img/p/essencia-capim-10-ml/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/essencia-capim-10-ml/principal-480.webp",
       480
      ],
@@ -8049,7 +7561,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-capim-10-ml-nleb2/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/essencia-capim-10-ml-nleb2/01.webp",
+    "hash": "9292b6d2c6c6b233"
    },
    "galeria": [
     {
@@ -8075,13 +7588,14 @@
     "h": 607,
     "srcs": [
      [
-      "assets/img/p/aromatizador-cha-branco-e-bamboo-cristal-250-ml/principal-480.webp",
+      "assets/img/p/aromatizador-cha-branco-e-bamboo-cristal-250-ml/principal-320.webp",
       223
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-cha-branco-e-bamboo-cristal-250-ml-d20mp/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/aromatizador-cha-branco-e-bamboo-cristal-250-ml-d20mp/01.webp",
+    "hash": "f1f1f1b2b2b292a2"
    },
    "galeria": [
     {
@@ -8107,13 +7621,18 @@
     "h": 891,
     "srcs": [
      [
+      "assets/img/p/lip-balm-natural/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/lip-balm-natural/principal-480.webp",
       410
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-balm-natural-20oce/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-balm-natural-20oce/01.webp",
+    "hash": "898b8ccccccbcccc"
    },
    "galeria": [
     {
@@ -8139,6 +7658,10 @@
     "h": 930,
     "srcs": [
      [
+      "assets/img/p/batom-liquido-rubi-04/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/batom-liquido-rubi-04/principal-480.webp",
       480
      ],
@@ -8149,7 +7672,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/batom-liquido-rubi-04-19rax/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/batom-liquido-rubi-04-19rax/01.webp",
+    "hash": "8f77b69697b2b2b3"
    },
    "galeria": [
     {
@@ -8188,13 +7712,14 @@
     "h": 1022,
     "srcs": [
      [
-      "assets/img/p/oleo-urucum/principal-480.webp",
+      "assets/img/p/oleo-urucum/principal-320.webp",
       290
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-urucum-yft7m/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/oleo-urucum-yft7m/01.webp",
+    "hash": "60c3c2a6ae9e9cb0"
    },
    "galeria": [
     {
@@ -8220,13 +7745,18 @@
     "h": 1003,
     "srcs": [
      [
+      "assets/img/p/mascara-para-cilios/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/mascara-para-cilios/principal-480.webp",
       396
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-para-cilios-by2um/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/mascara-para-cilios-by2um/01.webp",
+    "hash": "cb8a9a9adacac8cc"
    },
    "galeria": [
     {
@@ -8265,6 +7795,10 @@
     "h": 1144,
     "srcs": [
      [
+      "assets/img/p/lip-gloss-poente-09/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/lip-gloss-poente-09/principal-480.webp",
       480
      ],
@@ -8275,7 +7809,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-gloss-poente-09-1dj84/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-gloss-poente-09-1dj84/01.webp",
+    "hash": "1e1e9a5abe9a4e24"
    },
    "galeria": [
     {
@@ -8301,13 +7836,18 @@
     "h": 1003,
     "srcs": [
      [
+      "assets/img/p/lip-gloss-areia-01/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/lip-gloss-areia-01/principal-480.webp",
       395
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-gloss-areia-01-19fjf/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-gloss-areia-01-19fjf/01.webp",
+    "hash": "aeeceeceeecececc"
    },
    "galeria": [
     {
@@ -8333,13 +7873,18 @@
     "h": 960,
     "srcs": [
      [
+      "assets/img/p/batom-aurora-02/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/batom-aurora-02/principal-480.webp",
       395
      ]
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/batom-aurora-02-19f7w/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/batom-aurora-02-19f7w/01.webp",
+    "hash": "aebeeeeeeececece"
    },
    "galeria": [
     {
@@ -8365,6 +7910,10 @@
     "h": 976,
     "srcs": [
      [
+      "assets/img/p/lip-gloss-aura-03/principal-320.webp",
+      320
+     ],
+     [
       "assets/img/p/lip-gloss-aura-03/principal-480.webp",
       480
      ],
@@ -8375,7 +7924,8 @@
     ],
     "tipo": "recorte",
     "origem": "loja",
-    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-gloss-aura-03-qzfks/01.webp"
+    "ref": "originais/2026-09-29-loja-nuvemshop/imagens/lip-gloss-aura-03-qzfks/01.webp",
+    "hash": "5e1e5e5a5a5a5a1e"
    },
    "galeria": [
     {
@@ -8425,6 +7975,21 @@
     ]
    ],
    "fonte": "trabalho/imagens/editorial/hero-caramelo-limao-vertical.png"
+  },
+  "destino-arraial": {
+   "w": 1120,
+   "h": 1400,
+   "srcs": [
+    [
+     "assets/img/ed/destino-arraial-700.webp",
+     700
+    ],
+    [
+     "assets/img/ed/destino-arraial-1200.webp",
+     1120
+    ]
+   ],
+   "fonte": "trabalho/imagens/editorial/portas-destinos/destino-arraial.png"
   },
   "destino-caraiva": {
    "w": 1120,
@@ -8664,24 +8229,9 @@
      1400
     ]
    ],
-   "fonte": "originais/2026-09-29-fotos-cliente/IMG_2494.jpeg"
-  },
-  "destino-arraial": {
-   "w": 1120,
-   "h": 1400,
-   "srcs": [
-    [
-     "assets/img/ed/destino-arraial-700.webp",
-     700
-    ],
-    [
-     "assets/img/ed/destino-arraial-1200.webp",
-     1120
-    ]
-   ],
-   "fonte": "trabalho/imagens/editorial/portas-destinos/destino-arraial.png"
+   "fonte": "originais/2026-09-29-fotos-cliente/FullSizeRender (156).jpeg"
   }
  },
  "og": "assets/img/og.jpg",
- "gerado_em": "2026-09-29T09:56:10"
+ "gerado_em": "2026-09-29T12:02:35"
 }

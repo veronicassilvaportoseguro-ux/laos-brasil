@@ -395,8 +395,21 @@
   background: #fff;
   background: color-mix(in srgb, var(--lc-papel) 30%, white);
 }
-.lc-msg-erro .lc-bolha {
+.lc-msg-erro .lc-bolha,
+.lc-msg-alerta .lc-bolha {
   border-color: var(--lc-falesia);
+}
+/* Aviso de verificação: acima do texto da resposta. */
+.lc-alerta {
+  margin: 0;
+  padding: 8px 12px;
+  border-left: 3px solid var(--lc-falesia);
+  border-radius: 2px;
+  background: #f7e7df;
+  background: color-mix(in srgb, var(--lc-falesia) 12%, var(--lc-papel));
+  color: var(--lc-tinta);
+  font-size: 13px;
+  font-weight: 500;
 }
 .lc-extras {
   display: grid;

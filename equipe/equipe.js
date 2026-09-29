@@ -1,14 +1,41 @@
 // IA da equipe LAOS — JS puro. Código de acesso só no sessionStorage (some ao fechar a aba).
+// Segurança (revisão de 2026-09-29, A1): o endpoint vem SÓ de config.js (arquivo confiável, gerado na publicação);
+// nada da URL da página muda para onde o código e os textos vão. DOM montado só com nós de texto e sem código inline (CSP estrita).
 (function () {
   'use strict';
   var cfg = window.LAOS_EQUIPE || {};
-  var params = new URLSearchParams(location.search);
-  var ENDPOINT = (params.get('endpoint') || cfg.endpoint || '').replace(/\/+$/, '');
   var CHAVE_CODIGO = 'laos-equipe:codigo';
   var $ = function (id) { return document.getElementById(id); };
 
-  var estado = { codigo: null, historico: [], texto: '', controle: null };
+  // Endpoint confiável: https; http só para 127.0.0.1/localhost (desenvolvimento local).
+  function endpointConfiavel(u) {
+    try {
+      var url = new URL(String(u || ''));
+      var local = url.protocol === 'http:' && (url.hostname === '127.0.0.1' || url.hostname === 'localhost');
+      if ((url.protocol !== 'https:' && !local) || /SUBDOMINIO/i.test(url.hostname) || url.username || url.password) return null;
+      return url.origin + url.pathname.replace(/\/+$/, '');
+    } catch (e) {
+      return null;
+    }
+  }
+  var ENDPOINT = endpointConfiavel(cfg.endpoint);
+
+  // geracao: cada "Sair" invalida gerações em voo (nada que chegue depois é desenhado).
+  var estado = { codigo: null, historico: [], texto: '', controle: null, geracao: 0 };
   try { estado.codigo = sessionStorage.getItem(CHAVE_CODIGO); } catch (e) { /* sem sessão */ }
+
+  var CAMPOS = ['produtos', 'mensagem-cliente', 'cliente-b2b', 'quantidades', 'ocasiao', 'observacoes', 'ajuste'];
+
+  function limparSaida(textoVazio) {
+    var saida = $('saida');
+    saida.textContent = '';
+    var p = document.createElement('p');
+    p.className = 'vazio';
+    p.textContent = textoVazio || 'O texto gerado aparece aqui.';
+    saida.appendChild(p);
+    $('pendencias').hidden = true;
+    $('pendencias').textContent = '';
+  }
 
   // ---------- acesso ----------
   function mostrarTrabalho(sim) {
@@ -18,7 +45,8 @@
     if (sim) {
       carregarProdutos();
       atualizarCampos();
-      document.querySelector('input[name="tarefa"]:checked').focus();
+      var marcado = document.querySelector('input[name="tarefa"]:checked');
+      if (marcado) marcado.focus();
     } else {
       $('codigo').focus();
     }
@@ -36,7 +64,7 @@
     e.preventDefault();
     var codigo = $('codigo').value.trim();
     $('acesso-erro').textContent = '';
-    if (!ENDPOINT || /SUBDOMINIO/.test(ENDPOINT)) { $('acesso-erro').textContent = 'Endpoint do Worker não configurado (config.js).'; return; }
+    if (!ENDPOINT) { $('acesso-erro').textContent = 'Endpoint do Worker não configurado ou inválido (config.js).'; return; }
     try {
       var r = await validarCodigo(codigo);
       if (!r.ok) { $('acesso-erro').textContent = r.mensagem; return; }
@@ -49,11 +77,23 @@
     }
   });
 
-  $('sair').addEventListener('click', function () {
+  // Sair: aborta a geração em curso e apaga código, resultado, histórico e campos (equipamento compartilhado).
+  function sair() {
+    estado.geracao++;
+    if (estado.controle) estado.controle.abort();
+    estado.controle = null;
     estado.codigo = null;
+    estado.historico = [];
+    estado.texto = '';
     try { sessionStorage.removeItem(CHAVE_CODIGO); } catch (e) { /* ok */ }
+    CAMPOS.forEach(function (id) { $(id).value = ''; });
+    limparSaida();
+    $('status').textContent = '';
+    $('form-ajuste').hidden = true;
+    ocupado(false);
     mostrarTrabalho(false);
-  });
+  }
+  $('sair').addEventListener('click', sair);
 
   // ---------- produtos (sugestões) ----------
   var produtosCarregados = false;
@@ -63,9 +103,9 @@
     fetch(cfg.produtos).then(function (r) { return r.ok ? r.json() : null; }).then(function (j) {
       if (!j || !j.produtos) return;
       var lista = $('lista-produtos');
-      Object.keys(j.produtos).sort(function (a, b) { return j.produtos[a].nome.localeCompare(j.produtos[b].nome, 'pt'); }).forEach(function (slug) {
+      Object.keys(j.produtos).sort(function (a, b) { return String(j.produtos[a].nome).localeCompare(String(j.produtos[b].nome), 'pt'); }).forEach(function (slug) {
         var o = document.createElement('option');
-        o.value = j.produtos[slug].nome;
+        o.value = String(j.produtos[slug].nome || slug);
         o.label = slug;
         lista.appendChild(o);
       });
@@ -74,17 +114,16 @@
 
   // ---------- campos por tarefa ----------
   function tarefaAtual() {
-    return document.querySelector('input[name="tarefa"]:checked').value;
+    var marcado = document.querySelector('input[name="tarefa"]:checked');
+    return marcado ? marcado.value : 'livre';
   }
   function atualizarCampos() {
     var t = tarefaAtual();
     document.querySelectorAll('.campo[data-para]').forEach(function (c) {
       c.hidden = c.getAttribute('data-para').split(' ').indexOf(t) < 0;
     });
-    var rotulo = document.querySelector('label[for="observacoes"]');
-    if (!rotulo.dataset.original) rotulo.dataset.original = rotulo.innerHTML;
-    if (t === 'livre') rotulo.textContent = 'Pedido';
-    else rotulo.innerHTML = rotulo.dataset.original;
+    $('rotulo-observacoes').hidden = t === 'livre';
+    $('rotulo-pedido').hidden = t !== 'livre';
   }
   document.querySelectorAll('input[name="tarefa"]').forEach(function (r) { r.addEventListener('change', atualizarCampos); });
 
@@ -93,9 +132,21 @@
     return String(s).replace(/<\s*\/?\s*(mensagem_do_cliente|mensagem_do_visitante|system|sistema)\b[^>]*>/gi, '[marcação removida]');
   }
 
-  function montarPedido() {
+  // Dados pessoais (e-mail, telefone, CPF, cartão) são mascarados antes de sair do navegador (mascarar.js).
+  // Sem o mascarador carregado, nada é enviado.
+  function mascararTexto(texto, conta) {
+    var r = window.LaosMascarar.mascarar(texto);
+    conta.n += r.contagem;
+    return r.texto;
+  }
+
+  function montarPedido(conta) {
     var t = tarefaAtual();
-    var v = function (id) { return $(id).value.trim(); };
+    var lidos = {};
+    var v = function (id) {
+      if (!(id in lidos)) lidos[id] = mascararTexto($(id).value.trim(), conta); // cada campo mascarado e contado uma vez
+      return lidos[id];
+    };
     var linhas = ['TAREFA: ' + t];
     if (v('produtos')) linhas.push('Produtos: ' + v('produtos'));
     if (t === 'resposta_cliente') {
@@ -179,11 +230,14 @@
     $('saida').setAttribute('aria-busy', sim ? 'true' : 'false');
   }
 
-  async function gerar(mensagens) {
+  async function gerar(mensagens, mascarados) {
+    if (!estado.codigo || !ENDPOINT) return;
+    var minha = ++estado.geracao;
+    var vigente = function () { return minha === estado.geracao; };
     estado.texto = '';
     ocupado(true);
-    $('status').textContent = 'Gerando…';
-    $('saida').innerHTML = '<p class="vazio">Gerando…</p>';
+    $('status').textContent = 'Gerando…' + (mascarados ? ' (' + mascarados + (mascarados === 1 ? ' dado pessoal mascarado' : ' dados pessoais mascarados') + ' antes do envio)' : '');
+    limparSaida('Gerando…');
     var controle = new AbortController();
     estado.controle = controle;
     var fim = null;
@@ -196,11 +250,12 @@
         signal: controle.signal,
         credentials: 'omit',
       });
+      if (!vigente()) return;
       if (r.status === 401 || r.status === 403) {
         var j401 = await r.json().catch(function () { return null; });
-        erro = (j401 && j401.erro && j401.erro.mensagem) || 'Código inválido.';
-        $('sair').click();
-        $('acesso-erro').textContent = erro + ' Entre de novo.';
+        var aviso = (j401 && j401.erro && j401.erro.mensagem) || 'Código inválido.';
+        sair();
+        $('acesso-erro').textContent = aviso + ' Entre de novo.';
         return;
       }
       if (!r.ok || (r.headers.get('Content-Type') || '').indexOf('event-stream') < 0) {
@@ -208,6 +263,7 @@
         erro = (j && j.erro && j.erro.mensagem) || 'A IA não respondeu (HTTP ' + r.status + ').';
       } else {
         await lerSse(r.body, function (ev) {
+          if (!vigente()) return;
           if (ev.tipo === 'delta') { estado.texto += ev.texto; desenhar(estado.texto); }
           else if (ev.tipo === 'fim') fim = ev;
           else if (ev.tipo === 'erro') erro = ev.mensagem;
@@ -217,13 +273,14 @@
     } catch (e) {
       erro = controle.signal.aborted ? 'Parado.' : 'Sem conexão com a IA.';
     } finally {
-      estado.controle = null;
+      if (estado.controle === controle) estado.controle = null;
     }
+    if (!vigente()) return; // "Sair" no meio: nada é desenhado nem guardado
     if (fim) {
       estado.historico = mensagens.concat([{ role: 'assistant', content: estado.texto, assinatura: fim.assinatura }]);
       $('status').textContent = 'Pronto' + (fim.motivo === 'length' ? ' (texto cortado pelo limite; peça "continue").' : '.');
     } else {
-      if (!estado.texto) $('saida').innerHTML = '';
+      if (!estado.texto) $('saida').textContent = '';
       var p = document.createElement('p');
       p.className = 'erro';
       p.textContent = erro;
@@ -235,10 +292,12 @@
 
   $('form-tarefa').addEventListener('submit', function (e) {
     e.preventDefault();
-    var pedido = montarPedido();
+    if (!window.LaosMascarar) { $('status').textContent = 'Proteção de dados não carregou (mascarar.js). Recarregue a página.'; return; }
+    var conta = { n: 0 };
+    var pedido = montarPedido(conta);
     if (pedido.split('\n').length < 2) { $('status').textContent = 'Preencha ao menos um campo.'; return; }
     $('form-ajuste').hidden = true;
-    gerar([{ role: 'user', content: pedido }]);
+    gerar([{ role: 'user', content: pedido }], conta.n);
   });
   $('parar').addEventListener('click', function () { if (estado.controle) estado.controle.abort(); });
   $('refinar').addEventListener('click', function () {
@@ -247,10 +306,12 @@
   });
   $('form-ajuste').addEventListener('submit', function (e) {
     e.preventDefault();
-    var a = $('ajuste').value.trim();
+    if (!window.LaosMascarar) { $('status').textContent = 'Proteção de dados não carregou (mascarar.js). Recarregue a página.'; return; }
+    var contaAjuste = { n: 0 };
+    var a = mascararTexto($('ajuste').value.trim(), contaAjuste);
     if (!a || !estado.historico.length) return;
     $('ajuste').value = '';
-    gerar(estado.historico.concat([{ role: 'user', content: 'Ajuste o texto anterior: ' + a }]).slice(-12));
+    gerar(estado.historico.concat([{ role: 'user', content: 'Ajuste o texto anterior: ' + a }]).slice(-12), contaAjuste.n);
   });
 
   mostrarTrabalho(!!estado.codigo);

@@ -15,6 +15,8 @@
  *   data-produto      slug do produto da página (ou <meta name="laos:produto" content="slug">).
  *   data-idioma       pt | es | en (padrão: idioma do navegador).
  *   data-rotulo       texto do botão flutuante.
+ *   data-origens-cartao  outras origens https aceitas para link/foto dos cartões, separadas por vírgula
+ *                     (padrão: só a própria origem do site; qualquer outra URL do índice é descartada).
  * API: window.LaosChat.abrir('ia' | 'equipe' | 'inicio'), window.LaosChat.fechar().
  * Qualquer elemento com [data-laos-chat-abrir] abre o painel (valor opcional: ia | inicio).
  */
@@ -34,7 +36,23 @@
     css: d.css === 'false' ? null : resolver(d.css || 'laos-chat.css', script.src || document.baseURI),
     privacidade: d.privacidade ? resolver(d.privacidade, document.baseURI) : null,
     produto: d.produto || (document.querySelector('meta[name="laos:produto"]') || {}).content || null,
+    origensCartao: String(d.origensCartao || '').split(',').map(function (o) {
+      try { var u = new URL(o.trim()); return u.protocol === 'https:' ? u.origin : null; } catch (e) { return null; }
+    }).filter(Boolean),
   };
+  // Link e foto de cartão: só http(s) da própria origem (ou das origens https declaradas pelo site). Nada de
+  // javascript:, data: ou destino externo vindo do índice (revisão de 2026-09-29, B1).
+  function urlPermitida(u, base) {
+    if (typeof u !== 'string' || !u.trim()) return null;
+    try {
+      var url = new URL(u.trim(), base);
+      if (url.protocol !== 'https:' && url.protocol !== 'http:') return null;
+      if (url.origin !== location.origin && CFG.origensCartao.indexOf(url.origin) < 0) return null;
+      return url.href;
+    } catch (e) {
+      return null;
+    }
+  }
   var CHAVE_SESSAO = 'laos-chat:v1';
   var MAX_HISTORICO = 12;
   var MAX_CHARS = 700;
@@ -47,7 +65,7 @@
       lojas: "Duas lojas em Arraial d'Ajuda: Praça da Igreja e Rua do Mucugê.",
       avisoTitulo: 'Antes de começar',
       aviso: 'Sou a assistente virtual da LAOS, uma inteligência artificial. Respondo com o catálogo da loja e posso errar: pedido, frete e estoque de hoje são confirmados pela equipe no WhatsApp.',
-      privacidade: 'Não envie dados de cartão, senhas, documentos ou informações de saúde. A conversa é processada por um provedor de IA (DeepSeek), que a processa em servidores na China. A LAOS não guarda o texto; ele fica só nesta aba.',
+      privacidade: 'Não envie dados de cartão, senhas, documentos ou informações de saúde. A conversa é processada pela DeepSeek, um provedor de IA, em servidores na China. A LAOS não guarda o texto; ele fica só nesta aba.',
       politica: 'Política de privacidade', comecar: 'Começar conversa',
       placeholder: 'Pergunte sobre aromas e preços…', rotuloCampo: 'Sua mensagem para a assistente',
       enviar: 'Enviar', parar: 'Parar resposta', whats: 'Continuar no WhatsApp', nova: 'Nova conversa', voltar: 'Voltar', fechar: 'Fechar',
@@ -69,7 +87,7 @@
       lojas: "Dos tiendas en Arraial d'Ajuda: Praça da Igreja y Rua do Mucugê.",
       avisoTitulo: 'Antes de empezar',
       aviso: 'Soy la asistente virtual de LAOS, una inteligencia artificial. Respondo con el catálogo de la tienda y puedo equivocarme: pedidos, envíos y stock de hoy los confirma el equipo por WhatsApp.',
-      privacidade: 'No envíes datos de tarjeta, contraseñas, documentos ni información de salud. La conversación la procesa un proveedor de IA (DeepSeek), que la procesa en servidores en China. LAOS no guarda el texto; queda solo en esta pestaña.',
+      privacidade: 'No envíes datos de tarjeta, contraseñas, documentos ni información de salud. La conversación la procesa DeepSeek, un proveedor de IA, en servidores en China. LAOS no guarda el texto; queda solo en esta pestaña.',
       politica: 'Política de privacidad', comecar: 'Empezar conversación',
       placeholder: 'Pregunta por aromas y precios…', rotuloCampo: 'Tu mensaje para la asistente',
       enviar: 'Enviar', parar: 'Detener respuesta', whats: 'Seguir por WhatsApp', nova: 'Nueva conversación', voltar: 'Volver', fechar: 'Cerrar',
@@ -91,7 +109,7 @@
       lojas: "Two stores in Arraial d'Ajuda: Praça da Igreja and Rua do Mucugê.",
       avisoTitulo: 'Before you start',
       aviso: "I'm the LAOS virtual assistant, an artificial intelligence. I answer from the store catalog and can make mistakes: orders, shipping and today's stock are confirmed by the team on WhatsApp.",
-      privacidade: "Don't share card details, passwords, ID numbers or health information. The chat is processed by an AI provider (DeepSeek), which processes it on servers in China. LAOS doesn't store the text; it stays in this tab only.",
+      privacidade: "Don't share card details, passwords, ID numbers or health information. The chat is processed by DeepSeek, an AI provider, on servers in China. LAOS doesn't store the text; it stays in this tab only.",
       politica: 'Privacy policy', comecar: 'Start chatting',
       placeholder: 'Ask about scents and prices…', rotuloCampo: 'Your message to the assistant',
       enviar: 'Send', parar: 'Stop answer', whats: 'Continue on WhatsApp', nova: 'New chat', voltar: 'Back', fechar: 'Close',
@@ -117,7 +135,15 @@
     var salvo = JSON.parse(sessionStorage.getItem(CHAVE_SESSAO) || 'null');
     if (salvo && Array.isArray(salvo.historico)) {
       estado.aceito = !!salvo.aceito;
-      estado.historico = salvo.historico.filter(function (m) { return m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string'; }).slice(-40);
+      estado.historico = salvo.historico.filter(function (m) { return m && (m.role === 'user' || m.role === 'assistant') && typeof m.content === 'string'; }).slice(-40).map(function (m) {
+        var o = { role: m.role, content: m.content };
+        if (m.role === 'assistant') {
+          o.assinatura = typeof m.assinatura === 'string' ? m.assinatura : null;
+          // Estado da verificação sobrevive ao recarregar: o aviso volta junto com a resposta.
+          if (m.verificacao && m.verificacao.ok === false) o.verificacao = { ok: false, problemas: (Array.isArray(m.verificacao.problemas) ? m.verificacao.problemas : []).map(String).slice(0, 10) };
+        }
+        return o;
+      });
     }
   } catch (e) { /* sessão indisponível: segue sem memória */ }
   function salvar() {
@@ -182,8 +208,8 @@
           else if (j && j.produtos && typeof j.produtos === 'object') mapa = j.produtos;
           Object.keys(mapa).forEach(function (s) {
             var p = mapa[s];
-            p.url = p.url ? resolver(p.url, CFG.produtos) : null;
-            p.imagem = p.imagem ? resolver(p.imagem, CFG.produtos) : null;
+            p.url = urlPermitida(p.url, CFG.produtos);
+            p.imagem = urlPermitida(p.imagem, CFG.produtos);
           });
           indice = mapa;
           return mapa;
@@ -435,9 +461,17 @@
   function adicionarAssistente() {
     var bolha = el('div', { classe: 'lc-bolha', 'aria-busy': 'true' }, [el('span', { classe: 'lc-digitando', 'aria-hidden': 'true' }, [el('i'), el('i'), el('i')])]);
     var extras = el('div', { classe: 'lc-extras' });
-    var item = el('div', { classe: 'lc-msg lc-msg-assistente' }, [el('p', { classe: 'lc-rotulo', texto: T.assistente }), bolha, extras]);
+    // Aviso de verificação fica ACIMA do texto: quem lê a resposta lê o aviso antes.
+    var alerta = el('p', { classe: 'lc-alerta', role: 'note', hidden: true });
+    var item = el('div', { classe: 'lc-msg lc-msg-assistente' }, [el('p', { classe: 'lc-rotulo', texto: T.assistente }), alerta, bolha, extras]);
     ui.mensagens.appendChild(item);
-    return { item: item, bolha: bolha, extras: extras };
+    return { item: item, bolha: bolha, extras: extras, alerta: alerta };
+  }
+
+  function marcarReprovada(alvo) {
+    alvo.alerta.textContent = T.verificar;
+    alvo.alerta.hidden = false;
+    alvo.item.classList.add('lc-msg-alerta');
   }
 
   function preencherAssistente(alvo, texto, final, opcoes) {
@@ -485,6 +519,7 @@
         a.texto = m.content;
         a.item._laos = a;
         preencherAssistente(a, m.content, true, { pergunta: ultimaPergunta });
+        if (m.verificacao && m.verificacao.ok === false) marcarReprovada(a);
       }
     });
     atualizarWhatsRodape();
@@ -496,8 +531,9 @@
     ui.linkWhats.href = ultima ? linkWhatsApp(T.msgWhatsIa(ultima.slice(0, 180), '')) : linkWhatsApp();
   }
 
+  // Só volta ao modelo a resposta assinada pelo Worker; reprovada (sem assinatura) fica só na tela, com o aviso.
   function paraEnvio() {
-    var h = estado.historico.slice(-MAX_HISTORICO);
+    var h = estado.historico.filter(function (m) { return m.role === 'user' || (m.assinatura && !m.verificacao); }).slice(-MAX_HISTORICO);
     while (h.length && h[0].role !== 'user') h.shift();
     return h.map(function (m) {
       var o = { role: m.role, content: m.content };
@@ -603,9 +639,14 @@
     if (fim && !erro) {
       alvo.texto = acumulado;
       preencherAssistente(alvo, acumulado, true, { pergunta: texto });
-      estado.historico.push({ role: 'assistant', content: acumulado, assinatura: fim.assinatura || null });
+      var reprovada = !!(fim.verificacao && fim.verificacao.ok === false);
+      var registro = { role: 'assistant', content: acumulado, assinatura: reprovada ? null : fim.assinatura || null };
+      if (reprovada) {
+        registro.verificacao = { ok: false, problemas: (fim.verificacao.problemas || []).map(String).slice(0, 10) };
+        marcarReprovada(alvo);
+      }
+      estado.historico.push(registro);
       salvar();
-      if (fim.verificacao && fim.verificacao.ok === false) nota(alvo, T.verificar);
       if (fim.motivo === 'length') nota(alvo, T.cortada);
     } else {
       if (!semTexto) { alvo.texto = acumulado; preencherAssistente(alvo, acumulado, true, { pergunta: texto }); }

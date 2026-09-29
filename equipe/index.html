@@ -2,12 +2,14 @@
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://laos-ia.machadolutz.workers.dev; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="referrer" content="no-referrer">
   <title>IA da equipe · LAOS</title>
   <link rel="stylesheet" href="equipe.css">
   <script src="config.js"></script>
+  <script src="mascarar.js"></script>
   <script src="equipe.js" defer></script>
 </head>
 <body>
@@ -60,7 +62,7 @@
             <select id="canal"><option>WhatsApp</option><option>Instagram (direct)</option><option>E-mail</option></select>
           </div>
           <div class="campo" data-para="resposta_cliente">
-            <label for="mensagem-cliente">Mensagem do cliente</label>
+            <label for="mensagem-cliente">Mensagem do cliente <span class="dica">dados pessoais são mascarados antes de ir para a IA; tire nome e endereço</span></label>
             <textarea id="mensagem-cliente" rows="4" placeholder="Cole aqui o que o cliente escreveu."></textarea>
           </div>
           <div class="campo" data-para="proposta_b2b">
@@ -76,7 +78,7 @@
             <input id="ocasiao" placeholder="Ex.: fim de tarde em Arraial, Dia das Mães, chegada de novo aroma">
           </div>
           <div class="campo" data-para="fatos resposta_cliente legenda_instagram descricao_produto proposta_b2b livre">
-            <label for="observacoes" data-rotulo-livre="Pedido">Observações da equipe <span class="dica">fatos que só vocês sabem (prazo, frete, desconto…) entram como "informado pela equipe"</span></label>
+            <label for="observacoes"><span id="rotulo-observacoes">Observações da equipe <span class="dica">fatos que só vocês sabem (prazo, frete, desconto…) entram como "informado pela equipe"</span></span><span id="rotulo-pedido" hidden>Pedido</span></label>
             <textarea id="observacoes" rows="3"></textarea>
           </div>
         </div>
@@ -86,7 +88,7 @@
           <button type="button" id="parar" class="botao-contorno" hidden>Parar</button>
           <span id="status" class="status" role="status" aria-live="polite"></span>
         </div>
-        <p class="lembrete">A IA usa só o catálogo coletado da loja online (preços e estoque da data da coleta). O que faltar aparece como <mark>[CONFIRMAR]</mark>. Revise antes de enviar ou publicar. Não cole CPF, cartão ou endereço completo de clientes.</p>
+        <p class="lembrete">A IA usa só o catálogo coletado da loja online (preços e estoque da data da coleta). O que faltar aparece como <mark>[CONFIRMAR]</mark>. Revise antes de enviar ou publicar. <strong>Dados pessoais são mascarados antes de ir para a IA</strong> (telefone, e-mail, CPF e cartão); nome e endereço, tire você. Não cole CPF, cartão ou endereço completo de clientes.</p>
       </form>
 
       <section class="cartao saida" aria-labelledby="saida-titulo">

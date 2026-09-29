@@ -22,14 +22,16 @@
     if (q.get('fbclid')) o.src = o.src || 'meta', o.med = o.med || 'social';
     if (o.src) guardar('laos-origem', { ...o, quando: new Date().toISOString().slice(0, 10) });
   })();
+  // a origem vale por 30 dias; depois disso é descartada
+  const origem = () => { const o = ler('laos-origem', null); if (o && o.quando && (Date.now() - Date.parse(o.quando)) / 864e5 > 30) { try { localStorage.removeItem('laos-origem'); } catch (e) { /* modo privado */ } return null; } return o; };
 
   // ---------- aviso flutuante ----------
   let avisoT;
-  function aviso(html) {
+  function aviso(html, ms = 3800) {
     let el = $('.aviso-flutuante');
     if (!el) { el = document.createElement('div'); el.className = 'aviso-flutuante'; el.setAttribute('role', 'status'); corpo.appendChild(el); }
     el.innerHTML = html;
-    clearTimeout(avisoT); avisoT = setTimeout(() => el.remove(), 3800);
+    clearTimeout(avisoT); avisoT = setTimeout(() => el.remove(), ms);
   }
 
   // ---------- cabeçalho ----------
@@ -52,13 +54,14 @@
     mega.addEventListener('mouseleave', fechar);
     megaAbre.addEventListener('mouseleave', fechar);
     mega.addEventListener('focusout', (e) => { if (!mega.contains(e.relatedTarget) && e.relatedTarget !== megaAbre) fechar(); });
+    megaAbre.addEventListener('focusout', (e) => { if (!mega.contains(e.relatedTarget)) fechar(); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !mega.hidden) { fechar(); megaAbre.focus(); } });
   }
 
   // ---------- diálogos (menu celular, sacola) ----------
   function dialogo(el, abridor) {
     let ultimo = null;
-    const focaveis = () => $$('a[href], button:not([disabled]), input:not([disabled]), select, textarea, [tabindex]:not([tabindex="-1"])', el).filter((x) => x.offsetParent !== null);
+    const focaveis = () => $$('a[href], button:not([disabled]), input:not([disabled]), select, textarea, [tabindex]', el).filter((x) => x.offsetParent !== null && x.getAttribute('tabindex') !== '-1');
     const tecla = (e) => {
       if (e.key === 'Escape') fechar();
       if (e.key === 'Tab') {
@@ -67,8 +70,8 @@
         else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
       }
     };
-    function abrir() { ultimo = document.activeElement; el.hidden = false; document.documentElement.style.overflow = 'hidden'; document.addEventListener('keydown', tecla); if (abridor) abridor.setAttribute('aria-expanded', 'true'); const f = focaveis(); (f[0] || el).focus(); }
-    function fechar() { el.hidden = true; document.documentElement.style.overflow = ''; document.removeEventListener('keydown', tecla); if (abridor) abridor.setAttribute('aria-expanded', 'false'); if (ultimo) ultimo.focus(); }
+    function abrir() { ultimo = document.activeElement; el.hidden = false; document.documentElement.style.overflow = 'hidden'; document.documentElement.classList.add('dialogo-aberto'); document.addEventListener('keydown', tecla); if (abridor) abridor.setAttribute('aria-expanded', 'true'); const f = focaveis(); (f[0] || el).focus(); }
+    function fechar() { el.hidden = true; document.documentElement.style.overflow = ''; document.documentElement.classList.remove('dialogo-aberto'); document.removeEventListener('keydown', tecla); if (abridor) abridor.setAttribute('aria-expanded', 'false'); if (ultimo) ultimo.focus(); }
     return { abrir, fechar };
   }
   const menu = $('[data-menu]');
@@ -81,11 +84,26 @@
   // ---------- índice de produtos (busca, quiz, sacola) ----------
   let indiceP = null;
   const indice = () => indiceP || (indiceP = fetch(RAIZ + 'assets/produtos.json').then((r) => r.json()));
-  const cartaoHtml = (p) => `<article class="cartao"><a class="cartao__foto" href="${RAIZ}${p.u}" tabindex="-1" aria-hidden="true">${p.d ? '' : '<span class="cartao__selo cartao__selo--esgotado">Esgotado</span>'}${p.i ? `<img src="${RAIZ}${p.i}" alt="" loading="lazy" decoding="async"${p.r ? '' : ' class="cena"'}>` : ''}</a><div class="cartao__txt"><span class="cartao__tipo">${esc(p.t)}</span><h3 class="cartao__nome"><a href="${RAIZ}${p.u}">${esc(p.n)}</a></h3>${p.no ? `<p class="cartao__notas">${esc(p.no)}</p>` : ''}</div><div class="cartao__rodape"><span class="preco">${brl(p.p)}</span><button class="cartao__add" type="button" data-add="${esc(p.s)}" aria-label="Adicionar ${esc(p.n)} à sacola"${p.d ? '' : ' disabled'}><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></button></div></article>`;
+  // Caminhos internos válidos (o índice é artefato de build, mas não se confia em dado para montar atributo)
+  const URL_PRODUTO = /^produtos\/[a-z0-9-]{1,140}\/$/;
+  const URL_IMG = /^assets\/img\/[a-z0-9/._-]{1,200}$/;
+  const NEUTRA = (fn) => `<span class="foto-neutra"><svg class="foto-neutra__simbolo" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M16 3.5v25" stroke="currentColor" stroke-width="1.4"/></svg><span class="foto-neutra__tipo">${esc(fn[0])}</span><span class="foto-neutra__nome">${esc(fn[1])}</span><span class="foto-neutra__aviso">Foto em atualização</span></span>`;
+  const cartaoHtml = (p) => `<article class="cartao"><a class="cartao__foto" href="${RAIZ}${URL_PRODUTO.test(p.u) ? esc(p.u) : 'loja/'}" tabindex="-1" aria-hidden="true">${p.d ? '' : '<span class="cartao__selo cartao__selo--esgotado">Esgotado</span>'}${p.i && URL_IMG.test(p.i) ? `<img src="${RAIZ}${esc(p.i)}" alt="" loading="lazy" decoding="async"${p.r ? '' : ' class="cena"'}>${p.fl ? '<span class="cartao__nota-foto">Foto ilustrativa da linha</span>' : ''}` : Array.isArray(p.fn) ? NEUTRA(p.fn) : ''}</a><div class="cartao__txt"><span class="cartao__tipo">${esc(p.t)}</span><h3 class="cartao__nome"><a href="${RAIZ}${URL_PRODUTO.test(p.u) ? esc(p.u) : 'loja/'}">${esc(p.n)}</a></h3>${p.no ? `<p class="cartao__notas">${esc(p.no)}</p>` : ''}</div><div class="cartao__rodape"><span class="preco">${p.pf ? '<small>a partir de</small> ' : ''}${brl(p.p)}</span><button class="cartao__add" type="button" data-add="${esc(p.s)}" aria-label="Adicionar ${esc(p.n)} à sacola"${p.d ? '' : ' disabled'}><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></button></div></article>`;
 
   // ---------- sacola ----------
   const CHAVE = 'laos-sacola-v1';
-  let sacola = ler(CHAVE, []);
+  // O localStorage não é fonte confiável (revisão de segurança M3): valida tipos, formatos e limites ao carregar.
+  const SLUG = /^[a-z0-9-]{1,140}$/;
+  function limparSacola(v) {
+    if (!Array.isArray(v)) return [];
+    return v.filter((i) => i && typeof i === 'object' && typeof i.s === 'string' && SLUG.test(i.s)).slice(0, 60).map((i) => ({
+      k: String(i.k || i.s).slice(0, 200), s: i.s, n: String(i.n || '').slice(0, 120), t: String(i.t || '').slice(0, 120),
+      p: Number.isFinite(Number(i.p)) && Number(i.p) >= 0 ? Number(i.p) : 0, v: String(i.v || '').slice(0, 80), vid: String(i.vid || '').replace(/\D/g, '').slice(0, 20),
+      i: typeof i.i === 'string' && URL_IMG.test(i.i) ? i.i : '', u: typeof i.u === 'string' && URL_PRODUTO.test(i.u) ? i.u : 'loja/',
+      q: Math.max(1, Math.min(99, parseInt(i.q, 10) || 1)),
+    }));
+  }
+  let sacola = limparSacola(ler(CHAVE, []));
   const gaveta = $('[data-gaveta]');
   const dg = gaveta ? dialogo(gaveta, $('[data-sacola-abre]')) : null;
   const contar = () => sacola.reduce((s, i) => s + i.q, 0);
@@ -101,7 +119,7 @@
   function renderSacola() {
     const ul = $('[data-sacola-itens]'); if (!ul) return;
     if (!sacola.length) { ul.innerHTML = '<li class="gaveta__vazia">Sua sacola está vazia.<br><a href="' + RAIZ + 'loja/">Conhecer os aromas</a></li>'; }
-    else ul.innerHTML = sacola.map((i) => `<li class="item-sacola" data-k="${esc(i.k)}">${i.i ? `<img src="${RAIZ}${esc(i.i)}" alt="" width="72" height="88">` : '<span></span>'}<div><h3><a href="${RAIZ}${esc(i.u)}">${esc(i.n)}</a></h3><div class="var">${esc([i.t, i.v].filter(Boolean).join(' · '))}</div><div class="qtd"><button type="button" data-item-qtd="-1" aria-label="Diminuir">−</button><output>${i.q}</output><button type="button" data-item-qtd="1" aria-label="Aumentar">+</button></div><br><button class="remover" type="button" data-item-remove>Remover</button></div><strong class="preco">${brl(i.p * i.q)}</strong></li>`).join('');
+    else ul.innerHTML = sacola.map((i) => `<li class="item-sacola" data-k="${esc(i.k)}">${i.i ? `<img src="${RAIZ}${esc(i.i)}" alt="" width="72" height="88">` : '<span></span>'}<div><h3><a href="${RAIZ}${esc(i.u)}">${esc(i.n)}</a></h3><div class="var">${esc([i.t, i.v].filter(Boolean).join(' · '))}</div><div class="qtd"><button type="button" data-item-qtd="-1" aria-label="Diminuir">−</button><output>${Math.max(1, Math.min(99, parseInt(i.q, 10) || 1))}</output><button type="button" data-item-qtd="1" aria-label="Aumentar">+</button></div><br><button class="remover" type="button" data-item-remove>Remover</button></div><strong class="preco">${brl(i.p * i.q)}</strong></li>`).join('');
     const tot = $('[data-sacola-total]'); if (tot) tot.textContent = brl(sacola.reduce((s, i) => s + i.p * i.q, 0));
     const form = $('[data-sacola-form]'); if (form) form.querySelector('button[type=submit]').disabled = !sacola.length;
   }
@@ -123,13 +141,14 @@
       e.preventDefault();
       if (!sacola.length) return;
       const codigo = 'LAOS-' + Date.now().toString(36).slice(-4).toUpperCase() + Math.random().toString(36).slice(2, 4).toUpperCase();
-      const o = ler('laos-origem', null);
+      const o = origem();
       const linhas = sacola.map((i) => `• ${i.q}× ${i.n}${i.v ? ` (${i.v})` : ''} — ${brl(i.p * i.q)}`);
       const total = sacola.reduce((s, i) => s + i.p * i.q, 0);
       const entrega = formS.entrega.value === 'loja' ? 'Quero buscar numa das lojas em Arraial d\'Ajuda' : `Receber em casa · CEP/cidade: ${formS.cep.value || '(informar)'}`;
-      const msg = [`Olá, LAOS! Quero fazer um pedido pelo site.`, `Pedido ${codigo}`, '', ...linhas, '', `Subtotal: ${brl(total)}`, `Nome: ${formS.nome.value}`, `Entrega: ${entrega}`, '', `Origem: ${o ? [o.src, o.med, o.camp].filter(Boolean).join(' / ') : 'site'}`, '(Frete e forma de pagamento a combinar.)'].join('\n');
-      window.open(`https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`, '_blank', 'noopener');
-      aviso(`Pedido ${codigo} enviado para o WhatsApp da LAOS.`);
+      const msg = [`Olá, LAOS! Quero fazer um pedido pelo site.`, `Pedido ${codigo}`, '', ...linhas, '', `Subtotal: ${brl(total)}`, `Nome: ${formS.nome.value}`, `Entrega: ${entrega}`, '', `Vim pelo: ${o ? ({ instagram: 'Instagram', facebook: 'Facebook', meta: 'Instagram/Facebook', google: 'Google' }[String(o.src).toLowerCase()] || o.src) + (o.camp ? ` (${o.camp})` : '') : 'site'}`, '(Frete e forma de pagamento a combinar.)'].join('\n');
+      const url = `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank', 'noopener');
+      aviso(`Abrimos a mensagem do pedido ${codigo} no seu WhatsApp. Envie para a nossa equipe confirmar. <a href="${esc(url)}" target="_blank" rel="noopener" style="color:inherit">Não abriu? Toque aqui</a>.`, 15000);
     });
   }
   // botões de adicionar (cartões e página de produto)
@@ -153,13 +172,25 @@
   const pdp = $('[data-pdp]');
   if (pdp) {
     const out = $('[data-qtd-valor]', pdp);
-    $$('[data-qtd]', pdp).forEach((b) => b.addEventListener('click', () => { out.textContent = Math.max(1, Math.min(99, Number(out.textContent) + Number(b.dataset.qtd))); }));
     const precoEl = $('[data-preco-exibido]', pdp);
-    const atualizaPreco = () => { const v = $('input[name=variante]:checked', pdp); if (v && precoEl) precoEl.textContent = brl(v.dataset.preco); };
+    const precoBarra = $('[data-preco-barra]');
+    const linkWa = $('[data-wa-pdp]', pdp);
+    const atualizaPreco = () => {
+      const v = $('input[name=variante]:checked', pdp);
+      const unit = Number(v?.dataset.preco || pdp.dataset.preco);
+      const q = Math.max(1, Math.min(99, Number(out?.textContent || 1)));
+      if (v && precoEl) precoEl.textContent = brl(unit);
+      if (precoBarra) precoBarra.textContent = q > 1 ? `${q} × ${brl(unit)}` : brl(unit);
+      if (linkWa && !$('[data-add-pdp]', pdp)?.disabled) {
+        const item = `${q}× ${pdp.dataset.nome} (${[pdp.dataset.tipo, v?.dataset.varNome].filter(Boolean).join(' · ')})`;
+        linkWa.href = `https://wa.me/${WHATS}?text=${encodeURIComponent(`Olá, LAOS! Quero pedir: ${item} — ${brl(unit * q)}. Vi no site.`)}`;
+      }
+    };
+    $$('[data-qtd]', pdp).forEach((b) => b.addEventListener('click', () => { out.textContent = Math.max(1, Math.min(99, Number(out.textContent) + Number(b.dataset.qtd))); atualizaPreco(); }));
     $$('input[name=variante]', pdp).forEach((r) => r.addEventListener('change', atualizaPreco)); atualizaPreco();
     const barra = $('[data-barra-compra]'); const alvo = $('[data-comprar]', pdp);
     if (barra && alvo && 'IntersectionObserver' in window) {
-      new IntersectionObserver(([en]) => { const mostrar = !en.isIntersecting && en.boundingClientRect.top < 0; barra.classList.toggle('visivel', mostrar); barra.setAttribute('aria-hidden', String(!mostrar)); $('button', barra).tabIndex = mostrar ? 0 : -1; }).observe(alvo);
+      new IntersectionObserver(([en]) => { const mostrar = !en.isIntersecting && en.boundingClientRect.top < 0; barra.classList.toggle('visivel', mostrar); document.documentElement.classList.toggle('barra-visivel', mostrar); barra.setAttribute('aria-hidden', String(!mostrar)); $('button', barra).tabIndex = mostrar ? 0 : -1; }).observe(alvo);
     }
   }
 
@@ -205,7 +236,8 @@
       const q = norm(campo.value).split(/\s+/).filter(Boolean);
       if (!q.length) { gradeB.innerHTML = ''; status.textContent = ''; return; }
       const lista = await indice();
-      const res = lista.filter((p) => q.every((w) => p.b.includes(w) || norm(p.n).includes(w))).sort((a, b) => (b.d - a.d) || (norm(a.n).startsWith(q[0]) ? -1 : 1));
+      const bate = (p, w) => p.b.includes(w) || norm(p.n).includes(w) || (w.length > 4 && w.endsWith('s') && (p.b.includes(w.slice(0, -1)) || (w.endsWith('es') && p.b.includes(w.slice(0, -2)))));
+      const res = lista.filter((p) => q.every((w) => bate(p, w))).sort((a, b) => (b.d - a.d) || (norm(a.n).startsWith(q[0]) ? -1 : 1));
       status.textContent = res.length ? `${res.length} ${res.length === 1 ? 'produto encontrado' : 'produtos encontrados'} para “${campo.value}”` : `Nada encontrado para “${campo.value}”. Tente o nome de uma nota, como lavanda ou caju.`;
       gradeB.innerHTML = res.slice(0, 60).map(cartaoHtml).join('');
     };
@@ -222,12 +254,16 @@
       e.preventDefault();
       const f = new FormData(quiz); const onde = f.get('onde'), fam = f.get('familia'), fmt = f.get('formato');
       const lista = (await indice()).filter((p) => p.d);
-      const tiposOk = fmt && fmt !== 'qualquer' ? [fmt] : TIPOS[onde] || [];
-      let res = lista.filter((p) => tiposOk.includes(p.tp) && p.f === fam);
-      if (res.length < 4) res = res.concat(lista.filter((p) => tiposOk.includes(p.tp) && !res.includes(p)).slice(0, 8 - res.length));
+      const doLugar = TIPOS[onde] || [];
+      const incompativel = fmt && fmt !== 'qualquer' && onde === 'carro' && !doLugar.includes(fmt);
+      const tiposOk = incompativel ? doLugar : fmt && fmt !== 'qualquer' ? [fmt] : doLugar;
+      const rotFam = quiz.querySelector('input[name=familia]:checked')?.parentElement?.querySelector('span')?.childNodes[0]?.textContent?.trim().toLowerCase() || 'essa família';
+      const combinam = lista.filter((p) => tiposOk.includes(p.tp) && p.f === fam);
+      const outras = combinam.length < 4 ? lista.filter((p) => tiposOk.includes(p.tp) && !combinam.includes(p)).slice(0, 8 - combinam.length) : [];
       const sec = $('[data-quiz-resultado]'); sec.hidden = false;
-      $('[data-quiz-titulo]').textContent = res.length ? 'Sugestões para você' : 'Nenhuma sugestão com essa combinação — tente outro formato.';
-      $('[data-quiz-grade]').innerHTML = res.slice(0, 12).map(cartaoHtml).join('');
+      const avisoCarro = incompativel ? 'No carro e no armário, os formatos são o aromatizador de carro, o sachê e o spray de 60 ml. ' : '';
+      $('[data-quiz-titulo]').textContent = combinam.length ? `${avisoCarro}Sugestões para você` : outras.length ? `${avisoCarro}Não temos aromas ${rotFam} nesse formato. Veja outras opções no mesmo formato:` : 'Nenhuma sugestão com essa combinação. Tente outro formato.';
+      $('[data-quiz-grade]').innerHTML = combinam.slice(0, 12).map(cartaoHtml).join('') + (combinam.length && outras.length ? '<p class="quiz__outras">Outras opções no mesmo formato, de outras famílias:</p>' : '') + outras.map(cartaoHtml).join('');
       sec.scrollIntoView({ behavior: reduzir ? 'auto' : 'smooth', block: 'start' });
     });
   }
