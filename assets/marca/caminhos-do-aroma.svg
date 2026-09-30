@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" fill="none">
+  <title>Caminhos do aroma — grafismo LAOS</title>
+  <circle cx="240" cy="240" r="212" stroke="#3e3a6d" stroke-width="1.5"/>
+  <circle cx="240" cy="240" r="197" stroke="#3e3a6d" stroke-width=".7"/>
+  <path d="M29 235c64-7 89-35 145-35 70 0 89 68 157 68 49 0 66-30 115-35M29 251c64-7 89-35 145-35 70 0 89 68 157 68 49 0 66-30 115-35M37 278c58-7 86-35 137-35 70 0 89 68 157 68 43 0 65-27 109-32M54 308c49-10 75-32 120-32 70 0 89 68 157 68 33 0 55-19 88-26" stroke="#3e3a6d" stroke-width="2"/>
+  <path d="M241 67v24m0 27v42m0 16v229" stroke="#3e3a6d" stroke-width="1.5"/>
+  <circle cx="240" cy="139" r="38" fill="#b0512d"/>
+  <path d="M217 139h46m-23-23v46" stroke="#faf8f2" stroke-width="1.2"/>
+  <path d="M175 382h130m-88 13h46" stroke="#3e3a6d" stroke-width="1"/>
+  <circle cx="82" cy="155" r="3" fill="#3e3a6d"/>
+  <circle cx="393" cy="335" r="3" fill="#3e3a6d"/>
+</svg>

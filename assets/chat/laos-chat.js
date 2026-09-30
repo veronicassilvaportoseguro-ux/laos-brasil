@@ -59,7 +59,7 @@
 
   var TEXTOS = {
     pt: {
-      lancador: 'Fale com a LAOS', sobre: 'LAOS · Casa de aromas', titulo: 'Como podemos ajudar?', tituloIa: 'Assistente LAOS',
+      lancador: 'Converse com a LAOS', sobre: 'LAOS · Casa de aromas', titulo: 'Como podemos ajudar?', tituloIa: 'Assistente LAOS',
       iaTitulo: 'Perguntar à assistente', iaDesc: 'Respostas na hora sobre aromas, tamanhos e preços do catálogo.', selo: 'IA',
       eqTitulo: 'Falar com a equipe', eqDesc: 'Pedidos, frete, pagamento e trocas com uma pessoa da loja, no WhatsApp.',
       lojas: "Duas lojas em Arraial d'Ajuda: Praça da Igreja e Rua do Mucugê.",
@@ -67,7 +67,7 @@
       aviso: 'Sou a assistente virtual da LAOS, uma inteligência artificial. Respondo com o catálogo da loja e posso errar: pedido, frete e estoque de hoje são confirmados pela equipe no WhatsApp.',
       privacidade: 'Não envie dados de cartão, senhas, documentos ou informações de saúde. A conversa é processada pela DeepSeek, um provedor de IA, em servidores na China. A LAOS não guarda o texto; ele fica só nesta aba.',
       politica: 'Política de privacidade', comecar: 'Começar conversa',
-      placeholder: 'Pergunte sobre aromas e preços…', rotuloCampo: 'Sua mensagem para a assistente',
+      placeholder: 'Pergunte sobre aromas…', rotuloCampo: 'Sua mensagem para a assistente',
       enviar: 'Enviar', parar: 'Parar resposta', whats: 'Continuar no WhatsApp', nova: 'Nova conversa', voltar: 'Voltar', fechar: 'Fechar',
       escrevendo: 'A assistente está escrevendo…', pronta: 'Resposta da assistente pronta.',
       falha: 'A assistente está indisponível agora. A equipe da LAOS atende você no WhatsApp.',
@@ -89,7 +89,7 @@
       aviso: 'Soy la asistente virtual de LAOS, una inteligencia artificial. Respondo con el catálogo de la tienda y puedo equivocarme: pedidos, envíos y stock de hoy los confirma el equipo por WhatsApp.',
       privacidade: 'No envíes datos de tarjeta, contraseñas, documentos ni información de salud. La conversación la procesa DeepSeek, un proveedor de IA, en servidores en China. LAOS no guarda el texto; queda solo en esta pestaña.',
       politica: 'Política de privacidad', comecar: 'Empezar conversación',
-      placeholder: 'Pregunta por aromas y precios…', rotuloCampo: 'Tu mensaje para la asistente',
+      placeholder: 'Pregunta por aromas…', rotuloCampo: 'Tu mensaje para la asistente',
       enviar: 'Enviar', parar: 'Detener respuesta', whats: 'Seguir por WhatsApp', nova: 'Nueva conversación', voltar: 'Volver', fechar: 'Cerrar',
       escrevendo: 'La asistente está escribiendo…', pronta: 'Respuesta de la asistente lista.',
       falha: 'La asistente no está disponible ahora. El equipo de LAOS te atiende por WhatsApp.',
@@ -111,7 +111,7 @@
       aviso: "I'm the LAOS virtual assistant, an artificial intelligence. I answer from the store catalog and can make mistakes: orders, shipping and today's stock are confirmed by the team on WhatsApp.",
       privacidade: "Don't share card details, passwords, ID numbers or health information. The chat is processed by DeepSeek, an AI provider, on servers in China. LAOS doesn't store the text; it stays in this tab only.",
       politica: 'Privacy policy', comecar: 'Start chatting',
-      placeholder: 'Ask about scents and prices…', rotuloCampo: 'Your message to the assistant',
+      placeholder: 'Ask about scents…', rotuloCampo: 'Your message to the assistant',
       enviar: 'Send', parar: 'Stop answer', whats: 'Continue on WhatsApp', nova: 'New chat', voltar: 'Back', fechar: 'Close',
       escrevendo: 'The assistant is typing…', pronta: 'Assistant answer ready.',
       falha: 'The assistant is unavailable right now. The LAOS team can help you on WhatsApp.',
@@ -130,7 +130,7 @@
   var rotuloLancador = d.rotulo || T.lancador;
 
   // ---------- estado ----------
-  var estado = { aberto: false, vista: 'inicio', aceito: false, historico: [], ocupado: false, controle: null, parado: false, foco: null };
+  var estado = { aberto: false, vista: 'inicio', aceito: false, historico: [], ocupado: false, controle: null, parado: false, foco: null, overflowAnterior: '' };
   try {
     var salvo = JSON.parse(sessionStorage.getItem(CHAVE_SESSAO) || 'null');
     if (salvo && Array.isArray(salvo.historico)) {
@@ -177,12 +177,12 @@
     return s;
   }
   var ICONES = {
-    pavio: 'M12 3.5a8.5 8.5 0 1 0 0 17a8.5 8.5 0 1 0 0-17|M5 19L19 5',
+    assistente: 'M12 3l2.4 6.6L21 12l-6.6 2.4L12 21l-2.4-6.6L3 12l6.6-2.4z',
     fechar: 'M6 6l12 12|M18 6L6 18',
     voltar: 'M15 5l-7 7l7 7',
     enviar: 'M4 12h14|M12 6l6 6l-6 6',
     parar: 'M7 7h10v10H7z',
-    conversa: 'M4 5h16v11H9l-5 4z|M8 9.5h8|M8 12.5h5',
+    conversa: 'M20 11.5a7.5 7.5 0 0 1-7.5 7.5H9l-5 3v-6a7.5 7.5 0 0 1 8.5-11.9A7.5 7.5 0 0 1 20 11.5z|M8 10h8|M8 13h5',
     seta: 'M5 12h14|M13 6l6 6l-6 6',
   };
   function linkWhatsApp(texto) {
@@ -237,8 +237,8 @@
     }
     var produtoTitulo = CFG.produto ? (document.querySelector('h1') || {}).textContent : null;
 
-    var lancador = el('button', { type: 'button', classe: 'lc-lancador', 'aria-haspopup': 'dialog', 'aria-expanded': 'false', 'aria-controls': 'lc-painel' }, [
-      svg(ICONES.pavio, 'lc-icone'), el('span', { texto: rotuloLancador }),
+    var lancador = el('button', { type: 'button', classe: 'lc-lancador', 'aria-label': rotuloLancador, 'aria-haspopup': 'dialog', 'aria-expanded': 'false', 'aria-controls': 'lc-painel' }, [
+      svg(ICONES.conversa, 'lc-icone'), el('span', { classe: 'lc-lancador-texto', texto: rotuloLancador }),
     ]);
 
     var voltar = el('button', { type: 'button', classe: 'lc-icone-botao lc-voltar', 'aria-label': T.voltar, hidden: true }, [svg(ICONES.voltar)]);
@@ -249,7 +249,7 @@
     // Vista inicial: as duas escolhas.
     var escolhaIa = CFG.endpoint
       ? el('button', { type: 'button', classe: 'lc-escolha lc-escolha-ia' }, [
-          el('span', { classe: 'lc-escolha-icone' }, [svg(ICONES.pavio)]),
+          el('span', { classe: 'lc-escolha-icone' }, [svg(ICONES.assistente)]),
           el('span', { classe: 'lc-escolha-texto' }, [
             el('span', { classe: 'lc-escolha-titulo' }, [T.iaTitulo, el('span', { classe: 'lc-selo', texto: T.selo })]),
             el('span', { classe: 'lc-escolha-desc', texto: T.iaDesc }),
@@ -394,7 +394,7 @@
     return semShadow ? document.activeElement : raiz.activeElement;
   }
   function telaPequena() {
-    return window.matchMedia && window.matchMedia('(max-width: 640px)').matches;
+    return window.matchMedia && window.matchMedia('(max-width: 760px)').matches;
   }
 
   function mostrarVista(vista) {
@@ -412,11 +412,15 @@
     if (ia) carregarIndice().then(redesenharCartoes);
   }
 
-  function abrir(vista) {
+  function abrir(vista, origem) {
     if (!ui) return;
     if (vista === 'ia' && !CFG.endpoint) vista = 'inicio';
+    if (!estado.aberto) {
+      estado.foco = origem || document.activeElement;
+      estado.overflowAnterior = document.documentElement.style.overflow;
+    }
     estado.aberto = true;
-    estado.foco = document.activeElement;
+    document.documentElement.classList.add('chat-aberto');
     ui.painel.hidden = false;
     ui.lancador.setAttribute('aria-expanded', 'true');
     ui.lancador.classList.add('lc-lancador-aberto');
@@ -434,8 +438,18 @@
     ui.painel.hidden = true;
     ui.lancador.setAttribute('aria-expanded', 'false');
     ui.lancador.classList.remove('lc-lancador-aberto');
-    document.documentElement.style.overflow = '';
-    ui.lancador.focus();
+    document.documentElement.classList.remove('chat-aberto');
+    document.documentElement.style.overflow = estado.overflowAnterior;
+    var alvo = estado.foco;
+    if (!alvo || !alvo.isConnected || !alvo.getClientRects().length || typeof alvo.focus !== 'function') alvo = ui.lancador;
+    if (!alvo.getClientRects().length) {
+      var gatilhos = document.querySelectorAll('[data-laos-chat-abrir]');
+      for (var i = 0; i < gatilhos.length; i++) {
+        if (gatilhos[i].getClientRects().length) { alvo = gatilhos[i]; break; }
+      }
+    }
+    if (alvo.getClientRects().length) alvo.focus();
+    estado.foco = null;
   }
 
   function ajustarCampo() {
@@ -668,7 +682,7 @@
 
   function ligar(u) {
     ui = u;
-    u.lancador.addEventListener('click', function () { estado.aberto ? fecharPainel() : abrir(); });
+    u.lancador.addEventListener('click', function () { estado.aberto ? fecharPainel() : abrir(undefined, u.lancador); });
     u.fechar.addEventListener('click', fecharPainel);
     u.voltar.addEventListener('click', function () { mostrarVista('inicio'); (u.escolhaIa || u.fechar).focus(); });
     if (u.escolhaIa) u.escolhaIa.addEventListener('click', function () {
@@ -729,7 +743,7 @@
       var gatilho = e.target && e.target.closest && e.target.closest('[data-laos-chat-abrir]');
       if (!gatilho) return;
       e.preventDefault();
-      abrir(gatilho.getAttribute('data-laos-chat-abrir') || 'inicio');
+      abrir(gatilho.getAttribute('data-laos-chat-abrir') || 'inicio', gatilho);
     });
     if (estado.historico.length) redesenharHistorico();
   }
