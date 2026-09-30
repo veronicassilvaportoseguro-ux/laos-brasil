@@ -407,6 +407,12 @@ p { margin: 0 0 1em; text-wrap: pretty; }
   .js .revela { opacity: 1; transform: none; }
   .js .selo-traco.desenhar path { stroke-dashoffset: 0; animation: none; }
 }
+/* Ensaio fotográfico dos produtos (estilos D e F, 30/09): fotos verticais 4:5 na página do produto, sem corte quadrado */
+.pdp__galeria.pdp__galeria--ensaio figure,
+.pdp__galeria.pdp__galeria--ensaio figure:first-child,
+.pdp__galeria.pdp__galeria--ensaio figure:nth-child(even):last-child { aspect-ratio: 4 / 5; background: #e9dccb; }
+.pdp__galeria.pdp__galeria--ensaio figure:first-child,
+.pdp__galeria.pdp__galeria--ensaio figure:nth-child(even):last-child { grid-column: 1 / -1; }
 @media print { .cab, .faixa, .rodape, .barra-compra, .gaveta, .laos-chat-root { display: none !important; } }
 
 /* ---------- complementos de página ---------- */

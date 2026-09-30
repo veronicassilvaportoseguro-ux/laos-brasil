@@ -170,7 +170,7 @@
   };
   // Caminhos internos válidos (o índice é artefato de build, mas não se confia em dado para montar atributo)
   const URL_PRODUTO = /^produtos\/[a-z0-9-]{1,140}\/$/;
-  const URL_IMG = /^assets\/img\/[a-z0-9/._-]{1,200}$/;
+  const URL_IMG = /^assets\/img\/[a-zA-Z0-9/._-]{1,200}$/;
   const NEUTRA = (fn) => `<span class="foto-neutra"><svg class="foto-neutra__simbolo" viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="8.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M16 3.5v25" stroke="currentColor" stroke-width="1.4"/></svg><span class="foto-neutra__tipo">${esc(fn[0])}</span><span class="foto-neutra__nome">${esc(fn[1])}</span><span class="foto-neutra__aviso">Foto em atualização</span></span>`;
   const cartaoHtml = (p) => {
     const url = RAIZ + (URL_PRODUTO.test(p.u) ? esc(p.u) : 'loja/');
