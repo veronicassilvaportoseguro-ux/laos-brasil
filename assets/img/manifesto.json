@@ -4412,7 +4412,6 @@
    ],
    "editoriais": [
     "destino-arraial",
-    "presentes",
     "empresas-hotelaria",
     "guia-difusor"
    ]
@@ -5716,15 +5715,15 @@
      "h": 1440,
      "srcs": [
       [
-       "assets/img/p/drops-dental-vanilla-30g/ensaio-F-480.webp",
+       "assets/img/p/drops-dental-vanilla-30g/ensaio-F-db5206665fe8-480.webp",
        480
       ],
       [
-       "assets/img/p/drops-dental-vanilla-30g/ensaio-F-800.webp",
+       "assets/img/p/drops-dental-vanilla-30g/ensaio-F-db5206665fe8-800.webp",
        800
       ],
       [
-       "assets/img/p/drops-dental-vanilla-30g/ensaio-F-1152.webp",
+       "assets/img/p/drops-dental-vanilla-30g/ensaio-F-db5206665fe8-1152.webp",
        1152
       ]
      ],
@@ -8025,7 +8024,6 @@
    ],
    "editoriais": [
     "hero-vertical",
-    "presentes",
     "guia-vela",
     "empresas-corporativo"
    ]
@@ -8584,9 +8582,7 @@
      "ref": "trabalho/imagens/ensaio/aprovadas/aromatizador-60ml-alecrim/F.webp"
     }
    ],
-   "editoriais": [
-    "presentes"
-   ]
+   "editoriais": []
   },
   "aromatizador-castanha-do-para-60ml": {
    "url_slug": "aromatizador-castanha-do-para-60ml",
@@ -10817,11 +10813,11 @@
    "h": 933,
    "srcs": [
     [
-     "assets/img/ed/presentes-800.webp",
+     "assets/img/ed/presentes-64103082f3ff-800.webp",
      800
     ],
     [
-     "assets/img/ed/presentes-1400.webp",
+     "assets/img/ed/presentes-64103082f3ff-1400.webp",
      1400
     ]
    ],
@@ -10856,8 +10852,38 @@
     ]
    ],
    "fonte": "originais/2026-09-29-fotos-cliente/FullSizeRender (156).jpeg"
+  },
+  "guia-argila": {
+   "w": 1400,
+   "h": 933,
+   "srcs": [
+    [
+     "assets/img/ed/guia-argila-800.webp",
+     800
+    ],
+    [
+     "assets/img/ed/guia-argila-1400.webp",
+     1400
+    ]
+   ],
+   "fonte": "trabalho/imagens/editorial/negocios-guias/guia-argila.png"
+  },
+  "guia-formatos-pequenos": {
+   "w": 1400,
+   "h": 933,
+   "srcs": [
+    [
+     "assets/img/ed/guia-formatos-pequenos-800.webp",
+     800
+    ],
+    [
+     "assets/img/ed/guia-formatos-pequenos-1400.webp",
+     1400
+    ]
+   ],
+   "fonte": "trabalho/imagens/editorial/negocios-guias/guia-formatos-pequenos.png"
   }
  },
  "og": "assets/img/og.jpg",
- "gerado_em": "2026-09-30T13:38:34"
+ "gerado_em": "2026-10-01T18:36:23"
 }

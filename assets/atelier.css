@@ -231,7 +231,7 @@ html.rodape-visivel .laos-chat-host:not(:focus-within) { --laos-chat-lancador-di
 @media (max-width: 760px) {
   :root { --margem: 1.25rem; --cab: 6.1rem; }
   .cab__linha { min-height: 3.9rem; }
-  .cab__logo { width: 6.2rem; }
+  .cab__logo { width: min(6.2rem, 31vw); }
   .cab__categorias a { font-size: .72rem; min-height: 34px; }
   .cab__categorias > div { gap: 1.6rem; }
   .cab__acoes { gap: 1rem; }
@@ -242,7 +242,7 @@ html.rodape-visivel .laos-chat-host:not(:focus-within) { --laos-chat-lancador-di
   .sobre { font-size: .59rem; letter-spacing: .16em; margin-bottom: 1rem; }
   .secao-numero { font-size: .56rem; }
   .cabecalho-secao { display: block; margin-bottom: 2rem; }
-  .cabecalho-secao h2 { font-size: clamp(2.45rem,8.5vw,3.8rem); }
+  .cabecalho-secao h2 { font-size: clamp(2.45rem,8.5vw,3.8rem); overflow-wrap: anywhere; hyphens: auto; }
   .cabecalho-secao > .link-seta { margin-top: 1rem; }
   .secao-intro { margin-top: 1.4rem; font-size: .85rem; }
   .secao-intro br { display: none; }
@@ -274,10 +274,11 @@ html.rodape-visivel .laos-chat-host:not(:focus-within) { --laos-chat-lancador-di
   .cartao__rodape { padding-top: .55rem; }
   .atlas__abertura { margin-bottom: 2.5rem; padding-bottom: 1.5rem; }
   .atlas__abertura > .mono { font-size: .48rem; max-width: 95px; text-align: right; }
-  .atlas { grid-template-columns: 1fr; gap: 3rem; }
+  .atlas { grid-template-columns: minmax(0, 1fr); gap: 3rem; }
   .atlas h2 { font-size: clamp(2.75rem,10vw,4rem); }
   .atlas .lead { font-size: .91rem; margin-block: 1.2rem 2rem; }
-  .atlas__lista .lugar { font-size: 2.1rem; }
+  .atlas__lista a { grid-template-columns: min(1.5rem, 24px) minmax(0, 1fr) auto; column-gap: min(.7rem, 12px); }
+  .atlas__lista .lugar { font-size: 2.1rem; overflow-wrap: anywhere; hyphens: auto; }
   .atlas__figura { width: calc(100% - 2.5rem); max-width: 29rem; margin: 0 auto 2rem; aspect-ratio: 5/6; }
   .atlas__figura::before { inset: -10px 10px 10px -10px; }
   .escolha-aroma { padding-block: 3.5rem; }
@@ -287,16 +288,18 @@ html.rodape-visivel .laos-chat-host:not(:focus-within) { --laos-chat-lancador-di
   .escolha-aroma h2 { font-size: clamp(2.15rem,7vw,3rem); }
   .escolha-aroma p:not(.sobre) { font-size: .86rem; }
   .escolha-aroma > div > a { margin-top: 1.6rem; }
+  .escolha-aroma .botao { max-width: 100%; }
   .manifesto h2 { font-size: clamp(2.2rem,7.4vw,3.6rem); }
   .manifesto > .sobre { margin-bottom: 2rem; }
   .manifesto__fecho { display: grid; grid-template-columns: 4rem auto; gap: 1.4rem 1rem; justify-content: center; margin-top: 2.5rem; }
   .manifesto .selo-pequeno { width: 4rem; }
   .manifesto__fecho p { font-size: .77rem; }
   .manifesto__fecho .link-seta { grid-column: 1 / -1; margin: 0; justify-self: center; }
-  .lojas-editorial .grade-2 { grid-template-columns: 1fr; gap: 2.7rem; }
-  .origem-composicao { min-height: 450px; padding: 1.5rem; }
-  .origem-composicao__titulo { font-size: 6.6rem; margin-top: 2rem; }
-  .origem-composicao__cab { font-size: .46rem; }
+  .lojas-editorial .grade-2 { grid-template-columns: minmax(0, 1fr); gap: 2.7rem; }
+  .origem-composicao { min-height: 450px; padding: 1.5rem; container-type: inline-size; }
+  .origem-composicao__titulo { font-size: min(6.6rem, 44cqi); margin-top: 2rem; }
+  .origem-composicao__titulo em { margin-left: .58em; }
+  .origem-composicao__cab { font-size: .46rem; flex-wrap: wrap; }
   .origem-composicao figure { width: min(65%,245px); padding: .6rem .6rem 0; margin-top: .4rem; }
   .origem-composicao figcaption { font-size: .58rem; padding-block: .55rem .65rem; }
   .origem-composicao__selo { width: 3.75rem; bottom: 1.5rem; left: 1.5rem; }
@@ -307,7 +310,8 @@ html.rodape-visivel .laos-chat-host:not(:focus-within) { --laos-chat-lancador-di
   .loja-ponto { padding: 1.1rem 0; }
   .loja-ponto h3 { font-size: 1.65rem; }
   .empresas-editorial .cabecalho-secao { margin-bottom: 2.5rem; }
-  .b2b-cartoes { gap: 1.6rem; }
+  .b2b-cartoes { gap: 1.6rem; grid-template-columns: minmax(0, 1fr); }
+  .b2b-cartao { min-width: 0; grid-template-columns: minmax(0, 1fr); padding-inline: min(1.75rem, 28px); overflow-wrap: anywhere; hyphens: auto; }
   .b2b-cartao h3 { font-size: 1.8rem; }
   .b2b-cartao p { font-size: .86rem; }
   .guia h3 { font-size: 1.6rem; }
@@ -317,15 +321,19 @@ html.rodape-visivel .laos-chat-host:not(:focus-within) { --laos-chat-lancador-di
   .rodape__base { font-size: .6rem; }
 }
 @media (max-width: 600px) {
-  .abertura { height: max(620px, calc(100svh - 182px)); max-height: 850px; }
-  .abertura__imagem img { height: 112%; object-position: 58% 65%; }
+  .abertura { height: auto; min-height: max(620px, calc(100svh - 182px)); max-height: none; }
+  .abertura__imagem img { height: 118%; object-position: 58% 65%; }
   .abertura__veu { background: linear-gradient(180deg, rgb(27 23 18 / .70), rgb(27 23 18 / .42) 27%, transparent 58%, rgb(27 23 18 / .45)); }
-  .abertura__conteudo { justify-content: flex-start; }
-  .abertura__texto { padding-block: 1.6rem 0; }
-  .abertura h1 { font-size: clamp(3.3rem,13.3vw,5rem); line-height: 1.02; }
-  .abertura__texto > p { font-size: .86rem; margin-block: 1rem 1.35rem; }
+  /* A reserva acompanha o texto: a chama fica livre mesmo com fonte ampliada
+     ou com as barras do navegador reduzindo a altura útil do celular. */
+  .abertura__conteudo { display: grid; grid-template-rows: auto 1fr 1.2fr auto; min-height: inherit; height: auto; padding-block: 1rem; }
+  .abertura__topo { grid-row: 1; }
+  .abertura__texto { grid-row: 2; padding-block: 1rem 0; }
+  .abertura__conteudo::after { content: ''; grid-row: 3; }
+  .abertura h1 { font-size: clamp(3.3rem,13.3vw,5rem); line-height: 1.02; max-width: 100%; text-wrap: wrap; }
+  .abertura__texto > p { font-size: .86rem; margin-block: 1rem 1.15rem; }
   .abertura__texto .botao { min-height: 48px; font-size: .79rem; padding-inline: 1.25rem; }
-  .abertura__base { margin-top: auto; }
+  .abertura__base { grid-row: 4; margin-top: 0; }
   .abertura__descer > span:last-child { display: none; }
   .abertura__circulo { width: 36px; height: 36px; }
   .abertura__produto { min-width: 175px; padding-top: .6rem; gap: .35rem; }
