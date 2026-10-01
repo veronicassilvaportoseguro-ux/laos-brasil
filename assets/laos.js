@@ -30,6 +30,30 @@
   })();
   // a origem vale por 30 dias; depois disso é descartada
   const origem = () => { const o = ler('laos-origem', null); if (o && o.quando && (Date.now() - Date.parse(o.quando)) / 864e5 > 30) { try { localStorage.removeItem('laos-origem'); } catch (e) { /* modo privado */ } return null; } return o; };
+  const textoCurto = (v, limite) => {
+    let t = String(v || '').replace(/[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDFFF]/g, (c) => c.length === 2 ? c : ' ').replace(/[\u0000-\u001f\u007f\u200b-\u200f\u202a-\u202e\u2060-\u206f]/g, ' ').replace(/\s+/g, ' ').trim().slice(0, limite).replace(/[\uD800-\uDBFF]$/, '');
+    while (encodeURIComponent(t).length > limite * 4) t = t.slice(0, -1).replace(/[\uD800-\uDBFF]$/, '');
+    return t;
+  };
+  function codigoContato() {
+    let sufixo;
+    try { sufixo = crypto.getRandomValues(new Uint32Array(1))[0].toString(36); }
+    catch (e) { sufixo = Math.random().toString(36).slice(2, 10); }
+    return 'LAOS-' + Date.now().toString(36).toUpperCase() + '-' + sufixo.toUpperCase();
+  }
+  function textoOrigem() {
+    const o = origem();
+    if (!o || typeof o.src !== 'string' || typeof o.quando !== 'string' || !Number.isFinite(Date.parse(o.quando)) || Date.parse(o.quando) > Date.now() + 864e5) return 'site';
+    return [textoCurto(o.src, 60), textoCurto(o.med, 30), textoCurto(o.camp, 80)].filter(Boolean).join(' / ') || 'site';
+  }
+  function abrirContato(url, codigo) {
+    try {
+      // Com noopener, o navegador pode retornar null mesmo abrindo a janela.
+      // O retorno não é confirmação de envio nem de recebimento.
+      window.open(url, '_blank', 'noopener');
+    } catch (e) { /* o link abaixo preserva o caminho em navegador restrito */ }
+    aviso(`A mensagem ${esc(codigo)} está pronta. Revise e envie no WhatsApp para a equipe confirmar. <a href="${esc(url)}" target="_blank" rel="noopener" style="color:inherit">Abrir mensagem no WhatsApp</a>.`, 20000);
+  }
 
   // ---------- aviso flutuante ----------
   let avisoT;
@@ -177,8 +201,28 @@
     const acao = p.v && p.d
       ? `<a class="cartao__add" href="${url}" aria-label="Escolher tamanho de ${esc(p.n)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>`
       : `<button class="cartao__add" type="button" data-add="${esc(p.s)}" aria-label="Adicionar ${esc(p.n)} à sacola"${p.d ? '' : ' disabled'}><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 2v12M2 8h12"/></svg></button>`;
-    return `<article class="cartao"><a class="cartao__foto" href="${url}" tabindex="-1" aria-hidden="true">${p.d ? '' : '<span class="cartao__selo cartao__selo--esgotado">Esgotado</span>'}${p.i && URL_IMG.test(p.i) ? `<img src="${RAIZ}${esc(p.i)}" alt="" loading="lazy" decoding="async"${p.r ? '' : ' class="cena"'}>` : Array.isArray(p.fn) ? NEUTRA(p.fn) : ''}</a><div class="cartao__txt"><span class="cartao__tipo">${esc(p.t)}</span><h3 class="cartao__nome"><a href="${url}">${esc(p.n)}</a></h3>${p.no ? `<p class="cartao__notas">${esc(p.no)}</p>` : ''}</div><div class="cartao__rodape"><span class="preco">${p.pf ? '<small>a partir de</small> ' : ''}${brl(p.p)}</span>${acao}</div></article>`;
+    return `<article class="cartao"${p.i2 && URL_IMG.test(p.i2) ? ` data-foto-ambiente="${RAIZ}${esc(p.i2)}"` : ''}><a class="cartao__foto" href="${url}" tabindex="-1" aria-hidden="true">${p.d ? '' : '<span class="cartao__selo cartao__selo--esgotado">Esgotado</span>'}${p.i && URL_IMG.test(p.i) ? `<img src="${RAIZ}${esc(p.i)}" alt="" loading="lazy" decoding="async"${p.r ? '' : ' class="cena"'}>` : Array.isArray(p.fn) ? NEUTRA(p.fn) : ''}</a><div class="cartao__txt"><span class="cartao__tipo">${esc(p.t)}</span><h3 class="cartao__nome"><a href="${url}">${esc(p.n)}</a></h3>${p.no ? `<p class="cartao__notas">${esc(p.no)}</p>` : ''}</div><div class="cartao__rodape"><span class="preco">${p.pf ? '<small>a partir de</small> ' : ''}${brl(p.p)}</span>${acao}</div></article>`;
   };
+
+  // A segunda imagem só é pedida quando alguém explora o cartão. Não há
+  // download extra na entrada nem interferência no primeiro toque do celular.
+  const carregarAmbiente = (evento) => {
+    if (evento.type === 'pointerover' && (evento.pointerType !== 'mouse' || !matchMedia('(hover: hover)').matches)) return;
+    const card = evento.target.closest('.cartao[data-foto-ambiente]');
+    if (!card || card.dataset.ambienteCarregando) return;
+    const url = new URL(card.dataset.fotoAmbiente, location.href);
+    if (url.origin !== location.origin || !url.pathname.includes('/assets/img/')) return;
+    const quadro = card.querySelector('.cartao__foto');
+    if (!quadro) return;
+    card.dataset.ambienteCarregando = '1';
+    const im = new Image();
+    im.alt = ''; im.className = 'cena cartao__ambiente'; im.decoding = 'async';
+    im.onload = () => { quadro.append(im); card.classList.add('foto-pronta'); };
+    im.onerror = () => { delete card.dataset.ambienteCarregando; };
+    im.src = url.href;
+  };
+  document.addEventListener('pointerover', carregarAmbiente);
+  document.addEventListener('focusin', carregarAmbiente);
 
   // ---------- sacola ----------
   const CHAVE = 'laos-sacola-v1';
@@ -241,15 +285,13 @@
     formS.addEventListener('submit', (e) => {
       e.preventDefault();
       if (!sacola.length) return;
-      const codigo = 'LAOS-' + Date.now().toString(36).slice(-4).toUpperCase() + Math.random().toString(36).slice(2, 4).toUpperCase();
-      const o = origem();
+      const codigo = codigoContato();
       const linhas = sacola.map((i) => `• ${i.q}× ${i.n}${i.v ? ` (${i.v})` : ''} — ${brl(i.p * i.q)}`);
       const total = sacola.reduce((s, i) => s + i.p * i.q, 0);
       const entrega = formS.entrega.value === 'loja' ? 'Quero buscar numa das lojas em Arraial d\'Ajuda' : `Receber em casa · CEP/cidade: ${formS.cep.value || '(informar)'}`;
-      const msg = [`Olá, LAOS! Quero fazer um pedido pelo site.`, `Pedido ${codigo}`, '', ...linhas, '', `Subtotal: ${brl(total)}`, `Nome: ${formS.nome.value}`, `Entrega: ${entrega}`, '', `Vim pelo: ${o ? ({ instagram: 'Instagram', facebook: 'Facebook', meta: 'Instagram/Facebook', google: 'Google' }[String(o.src).toLowerCase()] || o.src) + (o.camp ? ` (${o.camp})` : '') : 'site'}`, '(Frete e forma de pagamento a combinar.)'].join('\n');
+      const msg = [`Olá, LAOS! Quero fazer um pedido pelo site.`, `Pedido ${codigo}`, '', ...linhas, '', `Subtotal: ${brl(total)}`, `Nome: ${textoCurto(formS.nome.value, 120)}`, `Entrega: ${textoCurto(entrega, 180)}`, '', `Origem: ${textoOrigem()}`, '(Frete e forma de pagamento a combinar.)'].join('\n');
       const url = `https://wa.me/${WHATS}?text=${encodeURIComponent(msg)}`;
-      window.open(url, '_blank', 'noopener');
-      aviso(`Abrimos a mensagem do pedido ${codigo} no seu WhatsApp. Envie para a nossa equipe confirmar. <a href="${esc(url)}" target="_blank" rel="noopener" style="color:inherit">Não abriu? Toque aqui</a>.`, 15000);
+      abrirContato(url, codigo);
     });
   }
   // botões de adicionar (cartões e página de produto)
@@ -574,8 +616,12 @@
   $$('[data-form-b2b]').forEach((form) => form.addEventListener('submit', (e) => {
     e.preventDefault();
     const f = new FormData(form);
-    const linhas = [`Olá, LAOS! Quero uma proposta para empresa/evento.`, '', `Nome: ${f.get('nome') || ''}`, f.get('empresa') ? `Empresa/evento: ${f.get('empresa')}` : '', `Tipo: ${f.get('tipo') || ''}`, f.get('cidade') ? `Cidade: ${f.get('cidade')}` : '', f.get('quantidade') ? `Quantidade aproximada: ${f.get('quantidade')}` : '', f.get('data') ? `Para quando: ${new Date(f.get('data') + 'T12:00').toLocaleDateString('pt-BR')}` : '', '', String(f.get('text') || '')].filter((x, i, a) => x !== '' || a[i - 1] !== '');
-    window.open(`https://wa.me/${WHATS}?text=${encodeURIComponent(linhas.join('\n'))}`, '_blank', 'noopener');
+    const codigo = codigoContato();
+    const campo = (nome, limite = 120) => textoCurto(f.get(nome), limite);
+    const data = campo('data', 10);
+    const dataValida = /^\d{4}-\d{2}-\d{2}$/.test(data) && Number.isFinite(Date.parse(data + 'T12:00:00'));
+    const linhas = [`Olá, LAOS! Quero uma proposta para empresa/evento.`, `Solicitação ${codigo}`, '', `Nome: ${campo('nome')}`, campo('empresa') ? `Empresa/evento: ${campo('empresa')}` : '', `Tipo: ${campo('tipo')}`, campo('cidade') ? `Cidade: ${campo('cidade')}` : '', campo('quantidade', 60) ? `Quantidade aproximada: ${campo('quantidade', 60)}` : '', dataValida ? `Para quando: ${new Date(data + 'T12:00:00').toLocaleDateString('pt-BR')}` : '', '', campo('text', 900), '', `Origem: ${textoOrigem()}`, '(Produtos, quantidade, disponibilidade, condições e prazo a confirmar com a equipe.)'].filter((x, i, a) => x !== '' || a[i - 1] !== '');
+    abrirContato(`https://wa.me/${WHATS}?text=${encodeURIComponent(linhas.join('\n'))}`, codigo);
   }));
 
   // ---------- atlas: troca a imagem ao passar pelos lugares ----------
@@ -598,6 +644,15 @@
       };
       a.addEventListener('mouseenter', trocar); a.addEventListener('focus', trocar);
     });
+  }
+
+  // O rodapé já oferece os caminhos de contato. Recolher o atalho flutuante
+  // nesse trecho mantém a assinatura livre sem fechar um atendimento aberto.
+  const rodape = $('.rodape');
+  if (rodape && 'IntersectionObserver' in window) {
+    new IntersectionObserver(([entrada]) => {
+      document.documentElement.classList.toggle('rodape-visivel', entrada.isIntersecting);
+    }, { threshold: 0 }).observe(rodape);
   }
 
   // ---------- movimento ----------

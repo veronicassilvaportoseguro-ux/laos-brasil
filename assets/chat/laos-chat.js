@@ -68,7 +68,7 @@
       privacidade: 'Não envie dados de cartão, senhas, documentos ou informações de saúde. A conversa é processada pela DeepSeek, um provedor de IA, em servidores na China. A LAOS não guarda o texto; ele fica só nesta aba.',
       politica: 'Política de privacidade', comecar: 'Começar conversa',
       placeholder: 'Pergunte sobre aromas…', rotuloCampo: 'Sua mensagem para a assistente',
-      enviar: 'Enviar', parar: 'Parar resposta', whats: 'Continuar no WhatsApp', nova: 'Nova conversa', voltar: 'Voltar', fechar: 'Fechar',
+      enviar: 'Enviar', parar: 'Parar resposta', whats: 'Falar com a equipe', nova: 'Nova conversa', voltar: 'Voltar', fechar: 'Fechar',
       escrevendo: 'A assistente está escrevendo…', pronta: 'Resposta da assistente pronta.',
       falha: 'A assistente está indisponível agora. A equipe da LAOS atende você no WhatsApp.',
       verificar: 'Não consegui confirmar todos os dados desta resposta. Confira com a equipe antes de comprar.',
@@ -78,7 +78,6 @@
       novaJanela: '(abre em nova janela)', voce: 'Você', assistente: 'Assistente LAOS · IA',
       msgWhats: 'Olá! Vim pelo site da LAOS e gostaria de falar com a equipe.',
       msgWhatsProduto: function (n) { return 'Olá! Vim pelo site da LAOS e tenho interesse em: ' + n + '.'; },
-      msgWhatsIa: function (q, ps) { return 'Olá! Vim pelo site da LAOS. Conversei com a assistente virtual sobre: "' + q + '".' + (ps ? ' Produtos: ' + ps + '.' : ''); },
     },
     es: {
       lancador: 'Habla con LAOS', sobre: 'LAOS · Casa de aromas', titulo: '¿Cómo podemos ayudarte?', tituloIa: 'Asistente LAOS',
@@ -90,7 +89,7 @@
       privacidade: 'No envíes datos de tarjeta, contraseñas, documentos ni información de salud. La conversación la procesa DeepSeek, un proveedor de IA, en servidores en China. LAOS no guarda el texto; queda solo en esta pestaña.',
       politica: 'Política de privacidad', comecar: 'Empezar conversación',
       placeholder: 'Pregunta por aromas…', rotuloCampo: 'Tu mensaje para la asistente',
-      enviar: 'Enviar', parar: 'Detener respuesta', whats: 'Seguir por WhatsApp', nova: 'Nueva conversación', voltar: 'Volver', fechar: 'Cerrar',
+      enviar: 'Enviar', parar: 'Detener respuesta', whats: 'Hablar con el equipo', nova: 'Nueva conversación', voltar: 'Volver', fechar: 'Cerrar',
       escrevendo: 'La asistente está escribiendo…', pronta: 'Respuesta de la asistente lista.',
       falha: 'La asistente no está disponible ahora. El equipo de LAOS te atiende por WhatsApp.',
       verificar: 'No pude confirmar todos los datos de esta respuesta. Confírmalos con el equipo antes de comprar.',
@@ -100,7 +99,6 @@
       novaJanela: '(se abre en una ventana nueva)', voce: 'Tú', assistente: 'Asistente LAOS · IA',
       msgWhats: '¡Hola! Vengo del sitio de LAOS y me gustaría hablar con el equipo.',
       msgWhatsProduto: function (n) { return '¡Hola! Vengo del sitio de LAOS y me interesa: ' + n + '.'; },
-      msgWhatsIa: function (q, ps) { return '¡Hola! Vengo del sitio de LAOS. Hablé con la asistente virtual sobre: "' + q + '".' + (ps ? ' Productos: ' + ps + '.' : ''); },
     },
     en: {
       lancador: 'Talk to LAOS', sobre: 'LAOS · House of scents', titulo: 'How can we help?', tituloIa: 'LAOS assistant',
@@ -112,7 +110,7 @@
       privacidade: "Don't share card details, passwords, ID numbers or health information. The chat is processed by DeepSeek, an AI provider, on servers in China. LAOS doesn't store the text; it stays in this tab only.",
       politica: 'Privacy policy', comecar: 'Start chatting',
       placeholder: 'Ask about scents…', rotuloCampo: 'Your message to the assistant',
-      enviar: 'Send', parar: 'Stop answer', whats: 'Continue on WhatsApp', nova: 'New chat', voltar: 'Back', fechar: 'Close',
+      enviar: 'Send', parar: 'Stop answer', whats: 'Talk to the team', nova: 'New chat', voltar: 'Back', fechar: 'Close',
       escrevendo: 'The assistant is typing…', pronta: 'Assistant answer ready.',
       falha: 'The assistant is unavailable right now. The LAOS team can help you on WhatsApp.',
       verificar: "I couldn't confirm every detail in this answer. Please check with the team before buying.",
@@ -122,7 +120,6 @@
       novaJanela: '(opens in a new window)', voce: 'You', assistente: 'LAOS assistant · AI',
       msgWhats: "Hi! I found LAOS on the website and I'd like to talk to the team.",
       msgWhatsProduto: function (n) { return "Hi! I found LAOS on the website and I'm interested in: " + n + '.'; },
-      msgWhatsIa: function (q, ps) { return 'Hi! I came from the LAOS website. I asked the virtual assistant about: "' + q + '".' + (ps ? ' Products: ' + ps + '.' : ''); },
     },
   };
   var idioma = String(d.idioma || navigator.language || document.documentElement.lang || 'pt').slice(0, 2).toLowerCase();
@@ -144,6 +141,7 @@
         }
         return o;
       });
+      salvar(); // normaliza a sessão existente e descarta campos que não fazem parte da conversa
     }
   } catch (e) { /* sessão indisponível: segue sem memória */ }
   function salvar() {
@@ -187,6 +185,13 @@
   };
   function linkWhatsApp(texto) {
     return 'https://wa.me/' + CFG.whatsapp + '?text=' + encodeURIComponent(texto || T.msgWhats);
+  }
+  function mensagemEquipe() {
+    // Contato humano comum: a conversa com a IA não entra no link do WhatsApp.
+    var produto = CFG.produto && indice && indice[CFG.produto];
+    var nome = CFG.produto ? (produto ? produto.nome : (document.querySelector('h1') || {}).textContent) : '';
+    nome = String(nome || '').replace(/\s+/g, ' ').trim().slice(0, 120).replace(/[\uD800-\uDBFF]$/, '');
+    return nome ? T.msgWhatsProduto(nome) : T.msgWhats;
   }
   function formatarPreco(v) {
     if (typeof v !== 'number' || !isFinite(v)) return '';
@@ -235,7 +240,6 @@
     } else {
       host.hidden = false;
     }
-    var produtoTitulo = CFG.produto ? (document.querySelector('h1') || {}).textContent : null;
 
     var lancador = el('button', { type: 'button', classe: 'lc-lancador', 'aria-label': rotuloLancador, 'aria-haspopup': 'dialog', 'aria-expanded': 'false', 'aria-controls': 'lc-painel' }, [
       svg(ICONES.conversa, 'lc-icone'), el('span', { classe: 'lc-lancador-texto', texto: rotuloLancador }),
@@ -257,7 +261,7 @@
           svg(ICONES.seta, 'lc-escolha-seta'),
         ])
       : null;
-    var escolhaEquipe = el('a', { classe: 'lc-escolha lc-escolha-equipe', href: linkWhatsApp(produtoTitulo ? T.msgWhatsProduto(produtoTitulo.trim().slice(0, 120)) : T.msgWhats), target: '_blank', rel: 'noopener' }, [
+    var escolhaEquipe = el('a', { classe: 'lc-escolha lc-escolha-equipe', href: linkWhatsApp(mensagemEquipe()), target: '_blank', rel: 'noopener' }, [
       el('span', { classe: 'lc-escolha-icone' }, [svg(ICONES.conversa)]),
       el('span', { classe: 'lc-escolha-texto' }, [
         el('span', { classe: 'lc-escolha-titulo', texto: T.eqTitulo }),
@@ -291,7 +295,7 @@
     var enviar = el('button', { type: 'submit', classe: 'lc-enviar', 'aria-label': T.enviar }, [svg(ICONES.enviar)]);
     var contador = el('span', { id: 'lc-contador', classe: 'lc-contador', 'aria-live': 'polite' });
     var formulario = el('form', { classe: 'lc-form', novalidate: true }, [el('label', { for: 'lc-campo', classe: 'lc-sr', texto: T.rotuloCampo }), campo, enviar]);
-    var linkWhats = el('a', { classe: 'lc-link-whats', href: linkWhatsApp(), target: '_blank', rel: 'noopener' }, [svg(ICONES.conversa, 'lc-icone-pequeno'), T.whats, el('span', { classe: 'lc-sr', texto: ' ' + T.novaJanela })]);
+    var linkWhats = el('a', { classe: 'lc-link-whats', href: linkWhatsApp(mensagemEquipe()), target: '_blank', rel: 'noopener' }, [svg(ICONES.conversa, 'lc-icone-pequeno'), T.whats, el('span', { classe: 'lc-sr', texto: ' ' + T.novaJanela })]);
     var nova = el('button', { type: 'button', classe: 'lc-link-nova', texto: T.nova });
     var rodape = el('footer', { classe: 'lc-rodape', hidden: true }, [formulario, el('div', { classe: 'lc-rodape-linha' }, [linkWhats, contador, nova])]);
 
@@ -300,7 +304,7 @@
     raiz.appendChild(raizUi);
     document.body.appendChild(host);
 
-    var ui = { lancador: lancador, painel: painel, titulo: titulo, voltar: voltar, fechar: fechar, vistaInicio: vistaInicio, vistaIa: vistaIa, aviso: aviso, aceitar: aceitar, mensagens: mensagens, sugestoes: sugestoes, statusVivo: statusVivo, rodape: rodape, formulario: formulario, campo: campo, enviar: enviar, contador: contador, linkWhats: linkWhats, nova: nova, escolhaIa: escolhaIa, corpo: corpo };
+    var ui = { lancador: lancador, painel: painel, titulo: titulo, voltar: voltar, fechar: fechar, vistaInicio: vistaInicio, vistaIa: vistaIa, aviso: aviso, aceitar: aceitar, mensagens: mensagens, sugestoes: sugestoes, statusVivo: statusVivo, rodape: rodape, formulario: formulario, campo: campo, enviar: enviar, contador: contador, linkWhats: linkWhats, nova: nova, escolhaIa: escolhaIa, escolhaEquipe: escolhaEquipe, corpo: corpo };
     ligar(ui);
     return ui;
   }
@@ -373,14 +377,12 @@
     return p.url ? el('a', { classe: 'lc-cartao', href: p.url }, filhos) : el('div', { classe: 'lc-cartao' }, filhos);
   }
 
-  function nomesDosProdutos(slugs) {
-    return slugs.map(function (s) { return indice && indice[s] ? indice[s].nome : null; }).filter(Boolean).slice(0, 3).join(', ');
-  }
-
-  function botaoWhats(pergunta, slugs) {
-    return el('a', { classe: 'lc-botao lc-botao-whats', href: linkWhatsApp(T.msgWhatsIa(String(pergunta || '').slice(0, 180), nomesDosProdutos(slugs))), target: '_blank', rel: 'noopener' }, [
+  function botaoWhats() {
+    var botao = el('a', { classe: 'lc-botao lc-botao-whats', href: linkWhatsApp(mensagemEquipe()), target: '_blank', rel: 'noopener' }, [
       svg(ICONES.conversa, 'lc-icone-pequeno'), T.whats, el('span', { classe: 'lc-sr', texto: ' ' + T.novaJanela }),
     ]);
+    botao.addEventListener('click', function () { botao.setAttribute('href', linkWhatsApp(mensagemEquipe())); });
+    return botao;
   }
 
   // ---------- comportamento ----------
@@ -504,7 +506,7 @@
       }
     }
     if (final && (r.whatsapp || (opcoes && opcoes.whatsapp)) && !alvo.extras.querySelector('.lc-botao-whats')) {
-      alvo.extras.appendChild(botaoWhats(opcoes && opcoes.pergunta, r.slugs));
+      alvo.extras.appendChild(botaoWhats());
     }
     return r;
   }
@@ -520,6 +522,7 @@
       if (!item._laos || typeof item._laos.texto !== 'string') return; // ainda em streaming
       preencherAssistente(item._laos, item._laos.texto, true, {});
     });
+    atualizarWhatsRodape();
   }
 
   function redesenharHistorico() {
@@ -540,9 +543,11 @@
   }
 
   function atualizarWhatsRodape() {
-    var ultima = null;
-    for (var i = estado.historico.length - 1; i >= 0; i--) if (estado.historico[i].role === 'user') { ultima = estado.historico[i].content; break; }
-    ui.linkWhats.href = ultima ? linkWhatsApp(T.msgWhatsIa(ultima.slice(0, 180), '')) : linkWhatsApp();
+    if (!ui) return;
+    var href = linkWhatsApp(mensagemEquipe());
+    ui.linkWhats.setAttribute('href', href);
+    ui.escolhaEquipe.setAttribute('href', href);
+    Array.prototype.forEach.call(ui.mensagens.querySelectorAll('.lc-botao-whats'), function (a) { a.setAttribute('href', href); });
   }
 
   // Só volta ao modelo a resposta assinada pelo Worker; reprovada (sem assinatura) fica só na tela, com o aviso.
@@ -670,10 +675,11 @@
         if (semTexto) desenharTexto(alvo.bolha, (erro && erro.mensagem) || T.falha);
         else nota(alvo, (erro && erro.mensagem) || T.falha);
         alvo.item.classList.add('lc-msg-erro');
-        if (!alvo.extras.querySelector('.lc-botao-whats')) alvo.extras.appendChild(botaoWhats(texto, alvo.slugs || []));
+        if (!alvo.extras.querySelector('.lc-botao-whats')) alvo.extras.appendChild(botaoWhats());
       }
     }
     ui.statusVivo.textContent = T.pronta;
+    atualizarWhatsRodape();
     modoOcupado(false);
     estado.controle = null;
     rolarParaFim();
@@ -728,6 +734,8 @@
       mostrarVista('ia');
       u.campo.focus();
     });
+    u.linkWhats.addEventListener('click', atualizarWhatsRodape);
+    u.escolhaEquipe.addEventListener('click', atualizarWhatsRodape);
     u.painel.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') { e.stopPropagation(); fecharPainel(); return; }
       if (e.key !== 'Tab') return;

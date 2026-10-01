@@ -1,0 +1,377 @@
+/* LAOS — interiores da casa. Coleções, produto, leitura e atendimento.
+   Complementa atelier.css; preserva os contratos de navegação e compra. */
+
+/* A mesma cadência editorial em cada porta de entrada. */
+.cab-pagina { padding-block: clamp(2.5rem, 5.5vw, 5.5rem) clamp(2rem, 4vw, 3.75rem); }
+.cab-pagina h1 { color: var(--tinta); font-weight: 340; font-size: clamp(3rem, 5.7vw, 6rem); line-height: 1.02; letter-spacing: -.048em; font-variation-settings: "SOFT" 0, "WONK" 0; }
+.cab-pagina .lead { margin-top: 1.5rem; max-width: 37rem; line-height: 1.7; }
+.cab-pagina .trilha { margin-bottom: clamp(1.6rem, 3vw, 2.75rem); }
+.trilha { font-size: .74rem; line-height: 1.55; color: var(--tinta-2); gap: .5rem; }
+.trilha li + li::before { color: var(--oliva-escuro, #54563E); margin-right: .5rem; }
+.trilha a:hover { color: var(--tinta); text-decoration: underline; }
+.cab-pagina.grade-2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: center; gap: clamp(2rem, 6vw, 7rem); }
+.cab-pagina.grade-2 > * { min-width: 0; }
+.cab-pagina.grade-2 h1 { max-width: 12ch; }
+.cab-pagina.grade-2 .fig-editorial { width: 100%; aspect-ratio: 4 / 5; max-height: 44rem; border-radius: 2px; }
+.cab-pagina.grade-2 .fig-editorial img { transition: transform 1.2s var(--ease); }
+.cab-pagina.grade-2 .onda { color: var(--argila); margin-block: 1.5rem; }
+.cab-pagina.grade-2 .lead:last-child { margin-bottom: 0; }
+.secao--noite .cab-pagina { padding-block: clamp(3rem, 7vw, 7rem); }
+.secao--noite .cab-pagina h1 { max-width: 15ch; color: var(--papel); }
+.secao--noite .cab-pagina .lead, .secao--noite .cab-pagina .sobre, .secao--noite .cab-pagina .trilha { color: #E6E3DC; }
+.secao--noite .trilha li + li::before { color: #D5C8B8; }
+.secao--noite .cab-pagina .onda { color: #D5C8B8; }
+
+/* Catálogo: cabeçalho aberto, busca discreta e filtros táteis. */
+.cab-pagina--loja { padding-block: clamp(2rem, 4vw, 4rem) 1.8rem; }
+.cab-pagina--loja .trilha { margin-bottom: 1.75rem; }
+.loja-intro { align-items: end; gap: 2rem; }
+.loja-intro h1 { font-size: clamp(2.9rem, 5vw, 5.25rem); }
+.loja-intro .lead { margin: 0 0 .25rem; font-size: .96rem; color: var(--oliva-escuro, #54563E); white-space: nowrap; }
+.cab-pagina--loja .busca-inline { margin-top: 2.2rem; }
+.busca-inline input, [data-busca] input { min-height: 3.5rem; border: 1px solid var(--areia-2); border-radius: 2px; background: transparent; padding: 1rem 1.1rem; font-size: 1rem; transition: border-color .2s, background .2s; }
+.busca-inline input::placeholder, [data-busca] input::placeholder { color: var(--tinta-2); opacity: 1; }
+.busca-inline input:focus, [data-busca] input:focus { border-color: var(--mineral); background: var(--papel); }
+.filtros { padding-block: 1rem; gap: .8rem 1.5rem; margin-bottom: 2rem; border-color: var(--areia-2); }
+.filtros__chips { gap: .45rem; min-width: 0; }
+.filtro { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; gap: .4rem; padding: .65rem 1rem; border: 1px solid var(--areia-2); background: transparent; color: var(--tinta); border-radius: 2px; font-size: .84rem; letter-spacing: .01em; transition: color .2s, border-color .2s, background .2s; }
+.filtro:hover { border-color: var(--mineral); background: var(--areia); }
+.filtro[aria-pressed="true"], .filtro[aria-current="page"] { background: var(--mineral); border-color: var(--mineral); color: var(--papel); }
+.filtros__fim { font-size: .76rem; color: var(--tinta-2); gap: 1.2rem; }
+.filtros select { font-size: .84rem; min-height: 44px; border-color: var(--areia-2); border-radius: 2px; background: var(--papel); padding-inline: .75rem; max-width: 10rem; }
+.filtros + .grade-produtos { row-gap: clamp(2.5rem, 4vw, 4rem); }
+.lista-categorias { margin-top: 2rem; border-color: var(--areia-2); }
+.lista-categorias li { border-color: var(--areia-2); }
+.lista-categorias a { min-height: 3.5rem; color: var(--tinta); padding-block: 1rem; font-size: 1rem; }
+.lista-categorias a .mono { color: var(--oliva-escuro, #54563E); }
+.lista-categorias a:hover span:first-child, .lista-categorias a:focus-visible span:first-child { color: var(--argila); }
+.lista-categorias--linha a { border-color: var(--areia-2); border-radius: 2px; padding: .65rem 1rem; min-height: 44px; font-size: .88rem; }
+.lista-categorias--linha a:hover { background: var(--areia); border-color: var(--tinta-2); }
+.pg-universo .cab-pagina .fig-editorial { aspect-ratio: 4 / 5; max-height: 42rem; }
+.sobre-categoria { padding-top: 3rem; margin-top: 4rem; }
+
+/* Produto: a fotografia ocupa a coluna principal; a compra tem ritmo próprio. */
+.pg-produto #conteudo > .envolve > nav { padding-top: 1.75rem; }
+.pg-produto .trilha { margin-bottom: 1rem; }
+.pdp { grid-template-columns: minmax(0, 1.18fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 6rem); padding-top: .75rem; padding-bottom: clamp(4rem, 7vw, 7rem); }
+.pdp__imagens { min-width: 0; }
+.pdp__galeria { gap: 1rem; }
+.pdp__galeria figure { border-radius: 2px; background: var(--areia); }
+.pdp__galeria.pdp__galeria--ensaio figure { background: var(--areia); }
+.pdp__galeria img.recorte { padding: 10%; filter: drop-shadow(0 20px 20px rgb(65 52 36 / .12)); }
+.pdp__galeria figcaption { background: rgb(244 241 233 / .94); color: var(--tinta-2); }
+.pdp__info { gap: 1.35rem; top: calc(var(--cab) + 1.75rem); padding-top: .5rem; }
+.pdp__info h1 { font-size: clamp(2.7rem, 4.1vw, 4.7rem); font-weight: 340; line-height: 1.035; letter-spacing: -.045em; color: var(--tinta); font-variation-settings: "SOFT" 0, "WONK" 0; overflow-wrap: break-word; }
+.pdp__sub { font: 400 .66rem/1.5 var(--mono); letter-spacing: .09em; text-transform: uppercase; color: var(--oliva-escuro, #54563E); }
+.pdp__sub a { text-decoration: none; border-bottom: 1px solid var(--areia-2); padding-bottom: .1rem; }
+.pdp__subtitulo { font-size: 1.02rem; color: var(--tinta-2); line-height: 1.55; margin-top: -.65rem; }
+.pdp__preco { gap: .75rem; margin-top: .15rem; }
+.pdp__preco .preco { font: 400 1.55rem/1.3 var(--sans); color: var(--tinta); letter-spacing: 0; }
+.pdp__preco .preco small { font-size: .64em; }
+.pdp__preco .cartao__selo { position: static; font-size: .62rem; }
+.pdp__resumo { font-size: 1rem; color: var(--tinta-2); line-height: 1.7; }
+.variantes { gap: .7rem; margin-block: .2rem; }
+.variantes legend { font: 400 .68rem/1.4 var(--mono); letter-spacing: .06em; color: var(--tinta-2); margin-bottom: .6rem; }
+.variantes__op { gap: .5rem; }
+.variantes span { min-height: 48px; border-color: var(--areia-2); border-radius: 2px; font-size: .88rem; padding: .7rem 1rem; transition: border-color .2s, background .2s; }
+.variantes label:hover span { border-color: var(--tinta-2); }
+.variantes input:checked + span { color: var(--tinta); background: var(--areia); border-color: var(--tinta); box-shadow: inset 0 -2px 0 var(--tinta); }
+.variantes input:disabled + span { box-shadow: none; }
+.comprar { gap: .75rem; }
+.comprar .botao, .pdp__info > .botao { min-height: 3.5rem; }
+.pdp__info > .botao--linha { margin-top: -.6rem; border-color: var(--areia-2); color: var(--mineral); }
+.pdp__info > .botao--linha:hover { color: var(--papel); border-color: var(--mineral); background: var(--mineral); }
+.qtd { grid-template-columns: 2.6rem 2.2rem 2.6rem; height: 3.5rem; border-color: var(--areia-2); border-radius: 2px; }
+.qtd button { color: var(--tinta); min-height: 44px; }
+.qtd button:hover { background: var(--areia); }
+.qtd output { font-size: .92rem; }
+.pdp__servicos { gap: .65rem; margin-block: .5rem .3rem; font-size: .83rem; line-height: 1.55; }
+.pdp__servicos li { padding-left: 1rem; }
+.pdp__servicos li::before { width: 4px; height: 4px; top: .6em; background: var(--oliva-escuro, #54563E); border: 0; border-radius: 0; }
+.pdp__servicos a { text-decoration-color: var(--areia-2); }
+.acordeao { border-color: var(--areia-2); }
+.acordeao summary { min-height: 62px; padding-block: 1.2rem; font: 400 .82rem/1.4 var(--sans); letter-spacing: .035em; color: var(--tinta); }
+.acordeao summary::after { color: var(--mineral); font-size: 1.45rem; }
+.acordeao details[open] summary { color: var(--mineral); }
+.acordeao .corpo { padding-bottom: 1.5rem; color: var(--tinta-2); line-height: 1.7; }
+.piramide__linha { grid-template-columns: 5.5rem 1fr; border-bottom-style: solid; padding-block: .25rem .8rem; }
+.piramide dt { font: 400 .63rem/1.55 var(--mono); letter-spacing: .04em; color: var(--oliva-escuro, #54563E); }
+.piramide dd { color: var(--tinta); font: 400 1rem/1.5 var(--sans); }
+.notas-chips li { border-color: var(--areia-2); border-radius: 2px; padding: .45rem .75rem; font-size: .86rem; }
+.galeria-controles { color: var(--tinta-2); }
+.galeria-controles button { border: 1px solid var(--areia-2); border-radius: 2px; color: var(--tinta); }
+.galeria-controles button:hover { background: var(--areia); }
+.pdp-historia { align-items: start; }
+.pdp-historia h2 { font-weight: 340; font-size: clamp(2.4rem, 4vw, 4rem); letter-spacing: -.04em; }
+.pdp-historia .lead { font-size: 1.05rem; line-height: 1.85; }
+.barra-compra { border-color: var(--areia-2); box-shadow: 0 -6px 32px rgb(29 29 29 / .035); }
+.barra-compra .preco { color: var(--tinta); }
+
+/* Atlas e famílias: coleções abertas e tipografia como orientação. */
+.pg-destinos .secao--noite { background: var(--mineral); }
+.pg-destinos .cab-pagina { position: relative; }
+.pg-destinos .cab-pagina::after { content: ""; position: absolute; right: 2%; top: 50%; width: clamp(20rem, 34vw, 33rem); aspect-ratio: 1; transform: translateY(-47%); background: var(--papel); opacity: .23; -webkit-mask: url("marca/caminhos-do-aroma.svg") center / contain no-repeat; mask: url("marca/caminhos-do-aroma.svg") center / contain no-repeat; pointer-events: none; }
+.pg-destinos .cab-pagina h1 { font-size: clamp(3.5rem, 7.2vw, 7.5rem); max-width: 12ch; }
+.pg-destinos .cab-pagina .lead { max-width: 35rem; }
+@media (min-width: 861px) {
+  .pg-destinos .cab-pagina .lead { max-width: min(35rem, 48%); }
+}
+.pg-destinos .secao--apertada { padding-block: clamp(3.5rem, 6.5vw, 6rem); }
+.pg-destinos .secao--apertada + .secao--apertada { border-top: 1px solid var(--areia-2); }
+.destinos-grade { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3rem clamp(1rem, 2.3vw, 2rem); }
+.destino { gap: .65rem; align-content: start; }
+.destino__img { aspect-ratio: 4 / 5; border-radius: 2px; margin-bottom: .55rem; }
+.destino h3 { font-weight: 340; font-size: clamp(1.65rem, 2.7vw, 2.5rem); line-height: 1.08; letter-spacing: -.035em; color: var(--tinta); }
+.destino p { font-size: .96rem; line-height: 1.6; }
+.destino > .mono { color: var(--oliva-escuro, #54563E); font-size: .62rem; letter-spacing: .035em; line-height: 1.5; }
+.destino > .mono:last-child { margin-top: .5rem; padding-top: .65rem; border-top: 1px solid var(--areia-2); }
+.destino:hover h3, .destino:focus-visible h3 { color: var(--argila); font-style: normal; }
+.familias { grid-template-columns: repeat(3, minmax(0, 1fr)); border-color: var(--areia-2); background: var(--areia-2); counter-reset: familia; }
+.familias li { counter-increment: familia; }
+.familias a { gap: .9rem; padding: clamp(1.5rem, 3vw, 2.5rem); min-height: 15rem; }
+.familias a::before { content: counter(familia, decimal-leading-zero); display: block; font: 400 .68rem/1 var(--mono); color: var(--oliva-escuro, #54563E); margin-bottom: .75rem; }
+.familias a:hover { background: var(--areia); }
+.familias h2 { font-size: 2rem; font-weight: 340; letter-spacing: -.035em; color: var(--tinta); }
+.familias p { font-size: .95rem; line-height: 1.65; }
+
+/* Leitura: respiro, medida de linha e hierarquia editorial. */
+.cab-pagina.artigo { max-width: 52rem; }
+.cab-pagina.artigo .sobre { font: 500 .66rem/1.5 var(--sans); letter-spacing: .19em; color: var(--oliva-escuro, #54563E); }
+.cab-pagina.artigo h1 { font-size: clamp(2.8rem, 5.2vw, 5rem); max-width: 17ch; }
+.cab-pagina.artigo .lead { max-width: 42rem; }
+.artigo { max-width: 43rem; }
+.artigo h2 { color: var(--tinta); font-weight: 340; font-size: clamp(1.9rem, 3vw, 2.65rem); letter-spacing: -.025em; margin-block: 3rem 1.2rem; }
+.artigo h3 { font-weight: 380; letter-spacing: -.02em; }
+.artigo p, .artigo li { font-size: 1.065rem; line-height: 1.8; color: var(--tinta-2); }
+.artigo strong { color: var(--tinta); font-weight: 500; }
+.artigo a { color: var(--mineral); text-decoration-color: var(--areia-2); }
+.artigo a:hover { text-decoration-color: var(--mineral); }
+.artigo .trilha li { font-size: .74rem; line-height: 1.55; }
+.artigo table { margin-block: 2rem; line-height: 1.6; }
+.artigo th { font: 400 .68rem/1.5 var(--mono); color: var(--oliva-escuro, #54563E); letter-spacing: .05em; padding-block: 1rem; }
+.artigo td { padding-block: 1rem; }
+.artigo .caixa { padding: clamp(1.4rem, 3vw, 2.2rem); background: var(--areia); border-left: 2px solid var(--oliva); }
+.guia-capa { max-width: 72rem; margin-block: 3rem 4rem; border-radius: 2px; }
+.guias { gap: 3rem clamp(1.25rem, 3vw, 2.5rem); }
+.guia { gap: 1rem; align-content: start; }
+.guia__img { aspect-ratio: 4 / 3; border-radius: 2px; }
+.guia h3 { color: var(--tinta); font-weight: 340; font-size: clamp(1.5rem, 2.2vw, 2rem); line-height: 1.18; letter-spacing: -.025em; }
+.guia p { font-size: .96rem; line-height: 1.65; }
+.guia:hover h3 { color: var(--argila); }
+.faq { margin-top: 2rem; }
+.faq details { border-color: var(--areia-2); }
+.faq summary { color: var(--tinta); font-weight: 340; font-size: clamp(1.25rem, 2vw, 1.6rem); line-height: 1.35; padding-block: 1.5rem; align-items: center; }
+.faq summary::after { color: var(--mineral); width: 1.25rem; text-align: center; }
+.faq .corpo { padding: 0 2.5rem 1.25rem 0; }
+
+/* Escolha de aroma: alternativas visíveis e seleção explícita. */
+.pg-quiz .cab-pagina { padding-bottom: 2.5rem; }
+.pg-quiz .cab-pagina h1 { font-size: clamp(3.15rem, 6vw, 5.75rem); }
+.quiz { max-width: 54rem; padding-bottom: 1.5rem; }
+.quiz-progresso { border-color: var(--areia-2); color: var(--oliva-escuro, #54563E); font: 400 .68rem/1.5 var(--mono); text-transform: uppercase; letter-spacing: .065em; padding-top: 1.25rem; margin-bottom: 2rem; }
+.quiz fieldset { margin-bottom: 2rem; }
+.quiz legend { color: var(--tinta); font-weight: 340; font-size: clamp(1.75rem, 3vw, 2.65rem); letter-spacing: -.035em; margin-bottom: 1.5rem; }
+.quiz__ops { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+.quiz__ops label { min-width: 0; }
+.quiz__ops span { height: 100%; min-height: 4.5rem; padding: 1.25rem 1.4rem; border-color: var(--areia-2); border-radius: 2px; line-height: 1.5; background: transparent; }
+.quiz__ops label:hover span { border-color: var(--mineral); }
+.quiz__ops span small { display: inline-block; margin-top: .35rem; font-size: .86rem; line-height: 1.55; }
+.quiz__ops input:checked + span { color: var(--tinta); background: var(--areia); border-color: var(--mineral); box-shadow: inset 0 -2px 0 var(--mineral); }
+.quiz-navegacao { border-color: var(--areia-2); padding-top: 1.5rem; gap: 1rem; }
+.quiz-navegacao .botao { min-height: 3.2rem; }
+.quiz-aviso { background: var(--areia); border-left: 2px solid var(--mineral); color: var(--tinta); padding: 1.25rem; }
+.quiz__outras { border-color: var(--areia-2); color: var(--tinta); font-family: var(--serif); font-size: 1.7rem; line-height: 1.3; font-weight: 340; }
+
+/* Empresas e contato: composição acolhedora e formulários claros. */
+.b2b-cartao { border-color: var(--areia-2); padding-top: 1.7rem; }
+.b2b-cartao__img { aspect-ratio: 4 / 3; border-radius: 2px; margin-bottom: 1.25rem; }
+.b2b-cartao h3 { font-size: clamp(1.75rem, 2.5vw, 2.4rem); font-weight: 340; letter-spacing: -.035em; }
+.b2b-cartao p { font-size: .98rem; line-height: 1.7; }
+.form-b2b { border-color: var(--areia-2); padding: clamp(1.5rem, 4vw, 3.5rem); background: var(--papel); }
+.form-grade { gap: 1.25rem; }
+.campo { gap: .55rem; font-size: .85rem; color: var(--tinta); }
+.campo input, .campo textarea, .campo select { border-color: var(--areia-2); background: transparent; border-radius: 2px; min-height: 3.2rem; padding: .8rem .9rem; font-size: 1rem; line-height: 1.5; }
+.campo input:focus, .campo textarea:focus, .campo select:focus { border-color: var(--mineral); }
+.campo textarea { min-height: 7rem; }
+.campo input::placeholder, .campo textarea::placeholder { color: var(--tinta-2); opacity: .85; }
+.form-b2b input[type="checkbox"], .opcoes-entrega input { accent-color: var(--mineral); }
+.passos { gap: 2rem; }
+.passos li::before { color: var(--oliva-escuro, #54563E); }
+.passos strong { font-weight: 340; font-size: 1.5rem; }
+.contatos { border-color: var(--areia-2); background: var(--areia-2); }
+.contato { padding: clamp(1.5rem, 3vw, 2.75rem); gap: .7rem; }
+.contato:hover { background: var(--areia); }
+.contato strong { color: var(--tinta); font-weight: 340; font-size: clamp(1.2rem, 2vw, 1.9rem); line-height: 1.2; }
+
+/* Sacola: mesmas matérias, controles generosos e rolagem preservada. */
+.gaveta { grid-template-columns: 1fr min(100%, 31rem); }
+.gaveta__fundo { min-width: 0; padding: 0; background: rgb(29 29 29 / .4); backdrop-filter: blur(3px); }
+.gaveta__painel { box-shadow: -16px 0 60px rgb(29 29 29 / .12); }
+.gaveta__topo { padding: 1.5rem 1.75rem; border-color: var(--areia-2); }
+.gaveta__topo h2 { font-size: 2rem; font-weight: 340; color: var(--tinta); letter-spacing: -.035em; }
+.gaveta__itens { padding-inline: 1.75rem; }
+.item-sacola { padding-block: 1.35rem; gap: 1rem; border-color: var(--areia-2); grid-template-columns: 5rem minmax(0, 1fr) auto; }
+.item-sacola img { width: 5rem; height: 6.25rem; border-radius: 2px; padding: 0; object-fit: contain; }
+.item-sacola h3 { color: var(--tinta); font: 400 1.05rem/1.35 var(--sans); }
+.item-sacola .preco { font-size: .9rem; white-space: nowrap; padding-top: .1rem; }
+.item-sacola .var { font-size: .8rem; margin-top: .35rem; }
+.item-sacola .qtd { grid-template-columns: 2.3rem 2rem 2.3rem; height: 2.5rem; margin-top: .75rem; }
+.item-sacola .qtd button { min-height: 0; }
+.item-sacola .remover { min-height: 36px; font-size: .75rem; color: var(--tinta-2); }
+.gaveta__rodape { padding: 1.5rem 1.75rem calc(1.5rem + env(safe-area-inset-bottom)); gap: 1rem; border-color: var(--areia-2); }
+.gaveta__total { padding-bottom: .25rem; color: var(--tinta); font-size: 1.1rem; }
+.gaveta__total strong { font-weight: 500; }
+.gaveta__nota { font-size: .78rem; line-height: 1.6; }
+.opcoes-entrega { font-size: .83rem; gap: .5rem; line-height: 1.45; }
+.opcoes-entrega label { min-height: 36px; }
+.opcoes-entrega input { flex: none; width: 15px; height: 15px; }
+.gaveta__vazia { padding-block: 4rem; color: var(--tinta-2); }
+.aviso-flutuante { background: var(--mineral); border-radius: 2px; }
+html.chat-aberto .aviso-flutuante { display: none; }
+.foto-neutra { background: var(--areia); }
+.foto-neutra__nome { font-weight: 340; font-variation-settings: "SOFT" 0, "WONK" 0; }
+
+@media (min-width: 861px) and (max-width: 1099px) {
+  .pdp { grid-template-columns: minmax(0, 1.06fr) minmax(0, 1fr); gap: 2rem; }
+  .pdp__galeria { display: grid; grid-template-columns: 1fr 1fr; overflow: visible; }
+  .pdp__galeria figure:first-child { grid-column: 1 / -1; }
+  .pdp__galeria figure, .pdp__galeria figure:first-child, .pdp__galeria figure:nth-child(even):last-child { aspect-ratio: 4 / 5; }
+  .pdp__info h1 { font-size: 2.9rem; }
+  .pdp__info { gap: 1.1rem; }
+  .galeria-controles { display: none; }
+  .comprar { grid-template-columns: 1fr; }
+  .comprar .qtd { justify-self: start; }
+  .filtros { grid-template-columns: 1fr; }
+  .filtros__fim { margin-left: 0; justify-content: space-between; }
+}
+
+@media (min-width: 761px) and (max-width: 960px) {
+  .pg-produto { padding-bottom: calc(5rem + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 860px) {
+  .pg-destinos .cab-pagina::after { display: none; }
+  .cab-pagina.grade-2 { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+  .cab-pagina.grade-2 h1 { max-width: 16ch; }
+  .cab-pagina.grade-2 .fig-editorial { aspect-ratio: 4 / 3; max-height: 35rem; }
+  .pg-universo .cab-pagina .fig-editorial { display: block; aspect-ratio: 16 / 10; max-height: none; }
+  .pg-universo .lista-categorias a { border-color: var(--areia-2); border-radius: 2px; }
+  .filtros { grid-template-columns: 1fr; }
+  .filtros__fim { margin-left: 0; justify-content: space-between; }
+  .pdp { grid-template-columns: minmax(0, 1fr); gap: 1rem; padding-top: .25rem; }
+  .pdp__info { display: contents; }
+  .pdp__info > * { order: 5; }
+  .pdp__info > .pdp__sub { order: 1; margin: 0; }
+  .pdp__info > h1 { order: 2; font-size: clamp(2.75rem, 6.5vw, 4.25rem); max-width: 20ch; }
+  .pdp__info > .pdp__subtitulo { order: 3; margin-top: -.4rem; }
+  .pdp__imagens { order: 4; margin-block: .6rem .5rem; }
+  .pdp__info > .variantes { order: 6; }
+  .pdp__info > .comprar { order: 7; }
+  .pdp__info > [data-wa-pdp] { order: 8; margin-top: 0; }
+  .pdp__info > .pdp__resumo { order: 9; }
+  .pdp__info > .pdp__servicos { order: 10; }
+  .pdp__info > .acordeao { order: 11; }
+  .pdp__galeria { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0; padding: 0; gap: .75rem; scrollbar-width: none; }
+  .pdp__galeria figure, .pdp__galeria figure:first-child, .pdp__galeria figure:nth-child(even):last-child { flex: 0 0 85%; aspect-ratio: 4 / 5; scroll-snap-align: start; }
+  .pdp__galeria figure:only-child { flex-basis: 100%; }
+  .galeria-controles { display: flex; margin-top: .75rem; }
+  .destinos-grade { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 1.1rem; }
+  .familias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .familias a { min-height: 14rem; }
+  .guias { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .guia-capa { margin-block: 2rem 3rem; }
+}
+
+@media (max-width: 560px) {
+  .cab-pagina { padding-block: 2.25rem 2rem; }
+  .cab-pagina h1 { font-size: clamp(2.65rem, 11.5vw, 3.8rem); letter-spacing: -.045em; }
+  .cab-pagina .trilha { margin-bottom: 1.5rem; }
+  .cab-pagina .lead { font-size: 1rem; margin-top: 1.2rem; line-height: 1.65; }
+  .cab-pagina.grade-2 { gap: 1.6rem; }
+  .cab-pagina.grade-2 h1 { max-width: none; }
+  .cab-pagina--loja { padding-bottom: 1.35rem; }
+  .cab-pagina--loja .trilha { display: flex; margin-bottom: 1.25rem; }
+  .loja-intro { display: block; }
+  .loja-intro .lead { white-space: normal; font-size: .9rem; margin-top: .75rem; }
+  .cab-pagina--loja .busca-inline { margin-top: 1.3rem; }
+  .busca-inline input, [data-busca] input { min-height: 3.25rem; font-size: 1rem; padding-inline: .85rem; }
+  .filtros { padding-block: .75rem; margin-bottom: 1.5rem; gap: .65rem; }
+  .filtros__chips { overflow-x: auto; flex-wrap: nowrap; padding-bottom: .3rem; scrollbar-width: thin; scrollbar-color: var(--areia-2) transparent; }
+  .filtros__chips > * { flex: none; }
+  .filtro { font-size: .81rem; padding-inline: .9rem; }
+  .filtros__fim { font-size: .74rem; gap: .5rem; }
+  .filtros select { border: 0; padding-left: 0; padding-right: .3rem; font-size: .81rem; }
+  .filtros + .grade-produtos { row-gap: 2.2rem; }
+  .pg-universo .lista-categorias { gap: .5rem; margin-top: 1.5rem; }
+  .pg-universo .lista-categorias a { border-color: var(--areia-2); border-radius: 2px; font-size: .82rem; }
+  .pg-produto #conteudo > .envolve > nav { padding-top: 1.25rem; }
+  .pg-produto .trilha { font-size: .69rem; margin-bottom: 1.3rem; }
+  .pdp { gap: .9rem; }
+  .pdp__info > h1 { font-size: clamp(2.5rem, 10.7vw, 3.6rem); }
+  .pdp__sub { font-size: .61rem; }
+  .pdp__subtitulo { font-size: .94rem; }
+  .pdp__galeria figure, .pdp__galeria figure:first-child, .pdp__galeria figure:nth-child(even):last-child { flex-basis: 92%; aspect-ratio: 4 / 5; }
+  .pdp__preco .preco { font-size: 1.4rem; }
+  .pdp__resumo { font-size: .96rem; }
+  .pdp__servicos { font-size: .81rem; margin-block: .5rem; }
+  .comprar { gap: .6rem; }
+  .comprar .botao, .pdp__info > .botao { min-height: 3.35rem; font-size: .82rem; padding-inline: .75rem; }
+  .qtd { height: 3.35rem; grid-template-columns: 2.5rem 2rem 2.5rem; }
+  .variantes span { font-size: .82rem; padding: .65rem .8rem; }
+  .acordeao summary { min-height: 60px; }
+  .barra-compra { padding-block: .75rem calc(.75rem + env(safe-area-inset-bottom)); }
+  .barra-compra .botao { min-height: 3rem; font-size: .81rem; }
+  .barra-compra .preco { font-size: .95rem; color: var(--tinta); }
+  .piramide__linha { grid-template-columns: 4.5rem 1fr; gap: .75rem; }
+  .pg-destinos .cab-pagina h1 { font-size: clamp(3.3rem, 13.5vw, 4.5rem); }
+  .pg-destinos .secao--apertada { padding-block: 3rem; }
+  .destinos-grade { gap: 2.2rem .9rem; }
+  .destino { gap: .5rem; }
+  .destino h3 { font-size: clamp(1.4rem, 5.5vw, 1.9rem); }
+  .destino p { font-size: .86rem; line-height: 1.55; }
+  .destino > .mono { font-size: .55rem; line-height: 1.6; overflow-wrap: anywhere; }
+  .familias { grid-template-columns: 1fr; }
+  .familias a { min-height: auto; padding: 1.75rem; gap: .75rem; }
+  .familias a::before { margin-bottom: .2rem; }
+  .cab-pagina.artigo h1 { font-size: clamp(2.65rem, 11vw, 3.65rem); }
+  .artigo p, .artigo li { font-size: 1rem; line-height: 1.75; }
+  .artigo h2 { margin-top: 2.5rem; }
+  .artigo .trilha li { font-size: .7rem; }
+  .guias { grid-template-columns: 1fr; gap: 2.75rem; }
+  .guia h3 { font-size: 1.9rem; }
+  .faq summary { font-size: 1.32rem; padding-block: 1.3rem; }
+  .faq .corpo { padding-right: .8rem; }
+  .pg-quiz .cab-pagina { padding-bottom: 1.75rem; }
+  .pg-quiz .cab-pagina h1 { font-size: 3.05rem; }
+  .quiz-progresso { margin-bottom: 1.75rem; }
+  .quiz legend { font-size: 1.8rem; line-height: 1.15; }
+  .quiz__ops { grid-template-columns: 1fr; gap: .65rem; }
+  .quiz__ops span { padding: 1.15rem; min-height: 4rem; }
+  .pg-quiz .quiz fieldset:first-of-type .quiz__ops span, .pg-quiz .quiz fieldset:last-of-type .quiz__ops span { font-size: .95rem; min-height: 4rem; padding: .9rem; }
+  .quiz-navegacao { gap: .75rem; }
+  .quiz-navegacao .botao { min-width: 0; padding-inline: 1rem; }
+  .form-grade { gap: 1.1rem; }
+  .form-b2b { padding: 1.35rem; }
+  .contato { padding: 1.75rem; }
+  .contato strong { font-size: 1.55rem; }
+  .gaveta { grid-template-columns: 0 minmax(0, 1fr); }
+  .gaveta__topo { padding: 1.25rem; }
+  .gaveta__itens { padding-inline: 1.25rem; }
+  .gaveta__rodape { padding: 1.25rem 1.25rem calc(1.5rem + env(safe-area-inset-bottom)); }
+  .item-sacola { grid-template-columns: 4rem minmax(0, 1fr) auto; gap: .75rem; }
+  .item-sacola img { width: 4rem; height: 5rem; }
+  .item-sacola h3 { font-size: .95rem; }
+  .item-sacola .preco { font-size: .78rem; }
+  .item-sacola .qtd { grid-template-columns: 2.2rem 1.9rem 2.2rem; }
+}
+
+@media (max-width: 360px) {
+  .comprar { gap: .5rem; }
+  .comprar .botao { font-size: .77rem; }
+  .qtd { grid-template-columns: 2.15rem 1.8rem 2.15rem; }
+  .item-sacola { grid-template-columns: 3.5rem minmax(0, 1fr) auto; gap: .6rem; }
+  .item-sacola img { width: 3.5rem; }
+  .destinos-grade { gap: 2rem .75rem; }
+  .destino h3 { font-size: 1.45rem; }
+  .destino p { font-size: .82rem; }
+}
